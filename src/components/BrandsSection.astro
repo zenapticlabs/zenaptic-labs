@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import pepsicoLogo from '../assets/brands/pepsico_logo.svg';
+import goFundMeLogo from '../assets/brands/go_fund_me_logo.svg';
+import chipotleLogo from '../assets/brands/chipotle_logo.svg';
+import washingtonLogo from '../assets/brands/washington_university_logo.svg';
+import deltaLogo from '../assets/brands/delta_logo.svg';
+---
+
+<div class="flex justify-around px-[80px] py-[72px] max-lg:flex-col">
+    <Image src={pepsicoLogo} alt="PepsiCo Logo" class="brand-image" />
+    <Image src={goFundMeLogo} alt="GoFundMe Logo" class="brand-image" />
+    <Image src={chipotleLogo} alt="Chipotle Logo" class="brand-image" />
+    <Image src={washingtonLogo} alt="Washington Logo" class="brand-image" />
+    <Image src={deltaLogo} alt="Delta Logo" class="brand-image" />
+</div>
+

@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logodark.svg";
+import ArrowUP from "../assets/arrowUpRight.svg";
+---
+<header class="container  h-[96px] flex max-md:flex-col justify-between items-center max-md:px-5 toggle  mx-auto">
+    <div class="text-2xl font-bold pl-[80px] max-md:w-full">
+    <Image src={Logo} alt="Logo" width={100} height={100} loading="lazy" class="inline-block mr-2 w-[227px] h-[36px] headerFooterLogo max-md:w-[200px] min-w-[200px]"  />
+    </div>
+    <nav class="flex justify-center max-md:w-full items-center gap-[40px] text-gray-400 h-full toggle max-md:hidden">
+        <a href="/" >About Us</a>
+        <a href="/services" >Services</a>
+        <a href="/case-studies" >Case Studies</a>
+        <a href="/contact" >Contact</a>
+        <div class="flex justify-center items-center  ">
+            <a href="/get-started" class="  mx-[16] my-2">
+
+                <Image src={ArrowUP} alt="Arrow" loading="lazy" class="object-cover object-center inline-block orange-filter mr-7" id="headerArrowUp"/>
+            </a>
+        </div> 
+    </nav>
+</header>
+</header>

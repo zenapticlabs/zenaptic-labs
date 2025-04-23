@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/* .dark{
+    background-color: #080808 !important;
+    color: #EFEFEF !important;
+} 
+ .light{
+    background-color: #EFEFEF !important;
+    color: #080808  !important;
+} */
+
+/* .footer-bg{
+    background-color: red;
+}
+
+.dark .footer-bg{
+    background-color:blue !important
+} */
+*{
+    font-family: urbanist, sans-serif;
+}
+.orange-filter{
+    filter: brightness(0) saturate(100%) invert(63%) sepia(55%) saturate(4258%) hue-rotate(350deg) brightness(101%) contrast(102%);
+}
+button , a {
+    cursor: pointer;
+}
