@@ -1,7 +1,6 @@
 ---
 import GenericSolutionSection from "./GenericSolutionsSection.jsx";
 
-// IntelligentSolutions
 const aiSolutions = {
   heading: "Artificial Intelligence",
   description: {
@@ -20,16 +19,82 @@ const aiSolutions = {
     "AI-driven Insights",
   ],
   caseStudies: [
-    { src: "src/assets/CaseStudy1.png", alt: "Case Study 1" },
-    { src: "src/assets/CaseStudy2.png", alt: "Case Study 2" },
-    { src: "src/assets/CaseStudy3.png", alt: "Case Study 3" },
+    { src: "/assets/CaseStudy1.png", alt: "Case Study 1" },
+    { src: "/assets/CaseStudy2.png", alt: "Case Study 2" },
+    { src: "/assets/CaseStudy3.png", alt: "Case Study 3" },
     
   ],
 };
+const techSolutions = {
+  heading: "Web Design & Development",
+  description: {
+    line1:
+      "We craft visually stunning, responsive, and SEO-optimized websites ",
+    line2: "that drive engagement and conversions.",
+  },
 
+  features: [
+    "Landing Page Development",
+    "E-commerce Web Development",
+    "Frontend Development",
+    "Back-End Development",
+    "Full-Stack Development",
+    "CMS Development",
+    "API Development & Integration",
+  ],
+  caseStudies: [
+    { src: "/assets/CaseStudyTech1.png", alt: "Case Study 1" },
+    { src: "/assets/CaseStudyTech2.png", alt: "Case Study 2" },
+    { src: "/assets/CaseStudyTech3.png", alt: "Case Study 3" },
+  ],
+};
+
+const webSolutions = {
+  features: [
+   "Web Development",
+  "Mobile Apps",
+  "SaaS Development",
+  "Software Development",
+  "Tech Solutions",
+  "Scalable Apps",
+  "Cloud Computing",
+  "App Development"
+  ],
+  description: {
+    line1:
+      "We build robust, scalable, and high-performing applications for web,",
+    line2: " mobile, and SaaS platforms.",
+  },
+  heading: "Web, Mobile and SaaS Development",
+  caseStudies: [
+    { src: "/assets/CaseStudyWeb1.png", alt: "Case Study 1" },
+    { src: "/assets/CaseStudyWeb2.png", alt: "Case Study 2" },
+    { src: "/assets/CaseStudyWeb3.png", alt: "Case Study 3" },
+  ],
+};
+
+const dataSolutions = {
+  features: [
+    "Big Data",
+    "Data Science",
+    "Business Intelligence",
+    "Cloud Data",
+    "Predictive Analytics",
+    "Data Solutions",
+    "Data Driven",
+  ],
+  description: {
+    line1:
+      "Unlock the full potential of your data with advanced analytics and ",
+    line2: "scalable warehousing solutions",
+  },
+  heading: "Data Warehousing & Analytics",
+};
 
 ---
 
 
 <GenericSolutionSection techSolutions={aiSolutions}  client:load />
-
+<GenericSolutionSection techSolutions={techSolutions} client:load />
+<GenericSolutionSection techSolutions={webSolutions} client:load />
+<GenericSolutionSection techSolutions={dataSolutions} client:load />

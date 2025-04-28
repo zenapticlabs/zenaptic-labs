@@ -22,9 +22,14 @@ import "../styles/global.css";
       rel="stylesheet"
     />
     <title>ZenapticLabs</title>
+    <script is:inline>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
   <body>
-    <Header />
+    <Header client:load />
     <slot />
     <Footer />
   </body>

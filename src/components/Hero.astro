@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import InfiniteSlider from "./InfiniteSlider.jsx";
 import TextRollAnimation from "./TextRollAnimation.jsx";
 const servicesOffered = [
@@ -30,7 +29,7 @@ const strategicInitiatives = [
 
 ---
 <div
-  class="h-[800px] !w-full overflow-hidden bg-[url(/src/assets/Grid.svg)] bg-cover bg-no-repeat bg-center shadow-[inset_0_0_100px_47px_#ffffff] max-md:h-[600px] relative"
+  class="h-[800px] !w-full overflow-hidden bg-[url(/assets/Grid.svg)] bg-cover bg-no-repeat bg-center shadow-[inset_0_0_100px_47px_#ffffff] max-md:h-[600px] relative"
 >
   <span
     class="h-[24px] w-[24px] rounded-[4px] block absolute right-[430px] top-[50px] border-[4px] border-[rgba(255,255,255,0.4)] bg-[linear-gradient(270deg,_#FF8C00_0%,_#FFBE44_100%)] shadow-[0_0_32px_8px_rgba(255,179,120,0.25)]"
@@ -41,13 +40,13 @@ const strategicInitiatives = [
   <div class="h-full bg-[#e0e0e030] py-16">
     <div class="container mx-auto flex flex-col justify-start">
       <p
-        class="bg-gradient-to-l pb-[120px] max-md:pb-[50px] from-white px-[80px] to-black bg-clip-text text-transparent text-[56px] font-bold max-md:text-4xl max-md:px-5"
+        class="bg-gradient-to-l pb-[120px] max-md:pb-[50px] from-white  to-black bg-clip-text text-transparent text-[56px] font-bold max-md:text-4xl max-md:px-5"
          >
         <TextRollAnimation
           client:load
           Text="TRANSFORMING"
           component="Hero"
-          classes="text-[black] text-[56px]"
+          classes="text-[black] text-[56px] max-md:text-[36px]"
           
         />
         <br />
@@ -55,14 +54,14 @@ const strategicInitiatives = [
           client:load
           Text="SOFTWARE IDEAS"
           component="Hero"
-          classes="text-[#FF7D12] text-[56px]"
+          classes="text-[#FF7D12] text-[56px] max-md:text-[36px]"
         />
         <br />
         <TextRollAnimation
           client:load
           Text="FOR YOUR BUSINESS INTO LIFE"
           component="Hero"
-          classes="text-[black] text-[56px] bg-gradient-to-l from-white to-black bg-clip-text"
+          classes="text-[black] text-[56px] bg-gradient-to-l from-white to-black bg-clip-text max-md:text-[36px] break-words"
         />
       </p>
     </div>
