@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import Step1 from "../../public/assets/Step1.svg";
+import Step2 from "../../public/assets/Step2.svg";
+import Step3 from "../../public/assets/Step3.svg";
+import Step4 from "../../public/assets/Step4.svg";
+import Step5 from "../../public/assets/Step5.svg";
+import Step6 from "../../public/assets/Step6.svg";
+import ButtonArrowIcon from "../../public/assets/arrowrightWhite.svg";
+const progressSteps = [
+  {
+    id: 1,
+    title: "STEP 01",
+    description: "Discovery & Planning",
+    icon: Step1,
+  },
+  {
+    id: 2,
+    title: "STEP 02",
+    description: "Design & Prototyping",
+    icon: Step2,
+  },
+  {
+    id: 3,
+    title: "STEP 03",
+    description: "Development",
+    icon: Step3,
+  },
+  {
+    id: 4,
+    title: "STEP 04",
+    description: "Testing & Quality Assurance",
+    icon: Step4,
+  },
+  {
+    id: 5,
+    title: "STEP 05",
+    description: "Deployment",
+    icon: Step5,
+  },
+  {
+    id: 6,
+    title: "STEP 06",
+    description: "Maintenance",
+    icon: Step6,
+  },
+];
+---
+
+<div class="conatiner px-20 max-md:px-5">
+  <h2
+    class="w-full text-center from-[#999999] to-[#181818] bg-clip-text text-transparent font-urbanist text-[48px] font-bold leading-[135%] bg-gradient-to-l"
+  >
+    Development Approach
+  </h2>
+  <div class="w-full flex justify-center items-center gap-1">
+    <div
+      class="w-[100%] flex flex-wrap justify-center items-center max-md:py-0 py-20"
+    >
+      <div class="w-full gap-10 flex flex-col">
+        <div
+          class="w-full flex justify-around flex-wrap max-md:flex-col items-center gap-6"
+        >
+          {
+            progressSteps.map((step) => (
+              <div class="w-[30%] max-md:w-[100%] !flex  flex-col justify-center items-center gap-12 p-6  border-[1px] border-[#DCDCDC] rounded-[8px]">
+                <div class="w-full">
+                  <span class="w-full block text-start text-[20px]  font-semibold leading-[135%] uppercase text-[var(--Color-Neutral-300,#525252)]">
+                    {step.title}
+                  </span>
+                  <span class="w-full block text-start text-[28px] font-urbanist font-semibold leading-[150%] text-[#292929]">
+                    {step.description}
+                  </span>
+                </div>
+                <div class="w-full flex justify-end items-center">
+                  <Image
+                    src={step.icon}
+                    alt={step.title}
+                    loading="lazy"
+                    class="w-[40%] h-[40%]"
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <!-- Button Section -->
+        <div class="w-full flex justify-center items-center">
+          <button
+            class="bg-[#FF7D12] mt-[85px] max-md:ml-[0px] max-md:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4"
+          >
+            <span>Start Your Project</span>
+            <Image
+              src={ButtonArrowIcon}
+              alt="Arrow"
+              loading="lazy"
+              class="object-cover object-center w-[24px] h-[24px] inline-block ml-2"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

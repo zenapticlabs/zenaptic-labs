@@ -19,7 +19,7 @@ import list from "../../public/assets/list.svg";
     />
   </div>
   <nav
-    class="flex justify-center items-center gap-[40px] text-gray-400 h-full max-md:w-[50%] toggle mr-[100px] max-md:mr-[0px]"
+    class="flex justify-center items-center gap-[40px] text-gray-400 h-full toggle mr-[100px] max-md:mr-[35px]"
   >
     <span
       class="nav-link max-md:hidden cursor-pointer"
@@ -40,9 +40,10 @@ import list from "../../public/assets/list.svg";
         />
       </span>
     </div>
+
     <span
       id="nav-bar"
-      class="hidden max-md:flex justify-end items-center w-[50%]"
+      class="hidden max-md:flex justify-between items-center w-[50%]"
     >
       <Image
         src={list}
@@ -98,16 +99,15 @@ import list from "../../public/assets/list.svg";
     const icon = document.getElementById("icon");
     if (icon && icon instanceof HTMLImageElement) {
       if (icon.src.includes("close")) {
-        icon.src = "../../public/assets/list.svg";
+        icon.src = "../../assets/list.svg";
       } else {
-        icon.src = "../../public/assets/close.svg";
+        icon.src = "../../assets/close.svg";
       }
     }
     const navBar = document.getElementById("menu");
     if (navBar) {
       if (navBar.style.display === "none" || navBar.style.display === "") {
         navBar.style.display = "block";
-
         document.body.style.overflow = "hidden";
       } else {
         navBar.style.display = "none";
