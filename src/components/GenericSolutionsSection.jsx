@@ -5,7 +5,7 @@ function GenericSolutionsSection(props) {
     const techSolutions = props.techSolutions || [];
     return (
         <>
-        <div className="container mx-auto flex justify-between items-center px-[80px] relative max-md:px-5 gap-10 pt-[80px] max-md:pt-[40px] max-md:flex-col">
+        <div className="container mx-auto flex justify-between items-center px-[80px] relative max-md:px-5 gap-10 pt-[80px] max-md:pt-[40px] max-md:flex-col" id="techSolutionsSection">
             <div className="flex flex-col gap-6 w-[80%] justify-center items-center ">
                 <div className="flex justify-baseline items-center w-full">
                     <h4 className="text-[48px] max-md:text-[32px] font-bold bg-gradient-to-r from-[#181818] to-[#999] bg-clip-text text-transparent">
@@ -34,11 +34,11 @@ function GenericSolutionsSection(props) {
                 </div>
             </div>
 
-            <div className="   absolute top-0   right-0 w-[20%] max-md:flex max-md:w-full max-md:static max-md:ml-[80px] max-md:justify-baseline max-md:items-center max-md:mt-10 max-md:gap-5">
+            <div className="absolute top-0 right-0 w-[20%] max-md:flex max-md:w-full max-md:static max-md:ml-[35px] max-md:justify-baseline max-md:items-center max-md:mt-10 max-md:gap-5">
                 <button className="bg-[#FF7D12] mt-[85px] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4">
                     <span>Start Your Project</span>
                     <img
-                        src='src/assets/arrowrightWhite.svg'
+                        src='/assets/arrowrightWhite.svg'
                         alt="Arrow"
                         loading="lazy"
                         className="object-cover object-center w-[24px] h-[24px] inline-block ml-2"

@@ -1,23 +1,118 @@
 ---
 import { Image } from "astro:assets";
-import Logo from "../assets/logodark.svg";
-import ArrowUP from "../assets/arrowUpRight.svg";
+import Logo from "../../public/assets/logo-dark.svg";
+import ArrowUP from "../../public/assets/arrowUpRight.svg";
+import list from "../../public/assets/list.svg";
 ---
-<header class="container  h-[96px] flex max-md:flex-col justify-between items-center max-md:px-5 toggle  mx-auto">
-    <div class="text-2xl font-bold pl-[80px] max-md:w-full">
-    <Image src={Logo} alt="Logo" width={100} height={100} loading="lazy" class="inline-block mr-2 w-[227px] h-[36px] headerFooterLogo max-md:w-[200px] min-w-[200px]"  />
-    </div>
-    <nav class="flex justify-center max-md:w-full items-center gap-[40px] text-gray-400 h-full toggle max-md:hidden">
-        <a href="/" >About Us</a>
-        <a href="/services" >Services</a>
-        <a href="/case-studies" >Case Studies</a>
-        <a href="/contact" >Contact</a>
-        <div class="flex justify-center items-center  ">
-            <a href="/get-started" class="  mx-[16] my-2">
 
-                <Image src={ArrowUP} alt="Arrow" loading="lazy" class="object-cover object-center inline-block orange-filter mr-7" id="headerArrowUp"/>
-            </a>
-        </div> 
-    </nav>
+<header
+  class="h-[96px] flex justify-between items-center toggle mx-auto max-md:mx-[0px] w-full"
+>
+  <div class="text-2xl font-bold pl-[115px] max-md:pl-[20px] max-md:w-[50%]">
+    <Image
+      src={Logo}
+      alt="Logo"
+      width={100}
+      height={100}
+      loading="lazy"
+      class="inline-block mr-2 w-[227px] h-[36px] max-md:w-[50%] headerFooterLogo min-w-[200px]"
+    />
+  </div>
+  <nav
+    class="flex justify-center items-center gap-[40px] text-gray-400 h-full max-md:w-[50%] toggle mr-[100px] max-md:mr-[0px]"
+  >
+    <span
+      class="nav-link max-md:hidden cursor-pointer"
+      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+      >About Us</span
+    >
+    <span class="nav-link max-md:hidden cursor-pointer">Services</span>
+    <span class="nav-link max-md:hidden cursor-pointer">Case Studies</span>
+    <span class="nav-link max-md:hidden cursor-pointer">Contact</span>
+    <div class="flex justify-center items-center max-md:justify-end">
+      <span class="nav-link max-md:hidden mx-[16] my-2 cursor-pointer">
+        <Image
+          src={ArrowUP}
+          alt="Arrow"
+          loading="lazy"
+          class="object-cover object-center inline-block orange-filter mr-7"
+          id="headerArrowUp"
+        />
+      </span>
+    </div>
+    <span
+      id="nav-bar"
+      class="hidden max-md:flex justify-end items-center w-[50%]"
+    >
+      <Image
+        src={list}
+        alt="Logo"
+        width={100}
+        height={100}
+        loading="lazy"
+        id="icon"
+        class="inline-block invert h-[24px] w-[24px] headerFooterLogo"
+      />
+    </span>
+  </nav>
 </header>
-</header>
+<div
+  class="fixed w-[100%] right-0 top-[80px] overflow-hidden hidden z-[10000000] px-[20px] py-[24px] bg-[#00000028]"
+  id="menu"
+  style="height:calc(100vh)"
+>
+  <div class="absolute inset-0 bg-white z-0 h-full">
+    <div
+      class="relative w-full overflow-hidden flex flex-col gap-5 justify-start items-between z-10 px-[24px] py-[40px]"
+    >
+      <span
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        id="about"
+        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+      >
+        About Us
+      </span>
+      <span
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        id="services"
+      >
+        Services
+      </span>
+      <span
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        id="caseStudies"
+      >
+        Case Studies
+      </span>
+      <span
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        id="contact"
+      >
+        Contact
+      </span>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById("nav-bar")?.addEventListener("click", () => {
+    const icon = document.getElementById("icon");
+    if (icon && icon instanceof HTMLImageElement) {
+      if (icon.src.includes("close")) {
+        icon.src = "../../public/assets/list.svg";
+      } else {
+        icon.src = "../../public/assets/close.svg";
+      }
+    }
+    const navBar = document.getElementById("menu");
+    if (navBar) {
+      if (navBar.style.display === "none" || navBar.style.display === "") {
+        navBar.style.display = "block";
+
+        document.body.style.overflow = "hidden";
+      } else {
+        navBar.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    }
+  });
+</script>

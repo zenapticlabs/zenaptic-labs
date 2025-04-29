@@ -1,17 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import pepsicoLogo from '../assets/brands/pepsico_logo.svg';
-import goFundMeLogo from '../assets/brands/go_fund_me_logo.svg';
-import chipotleLogo from '../assets/brands/chipotle_logo.svg';
-import washingtonLogo from '../assets/brands/washington_university_logo.svg';
-import deltaLogo from '../assets/brands/delta_logo.svg';
+import { Image } from "astro:assets";
+import pepsicoLogo from "../../public/assets/brands/pepsico_logo.svg";
+import goFundMeLogo from "../../public/assets/brands/go_fund_me_logo.svg";
+import chipotleLogo from "../../public/assets/brands/chipotle_logo.svg";
+import washingtonLogo from "../../public/assets/brands/washington_university_logo.svg";
+import deltaLogo from "../../public/assets/brands/delta_logo.svg";
 ---
 
-<div class="flex justify-around px-[80px] py-[72px] max-lg:flex-col">
-    <Image src={pepsicoLogo} alt="PepsiCo Logo" class="brand-image" />
-    <Image src={goFundMeLogo} alt="GoFundMe Logo" class="brand-image" />
-    <Image src={chipotleLogo} alt="Chipotle Logo" class="brand-image" />
-    <Image src={washingtonLogo} alt="Washington Logo" class="brand-image" />
-    <Image src={deltaLogo} alt="Delta Logo" class="brand-image" />
+<div class="flex justify-around px-[80px] gap-9 py-[72px] overflow-scroll">
+  <Image src={pepsicoLogo} alt="PepsiCo Logo" />
+  <Image src={goFundMeLogo} alt="GoFundMe Logo" />
+  <Image src={chipotleLogo} alt="Chipotle Logo" id="firstToView" />
+  <Image src={washingtonLogo} alt="Washington Logo" />
+  <Image src={deltaLogo} alt="Delta Logo" />
 </div>
-
+<script>
+  let showDefault = () => {
+    const element = document.getElementById("firstToView");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  };
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    showDefault();
+  }
+</script>
