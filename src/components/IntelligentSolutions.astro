@@ -1,7 +1,10 @@
 ---
 import GenericSolutionSection from "./GenericSolutionsSection.jsx";
+import zenapticbg from "../../public/assets/zenaptic-bg.svg";
+import { Image } from "astro:assets";
 
 const aiSolutions = {
+  component: "Intelligent Solutions",
   heading: "Artificial Intelligence",
   description: {
     line1:
@@ -26,6 +29,7 @@ const aiSolutions = {
   ],
 };
 const techSolutions = {
+  component: "Solutions",
   heading: "Web Design & Development",
   description: {
     line1:
@@ -93,8 +97,19 @@ const dataSolutions = {
 
 ---
 
-
-<GenericSolutionSection techSolutions={aiSolutions}  client:load />
-<GenericSolutionSection techSolutions={techSolutions} client:load />
-<GenericSolutionSection techSolutions={webSolutions} client:load />
-<GenericSolutionSection techSolutions={dataSolutions} client:load />
+<div class="relative before:content-[''] before:w-[2px] before:absolute before:left-[60px] before:max-md:left-[25px] before:h-full before:bg-[#DCDCDC]">
+  <GenericSolutionSection techSolutions={aiSolutions} client:load />
+  <GenericSolutionSection techSolutions={techSolutions} client:load />
+  <GenericSolutionSection techSolutions={webSolutions} client:load />
+  <GenericSolutionSection techSolutions={dataSolutions} client:load />
+  <div class="container px-20 flex items-center justify-center py-[80px]">
+    <Image
+      src={zenapticbg}
+      alt="Arrow"
+      loading="lazy"
+    />
+  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-md:left-[15px] absolute"></span>
+  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[1050px] left-[49px] max-md:left-[15px] absolute"></span>
+  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2000px] left-[49px] max-md:left-[15px] absolute"></span>
+  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2940px] left-[49px] max-md:left-[15px] absolute"></span>
+</div>

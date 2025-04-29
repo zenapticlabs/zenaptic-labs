@@ -1,5 +1,5 @@
 import React from 'react';
-import InfiniteSlider from './InfiniteSlider';
+import GenericInfiniteSlider from './GenericInfiniteSlider';
 
 function GenericSolutionsSection(props) {
     const techSolutions = props.techSolutions || [];
@@ -34,8 +34,8 @@ function GenericSolutionsSection(props) {
                 </div>
             </div>
 
-            <div className="absolute top-0 right-0 w-[20%] max-md:flex max-md:w-full max-md:static max-md:ml-[35px] max-md:justify-baseline max-md:items-center max-md:mt-10 max-md:gap-5">
-                <button className="bg-[#FF7D12] mt-[85px] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4">
+            <div className="   absolute top-0   right-0 w-[20%] max-md:flex max-md:w-full max-md:static max-md:ml-[35px] max-md:justify-baseline max-md:items-center max-md:mt-10 max-md:gap-5">
+                <button className="bg-[#FF7D12] mt-[85px] max-md:ml-[20px] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4">
                     <span>Start Your Project</span>
                     <img
                         src='/assets/arrowrightWhite.svg'
@@ -48,14 +48,13 @@ function GenericSolutionsSection(props) {
             </div>
         </div>
      {techSolutions.caseStudies !== undefined &&   <div className="!w-[100%] py-[80px] !mx-0 font-semibold !text-2xl text-[#292929] max-md:text-xl">
-            <InfiniteSlider
+            <GenericInfiniteSlider
                 featuresList={techSolutions.caseStudies}
                 speed={200}
                 speedOnHover={20}
-                animationDirection="horizontal"
-                direction="right-to-left"
+                direction="horizontal"
                 clientLoad
-                component="Image-Infinite-Slider"
+                component="image-infinite-slider"
             />
         </div>}
         </>
