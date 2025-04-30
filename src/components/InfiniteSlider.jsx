@@ -10,22 +10,21 @@ export default function InfiniteSliderBasic(props) {
     return (
        <>
            {component === "Text-Infinite-Slider" && (
-               <InfiniteSlider gap={24} direction={animationDirection} speed={speed} reverse={direction}>
+               <InfiniteSlider gap={24} direction={animationDirection} speed={speed} reverse={direction} type="text">
                    {featuresList.map((item, index) => (
-                       <span key={index} className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] whitespace-nowrap max-md:py-2 max-md:px-4">
+                       <span key={index} className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4">
                            {item}
                        </span>
                    ))}
                </InfiniteSlider>
            )}
-             {component === "Image-Infinite-Slider" && (
-               <InfiniteSlider gap={24} direction={animationDirection} speedOnHover={speedOnHover} speed={speed} reverse={direction}>
-                   {featuresList.map((item, index) => (                  
+             {component === "image-infinite-slider" && (
+               <InfiniteSlider gap={24} direction="horizontal" speedOnHover={speedOnHover} speed={speed} reverse={direction} type="image" >
+                   {featuresList.map((item, index) => (
                     <img src={item.src} key={index} alt={item.alt} className="rounded-lg w-[520px]  h-[390px] max-md:w-[45%] object-center object-contain transition-all ease-linear" />
                    ))}
                </InfiniteSlider>
            )}
-
        </>
     );
 }

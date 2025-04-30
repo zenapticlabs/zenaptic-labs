@@ -1,5 +1,5 @@
 ---
-import GenericSolutionSection from "./GenericSolutionsSection.jsx";
+import GenericSolutionSection from "./SolutionsSection.jsx";
 import zenapticbg from "../../public/assets/zenaptic-bg.svg";
 import { Image } from "astro:assets";
 
@@ -25,7 +25,6 @@ const aiSolutions = {
     { src: "/assets/CaseStudy1.png", alt: "Case Study 1" },
     { src: "/assets/CaseStudy2.png", alt: "Case Study 2" },
     { src: "/assets/CaseStudy3.png", alt: "Case Study 3" },
-    
   ],
 };
 const techSolutions = {
@@ -55,14 +54,14 @@ const techSolutions = {
 
 const webSolutions = {
   features: [
-   "Web Development",
-  "Mobile Apps",
-  "SaaS Development",
-  "Software Development",
-  "Tech Solutions",
-  "Scalable Apps",
-  "Cloud Computing",
-  "App Development"
+    "Web Development",
+    "Mobile Apps",
+    "SaaS Development",
+    "Software Development",
+    "Tech Solutions",
+    "Scalable Apps",
+    "Cloud Computing",
+    "App Development"
   ],
   description: {
     line1:
@@ -94,7 +93,6 @@ const dataSolutions = {
   },
   heading: "Data Warehousing & Analytics",
 };
-
 ---
 
 <div class="relative before:content-[''] before:w-[2px] before:absolute before:left-[60px] before:max-md:left-[25px] before:h-full before:bg-[#DCDCDC]">
@@ -103,13 +101,18 @@ const dataSolutions = {
   <GenericSolutionSection techSolutions={webSolutions} client:load />
   <GenericSolutionSection techSolutions={dataSolutions} client:load />
   <div class="container px-20 flex items-center justify-center py-[80px]">
-    <Image
-      src={zenapticbg}
-      alt="Arrow"
-      loading="lazy"
-    />
-  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-md:left-[15px] absolute"></span>
-  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[1050px] left-[49px] max-md:left-[15px] absolute"></span>
-  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2000px] left-[49px] max-md:left-[15px] absolute"></span>
-  <span class="w-[24px] h-[24px] rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2940px] left-[49px] max-md:left-[15px] absolute"></span>
+    <Image src={zenapticbg} alt="Arrow" loading="lazy" />
+  </div>
+  <span
+    class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-md:left-[15px] absolute"
+  ></span>
+  <span
+    class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[1050px] left-[49px] max-md:left-[15px] absolute"
+  ></span>
+  <span
+    class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2000px] left-[49px] max-md:left-[15px] absolute"
+  ></span>
+  <span
+    class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[2940px] left-[49px] max-md:left-[15px] absolute"
+  ></span>
 </div>

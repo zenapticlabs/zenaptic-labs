@@ -12,6 +12,7 @@ export type InfiniteSliderProps = {
   direction?: 'horizontal' | 'vertical';
   reverse?: boolean;
   className?: string;
+  type?:string
 };
 
 export function InfiniteSlider({
@@ -21,6 +22,7 @@ export function InfiniteSlider({
   speedOnHover,
   direction = 'horizontal',
   reverse = false,
+  type = "text",
   className,
 }: InfiniteSliderProps) {
   const [currentSpeed, setCurrentSpeed] = useState(speed);
@@ -40,18 +42,19 @@ export function InfiniteSlider({
     const duration = distanceToTravel / currentSpeed;
 
     if (isTransitioning) {
-      const remainingDistance = Math.abs(translation.get() - to);
-      const transitionDuration = remainingDistance / currentSpeed;
-
-      controls = animate(translation, [translation.get(), to], {
-        ease: 'linear',
-        duration: transitionDuration,
-        
-        onComplete: () => {
-          setIsTransitioning(false);
-          setKey((prevKey) => prevKey + 1);
-        },
-      });
+        const remainingDistance = Math.abs(translation.get() - to);
+        const transitionDuration = remainingDistance / currentSpeed;
+  
+        controls = animate(translation, [translation.get(), to], {
+          ease: 'linear',
+          duration: transitionDuration,
+          
+          onComplete: () => {
+            setIsTransitioning(false);
+            setKey((prevKey) => prevKey + 1);
+          },
+        });
+    
     } else {
       controls = animate(translation, [from, to], {
         ease: 'linear',
@@ -92,7 +95,7 @@ export function InfiniteSlider({
     : {};
 
   return (
-    <div className={cn('overflow-hidden relative z-20', className)}>
+    <div className={cn(`overflow-hidden relative ${type === "image" ? 'bg-white' :''} z-10` , className)}>
       <motion.div
         className='flex w-max'
         style={{
