@@ -40,7 +40,7 @@ const strategicInitiatives = [
   <div class="h-full bg-[#e0e0e030] ">
     <div class="container mx-auto flex flex-col justify-start pt-[60px] px-20 max-md:px-[10px]">
       <p
-        class="bg-gradient-to-l pb-[120px] max-md:pb-[50px] from-white  to-black bg-clip-text text-transparent text-[56px] font-bold max-md:text-4xl max-md:px-2"
+        class="bg-gradient-to-l pb-[200px] max-md:pb-[150px] from-white  to-black bg-clip-text text-transparent text-[56px] font-bold max-md:text-4xl max-md:px-2"
          >
         <TextRollAnimation
           client:load
@@ -71,7 +71,8 @@ const strategicInitiatives = [
       >
         <InfiniteSlider
           featuresList={servicesOffered}
-          speed={130}
+          speed={80}
+          speedOnHover={20}
           animationDirection={"horizontal"}
           direction="right-to-left"
           client:load
@@ -84,7 +85,8 @@ const strategicInitiatives = [
       >
         <InfiniteSlider
           featuresList={techSolutions}
-          speed={130}
+          speed={80}
+          speedOnHover={20}
           animationDirection={"horizontal"}
           direction="left-to-right"
           client:load
@@ -97,7 +99,8 @@ const strategicInitiatives = [
       >
         <InfiniteSlider
           featuresList={strategicInitiatives}
-          speed={130}
+          speed={80}
+          speedOnHover={20}
           animationDirection={"horizontal"}
           direction="right-to-left"
           client:load
