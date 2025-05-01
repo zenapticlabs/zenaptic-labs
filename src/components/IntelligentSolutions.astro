@@ -1,6 +1,7 @@
 ---
 import GenericSolutionSection from "./SolutionsSection.jsx";
 import zenapticbg from "../../public/assets/zenaptic-bg.svg";
+import mdzenapticbg from "../../public/assets/zenaptic-bgsmall.png";
 import { Image } from "astro:assets";
 
 const aiSolutions = {
@@ -61,7 +62,7 @@ const webSolutions = {
     "Tech Solutions",
     "Scalable Apps",
     "Cloud Computing",
-    "App Development"
+    "App Development",
   ],
   description: {
     line1:
@@ -100,8 +101,21 @@ const dataSolutions = {
   <GenericSolutionSection techSolutions={techSolutions} client:load />
   <GenericSolutionSection techSolutions={webSolutions} client:load />
   <GenericSolutionSection techSolutions={dataSolutions} client:load />
-  <div class="container px-20 flex items-center justify-center py-[80px]">
-    <Image src={zenapticbg} alt="Arrow" loading="lazy" />
+  <div
+    class="container px-20 max-lg:!px-2 flex items-center justify-center py-[80px]"
+  >
+    <Image
+      src={zenapticbg}
+      alt="Arrow"
+      loading="lazy"
+      class="object-center object-cover max-md:hidden"
+    />
+    <Image
+      src={mdzenapticbg}
+      alt="Arrow"
+      loading="lazy"
+      class="object-center object-cover hidden max-md:block"
+    />
   </div>
   <span
     class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-md:left-[15px] absolute"

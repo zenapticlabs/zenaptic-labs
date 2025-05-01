@@ -1,32 +1,18 @@
 ---
-import { Image } from "astro:assets";
-import pepsicoLogo from "../../public/assets/brands/pepsico_logo.svg";
-import goFundMeLogo from "../../public/assets/brands/go_fund_me_logo.svg";
-import chipotleLogo from "../../public/assets/brands/chipotle_logo.svg";
-import washingtonLogo from "../../public/assets/brands/washington_university_logo.svg";
-import deltaLogo from "../../public/assets/brands/delta_logo.svg";
+import { Image } from 'astro:assets';
+import pepsicoLogo from '../../public/assets/brands/pepsico_logo.svg';
+import goFundMeLogo from '../../public/assets/brands/go_fund_me_logo.svg';
+import chipotleLogo from '../../public/assets/brands/chipotle_logo.svg';
+import washingtonLogo from '../../public/assets/brands/washington_university_logo.svg';
+import deltaLogo from '../../public/assets/brands/delta_logo.svg';
+import { InfiniteSlider } from './MotionPrimitivesComponents/infinite-slider';
 ---
-
-<div class="flex justify-around px-[80px] gap-9 py-[72px] overflow-hidden max-lg:overflow-scroll max-md:justify-between max-md:px-5"
->
-  <Image src={pepsicoLogo} alt="PepsiCo Logo" />
-  <Image src={goFundMeLogo} alt="GoFundMe Logo" />
-  <Image src={chipotleLogo} alt="Chipotle Logo" id="firstToView" />
-  <Image src={washingtonLogo} alt="Washington Logo" />
-  <Image src={deltaLogo} alt="Delta Logo" />
+<div class="flex px-[80px] gap-9 py-[72px] overflow-y-hidden overflow-hidden max-lg:overflow-scroll max-md:justify-between max-md:px-5" >
+<InfiniteSlider gap={70} direction="horizontal" speed={80} speedOnHover={20} client:load>
+    <Image src={pepsicoLogo} alt="PepsiCo Logo"  />
+    <Image src={goFundMeLogo} alt="GoFundMe Logo"  />
+    <Image src={chipotleLogo} alt="Chipotle Logo"  />
+    <Image src={washingtonLogo} alt="Washington Logo"  />
+    <Image src={deltaLogo} alt="Delta Logo"  />
+</InfiniteSlider >
 </div>
-<script>
-  let showDefault = () => {
-    const element = document.getElementById("firstToView");
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
-    }
-  };
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    showDefault();
-  }
-</script>

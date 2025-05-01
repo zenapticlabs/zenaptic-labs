@@ -7,6 +7,7 @@ import DigitalJourney from "../components/DigitalJourney.astro";
 import IntelligentSolutions from "../components/IntelligentSolutions.astro";
 import ProgressSteps from "../components/ProgressSteps.astro";
 import TellUsAbout from "../components/TellUsAbout";
+import ChooseYourPlan from "../components/ChooseYourPlan.jsx";
 ---
 <Layout>
 <Hero  />
@@ -14,5 +15,6 @@ import TellUsAbout from "../components/TellUsAbout";
 <DigitalJourney />
 <IntelligentSolutions />
 <ProgressSteps />
-<TellUsAbout client:load />
+ <ChooseYourPlan client:load />
+ <TellUsAbout client:load />
 </Layout>

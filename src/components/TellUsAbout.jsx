@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
-
 function TellUsAbout() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -30,7 +29,7 @@ function TellUsAbout() {
   };
   return (
     <>
-      <div className="min-w-full px-20 py-18 flex justify-center items-center bg-[url(/assets/TellUSAboutBG.png)] bg-cover bg-no-repeat bg-[center_top_-30px]  flex-col gap-y-10 max-md:px-[20px]">
+      <div className="min-w-full px-20 py-18 flex justify-center items-center max-md:bg-[url(/assets/tell-us-aboutsmall.png)] max-md:bg-contain max-md:bg-[center_top_-135px] max-md:bg-[right_-135px]  bg-[url(/assets/TellUSAboutBG.png)] bg-cover bg-no-repeat bg-[center_top_-30px]  flex-col gap-y-10 max-md:px-[20px]">
         <div className="w-full flex justify-center items-center ">
           <h3 className="text-4xl font-bold text-center leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l">
             Tell us about your project
@@ -83,7 +82,7 @@ function TellUsAbout() {
                 rows="1"
                 value={formData.projectDescription}
                 onChange={handleChange}
-                className="w-full border-0 border-b border-[#BDBDBD] text-[#BDBDBD] text-[24px] placeholder-[#BDBDBD] focus:outline-none resize-none"
+                className="w-full border-0 border-b border-[#BDBDBD] text-[#000000f8] text-[24px] placeholder-[#BDBDBD] focus:outline-none resize-none"
               ></textarea>
      
 
@@ -91,7 +90,7 @@ function TellUsAbout() {
      <div className="w-full flex justify-center items-center">
               <button
                 type="submit"
-                className="bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
+                className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
               >
                 Send Message
                 <img
