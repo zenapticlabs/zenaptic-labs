@@ -10,9 +10,9 @@ export default function InfiniteSliderBasic(props) {
     return (
        <>
            {component === "Text-Infinite-Slider" && (
-               <InfiniteSlider gap={24} direction={animationDirection} speed={speed} reverse={direction} type="text">
+               <InfiniteSlider gap={24} speedOnHover={speedOnHover} direction={animationDirection} speed={speed} reverse={direction} type="text">
                    {featuresList.map((item, index) => (
-                       <span key={index} className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4">
+                       <span key={index} className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#d7d7d7d5] whitespace-nowrap max-md:py-2 max-md:px-4">
                            {item}
                        </span>
                    ))}
@@ -21,7 +21,15 @@ export default function InfiniteSliderBasic(props) {
              {component === "image-infinite-slider" && (
                <InfiniteSlider gap={24} direction="horizontal" speedOnHover={speedOnHover} speed={speed} reverse={direction} type="image" >
                    {featuresList.map((item, index) => (
-                    <img src={item.src} key={index} alt={item.alt} className="rounded-lg w-[520px]  h-[390px] max-md:w-[45%] object-center object-contain transition-all ease-linear" />
+                     <div  key={index} className="flex flex-col justify-center items-center max-md:items-start gap-y-3">             
+                    <img src={item.src}  alt={item.alt} className="rounded-lg w-[520px]   h-[390px] max-md:w-[260px] max-md:h-[195px] object-center object-contain transition-all ease-linear" />
+                              <span className=" w-[60%] max-md:w-[260px] text-[18px] hidden max-md:block font-bold">
+                              Enhancing Case Management for Increased Efficiency
+                                </span>           
+                                <span className="hidden max-md:block px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4" >
+                                HOOPSTOCOLLEGE
+                                </span>
+                               </div>  
                    ))}
                </InfiniteSlider>
            )}
