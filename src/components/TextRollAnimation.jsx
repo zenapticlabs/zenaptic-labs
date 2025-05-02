@@ -1,13 +1,11 @@
 import { TextRoll } from "./MotionPrimitivesComponents/text-roll";
-import React from 'react'
+import React from "react";
 
 function TextRollAnimation(props) {
-    let component=props.component
-    let Text =props.Text 
-    let classes=props.classes
-  return (
-    <TextRoll className={classes}>{Text}</TextRoll>
-  )
+  let component = props.component;
+  let Text = props.Text;
+  let classes = props.classes;
+  return <TextRoll className={classes}>{Text}</TextRoll>;
 }
 
-export default TextRollAnimation
+export default TextRollAnimation;
