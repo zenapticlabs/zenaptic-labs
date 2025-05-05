@@ -1,49 +1,106 @@
 ---
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import Logo from "../../public/assets/logo-dark.svg";
 import facebook from "../../public/assets/facebookdark.svg";
 import linkedin from "../../public/assets/linkedindark.svg";
 import X from "../../public/assets/Xdark.svg";
 ---
-<footer class="w-full flex flex-col  justify-center items-center toggle footer-bg">
-    <div class="w-[80%] py-[72px] pb-[45px] max-md:pt-[72px] max-md:pb-[0px]  flex justify-center items-center max-md:flex-col border-b-1 border-[#EFEFEF]">
 
-      <div class="w-[50%] max-md:w-full flex flex-col justify-center items-center gap-10 ">
-    <Image src={Logo} alt="Logo" width={100} height={100} loading="lazy" class="inline-block mr-2 w-[227px]  self-baseline max-md:self-center headerFooterLogo" />
+<footer
+  class="w-full flex flex-col justify-center items-center toggle footer-bg"
+>
+  <div
+    class="w-[80%] py-[72px] pb-[45px] max-md:pt-[72px] max-md:pb-[0px] flex justify-center items-center max-md:flex-col border-b-1 border-[#EFEFEF]"
+  >
+    <div
+      class="w-[50%] max-md:w-full flex flex-col justify-center items-center gap-10"
+    >
+      <Image
+        src={Logo}
+        alt="Logo"
+        width={100}
+        height={100}
+        loading="lazy"
+        class="inline-block mr-2 w-[227px] self-baseline max-md:self-center headerFooterLogo"
+      />
 
-    <div class="flex items-center space-x-4 max-md:flex-col w-full max-md:justify-center ">
-
-        <span class="text-[18px] font-[400] text-[#292929] max-md:pb-[16px]">Follow us</span>
-        <div class="flex gap-1.5 w-[20%] max-md:justify-center  max-md:w-full footerSocialIcons max-md:pb-[40px]">
-            <Image src={facebook} alt="Logo" width={100} height={100} loading="lazy" class="inline-block w-[24px] h-[24px]" />
-            <Image src={X} alt="Logo" width={100} height={100} loading="lazy" class="inline-block w-[24px] h-[24px]" />
-            <Image src={linkedin} alt="Logo" width={100} height={100} loading="lazy" class="inline-block w-[24px] h-[24px]" />
+      <div
+        class="flex items-center space-x-4 max-md:flex-col w-full max-md:justify-center"
+      >
+        <span class="text-[18px] font-[400] text-[#292929] max-md:pb-[16px]"
+          >Follow us</span
+        >
+        <div
+          class="flex gap-1.5 w-[20%] max-md:justify-center max-md:w-full footerSocialIcons max-md:pb-[40px]"
+        >
+          <Image
+            src={facebook}
+            alt="Logo"
+            width={100}
+            height={100}
+            loading="lazy"
+            class="inline-block w-[24px] h-[24px]"
+          />
+          <Image
+            src={X}
+            alt="Logo"
+            width={100}
+            height={100}
+            loading="lazy"
+            class="inline-block w-[24px] h-[24px]"
+          />
+          <Image
+            src={linkedin}
+            alt="Logo"
+            width={100}
+            height={100}
+            loading="lazy"
+            class="inline-block w-[24px] h-[24px]"
+          />
         </div>
-        <span class="text-[18px]  font-[400] text-[#292929]  max-md:hidden">Privacy Policy</span>
-        <span class="text-[18px] font-[400] text-[#292929] max-md:hidden"> Terms of Use</span>
+        <span class="text-[18px] font-[400] text-[#292929] max-md:hidden"
+          >Privacy Policy</span
+        >
+        <span class="text-[18px] font-[400] text-[#292929] max-md:hidden">
+          Terms of Use</span
+        >
+      </div>
     </div>
-    </div>
-    <div class="w-[50%] max-md:w-full ">
-
-        <form class="flex flex-col items-center justify-center   ">
-            <label for="newsletter" class=" font-[400]  leading-[150%] font-[Urbanist] normal-case self-start ml-2 mb-4 text-[16px] max-md:w-full max-md:text-center">Ready to start working on your next big idea?</label>
-            <div class="flex items-center max-md:flex-col !w-[100%] rounded-4xl max-md:bg-white bg-[#9F9F9F1A]  ">
-                <input type="email" id="newsletter" name="newsletter" class="max-md:py-[10px] max-md:text-black max-md:text-center max-md:rounded-[100px] max-md:border-2 max-md:border-amber-600 flex-1 w-full  outline-0 px-4 text-[#A3A3A3]" placeholder="Subscribe to our newsletter" required>
-                <button onclick="console.log('submit')" class="px-4 py-2 h-[48px] m-2 mr-2 bg-[#FF7D12] text-white rounded-[100px] border toggleFooterButton max-md:w-full border-[var(--Color-Neutral-50,#FFF)]">Subscribe</button>
-            </div>
-        </form>
-        <div class="hidden max-md:flex w-full justify-between items-center py-[40px]">
-            <span class="text-[18px]  font-[400] text-[#292929]  ">Privacy Policy</span>
-            <span class="text-[18px] font-[400] text-[#292929] "> Terms of Use</span>
+    <div class="w-[50%] max-md:w-full">
+      <form class="flex flex-col items-center justify-center">
+        <label
+          for="newsletter"
+          class="font-[400] leading-[150%] font-[Urbanist] normal-case self-start ml-2 mb-4 text-[16px] max-md:w-full max-md:text-center"
+          >Ready to start working on your next big idea?</label
+        >
+        <div
+          class="flex items-center max-md:flex-col !w-[100%] rounded-4xl max-md:bg-white bg-[#9F9F9F1A]"
+        >
+          <input
+            type="email"
+            id="newsletter"
+            name="newsletter"
+            class="max-md:py-[10px] max-md:text-black max-md:text-center max-md:rounded-[100px] max-md:border-2 max-md:border-amber-600 flex-1 w-full outline-0 px-4 text-[#A3A3A3]"
+            placeholder="Subscribe to our newsletter"
+            required
+          />
+          <button
+            onclick="console.log('submit')"
+            class="px-4 py-2 h-[48px] m-2 mr-2 bg-[#FF7D12] text-white rounded-[100px] border toggleFooterButton max-md:w-full border-[var(--Color-Neutral-50,#FFF)]"
+            >Subscribe</button
+          >
         </div>
+      </form>
+      <div
+        class="hidden max-md:flex w-full justify-between items-center py-[40px]"
+      >
+        <span class="text-[18px] font-[400] text-[#292929]">Privacy Policy</span
+        >
+        <span class="text-[18px] font-[400] text-[#292929]"> Terms of Use</span>
+      </div>
     </div>
-
-</div>
-<p class="w-[80%] text-[#989898] font-[16px] pb-[72px] mt-2.5">© 2024 copyrightzenaptic. All rights reserved.</p>
-
-</div>      
-
-
-
-
+  </div>
+  <p class="w-[80%] text-[#989898] font-[16px] pb-[72px] mt-2.5">
+    © 2024 copyrightzenaptic. All rights reserved.
+  </p>
 </footer>

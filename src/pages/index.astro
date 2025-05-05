@@ -8,13 +8,16 @@ import IntelligentSolutions from "../components/IntelligentSolutions.astro";
 import ProgressSteps from "../components/ProgressSteps.astro";
 import TellUsAbout from "../components/TellUsAbout";
 import ChooseYourPlan from "../components/ChooseYourPlan.jsx";
+import RealWorldSolution from "../components/RealWorldSolution.astro";
 ---
+
 <Layout>
-<Hero  />
-<BrandsSection />
-<DigitalJourney />
-<IntelligentSolutions />
-<ProgressSteps />
- <ChooseYourPlan client:load />
- <TellUsAbout client:load />
+  <Hero />
+  <BrandsSection />
+  <DigitalJourney />
+  <IntelligentSolutions />
+  <ProgressSteps />
+  <RealWorldSolution />
+  <ChooseYourPlan client:load />
+  <TellUsAbout client:load />
 </Layout>

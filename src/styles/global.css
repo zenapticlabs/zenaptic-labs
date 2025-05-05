@@ -15,18 +15,25 @@
 .dark .footer-bg{
     background-color:blue !important
 } */
-*{
-    font-family: urbanist, sans-serif;
+* {
+  font-family: urbanist, sans-serif;
 }
-.orange-filter{
-    filter: brightness(0) saturate(100%) invert(63%) sepia(55%) saturate(4258%) hue-rotate(350deg) brightness(101%) contrast(102%);
+
+.orange-filter {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(55%) saturate(4258%) hue-rotate(350deg) brightness(101%) contrast(102%);
 }
-button , a {
-    cursor: pointer;
+
+button,
+a {
+  cursor: pointer;
 }
 
 input[type="email"]:-webkit-autofill {
-    box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
-    -webkit-text-fill-color: #000;
-    transition: background-color 5000s ease-in-out 0s;
-  }
+  box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
+  -webkit-text-fill-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+textarea {
+  resize: vertical;
+}

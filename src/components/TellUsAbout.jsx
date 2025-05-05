@@ -29,7 +29,7 @@ function TellUsAbout() {
   };
   return (
     <>
-      <div className="min-w-full px-20 py-18 flex justify-center items-center max-md:bg-[url(/assets/tell-us-aboutsmall.png)] max-md:bg-contain max-md:bg-[center_top_-135px] max-md:bg-[right_-135px]  bg-[url(/assets/TellUSAboutBG.png)] bg-cover bg-no-repeat bg-[center_top_-30px]  flex-col gap-y-10 max-md:px-[20px]">
+      <div className="min-w-full px-20 py-18 flex justify-center items-center max-md:bg-[url(/assets/tell-us-aboutsmall.png)] max-md:bg-contain max-md:bg-[center_top_-135px]   bg-[url(/assets/TellUSAboutBG.png)] bg-cover bg-no-repeat bg-[center_top_-30px]  flex-col gap-y-10 max-md:px-[20px]">
         <div className="w-full flex justify-center items-center ">
           <h3 className="text-4xl font-bold text-center leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l">
             Tell us about your project
@@ -79,26 +79,24 @@ function TellUsAbout() {
               <textarea
                 name="projectDescription"
                 placeholder="Project Description"
-                rows="1"
+                rows="1" cols="50"
                 value={formData.projectDescription}
                 onChange={handleChange}
                 className="w-full border-0 border-b border-[#BDBDBD] text-[#000000f8] text-[24px] placeholder-[#BDBDBD] focus:outline-none resize-none"
               ></textarea>
-     
 
-
-     <div className="w-full flex justify-center items-center">
-              <button
-                type="submit"
-                className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
-              >
-                Send Message
-                <img
-                  src="/assets/arrowrightWhite.svg"
-                  alt="arrow"
-                  className="inline ml-2 w-[24px] h-[24px]"
-                />
-              </button>
+              <div className="w-full flex justify-center items-center">
+                <button
+                  type="submit"
+                  className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
+                >
+                  Send Message
+                  <img
+                    src="/assets/arrowrightWhite.svg"
+                    alt="arrow"
+                    className="inline ml-2 w-[24px] h-[24px]"
+                  />
+                </button>
               </div>
             </form>
           </div>
@@ -111,7 +109,7 @@ function TellUsAbout() {
         <InfiniteSlider
           gap={100}
           direction={"horizontal"}
-          speed={130}
+          speed={80}
           speedOnHover={20}
         >
           <span

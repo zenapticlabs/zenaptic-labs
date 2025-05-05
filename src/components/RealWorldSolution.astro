@@ -1,0 +1,70 @@
+---
+import InfiniteSlider from "./InfiniteSlider.jsx";
+import ButtonArrowIcon from "../../public/assets/arrowrightWhite.svg";
+import { Image } from "astro:assets";
+
+let realWorldSolution = [
+  {
+    highlight: "AI-Powered Automation",
+    heading: "Streamlining Operations with Intelligent Workflow Automation",
+    subHeading:
+      "Developed a custom AI-driven system that automated 80% of repetitive tasks, reducing operational costs and boosting efficiency for a logistics company.",
+    caseStudy: "/assets/2-real-world-solution.png",
+  },
+  {
+    highlight: "Predictive Analytics",
+    heading: "Enhancing Customer Retention with AI Insights",
+    subHeading:
+      "Built a predictive analytics tool that identified churn risks, enabling a retail client to improve retention rates by 35% through personalized strategies.",
+    caseStudy: "/assets/3-real-world-solution.png",
+  },
+  {
+    highlight: "Machine Learning",
+    heading: "Title: Transforming Healthcare with Data-Driven Diagnostics",
+    subHeading:
+      "Description: Designed a machine learning model that improved diagnostic accuracy by 25%, empowering healthcare providers with faster, more reliable patient insights.",
+    caseStudy: "/assets/1-real-world-solution.png",
+  },
+];
+---
+
+<div
+  class="w-full flex flex-col justify-center items-center gap-10 py-[80px] px-[72px] max-md:px-[20px]"
+>
+  <!-- header -->
+  <div class="w-full flex flex-col justify-center items-center">
+    <h3 class="text-[48px] gap-[24px] font-bold text-center text-black">
+      Real-World Solutions with Proven Impact
+    </h3>
+    <span class="w-full font-normal text-[24px] text-black text-center">
+      Discover how Zenaptic Labs delivers custom AI solutions that solve
+      real-world challenges and drive success.
+    </span>
+  </div>
+
+  <!-- Slide -->
+  <div class="w-full relative flex justify-center items-center">
+    <InfiniteSlider
+      featuresList={realWorldSolution}
+      speed={80}
+      speedOnHover={20}
+      direction="horizontal"
+      client:load
+      component="real-world-solutions"
+    />
+  </div>
+  <!-- footer -->
+  <div class="w-full flex justify-center items-center">
+    <button
+      class="bg-[#FF7D12] mt-[85px] max-md:ml-[0px] max-md:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4"
+    >
+      <span>Start Your Project</span>
+      <Image
+        src={ButtonArrowIcon}
+        alt="Arrow"
+        loading="lazy"
+        class="object-cover object-center w-[24px] h-[24px] inline-block ml-2"
+      />
+    </button>
+  </div>
+</div>
