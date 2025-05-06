@@ -1,14 +1,10 @@
 ---
-import { Image } from "astro:assets";
-import pepsicoLogo from "../../public/assets/brands/pepsico_logo.svg";
-import goFundMeLogo from "../../public/assets/brands/go_fund_me_logo.svg";
-import chipotleLogo from "../../public/assets/brands/chipotle_logo.svg";
-import washingtonLogo from "../../public/assets/brands/washington_university_logo.svg";
-import deltaLogo from "../../public/assets/brands/delta_logo.svg";
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
 ---
 
-<div class="flex px-[80px] gap-9 py-[72px] overflow-y-hidden overflow-hidden max-lg:overflow-scroll max-md:justify-between max-md:px-5">
+<div
+  class="flex !bg-transparent px-[80px] light gap-9 py-[72px] overflow-y-hidden overflow-hidden max-md:justify-between max-md:px-5"
+>
   <InfiniteSlider
     gap={70}
     direction="horizontal"
@@ -16,10 +12,26 @@ import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
     speedOnHover={20}
     client:load
   >
-    <Image src={pepsicoLogo} alt="PepsiCo Logo" />
-    <Image src={goFundMeLogo} alt="GoFundMe Logo" />
-    <Image src={chipotleLogo} alt="Chipotle Logo" />
-    <Image src={washingtonLogo} alt="Washington Logo" />
-    <Image src={deltaLogo} alt="Delta Logo" />
+    <img
+      src="/assets/pepsico-light.svg"
+      alt="PepsiCo Logo"
+      class="toggle-image"
+    />
+    <img
+      src="/assets/gofundme-light.svg"
+      alt="GoFundMe Logo"
+      class="toggle-image"
+    />
+    <img
+      src="/assets/chipotle-light.svg"
+      alt="Chipotle Logo"
+      class="toggle-image"
+    />
+    <img
+      src="/assets/washingtonuniversity-light.svg"
+      alt="Washington Logo"
+      class="toggle-image"
+    />
+    <img src="/assets/delta-light.svg" alt="Delta Logo" class="toggle-image" />
   </InfiniteSlider>
 </div>

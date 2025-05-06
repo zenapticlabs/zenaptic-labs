@@ -1,7 +1,5 @@
 ---
 import InfiniteSlider from "./InfiniteSlider.jsx";
-import ButtonArrowIcon from "../../public/assets/arrowrightWhite.svg";
-import { Image } from "astro:assets";
 
 let realWorldSolution = [
   {
@@ -33,10 +31,10 @@ let realWorldSolution = [
 >
   <!-- header -->
   <div class="w-full flex flex-col justify-center items-center">
-    <h3 class="text-[48px] gap-[24px] font-bold text-center text-black">
+    <h3 class="text-[48px] gap-[24px] font-bold text-center heading-dark">
       Real-World Solutions with Proven Impact
     </h3>
-    <span class="w-full font-normal text-[24px] text-black text-center">
+    <span class="w-full font-normal text-[24px] text-center">
       Discover how Zenaptic Labs delivers custom AI solutions that solve
       real-world challenges and drive success.
     </span>
@@ -56,14 +54,14 @@ let realWorldSolution = [
   <!-- footer -->
   <div class="w-full flex justify-center items-center">
     <button
-      class="bg-[#FF7D12] mt-[85px] max-md:ml-[0px] max-md:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4"
+      class="bg-[#FF7D12] mt-[85px] max-md:ml-[0px] max-md:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4 btn-dark"
     >
       <span>Start Your Project</span>
-      <Image
-        src={ButtonArrowIcon}
+      <img
+        src="/assets/arrowupright-light.svg"
         alt="Arrow"
         loading="lazy"
-        class="object-cover object-center w-[24px] h-[24px] inline-block ml-2"
+        class="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
       />
     </button>
   </div>
