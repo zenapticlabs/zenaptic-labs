@@ -22,7 +22,7 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <span
               key={index}
-              className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#d7d7d7d5] whitespace-nowrap max-md:py-2 max-md:px-4"
+              className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#d7d7d7d5] whitespace-nowrap max-md:py-2 max-md:px-4 bullet-dark"
             >
               {item}
             </span>
@@ -48,10 +48,10 @@ export default function InfiniteSliderBasic(props) {
                 alt={item.alt}
                 className="rounded-lg w-[520px]   h-[390px] max-md:w-[260px] max-md:h-[195px] object-center object-contain transition-all ease-linear"
               />
-              <span className=" max-md:w-[260px] text-[18px] hidden max-md:block font-bold">
+              <span className=" max-md:w-[260px] text-[18px] hidden max-md:block font-bold heading-dark">
                 Enhancing Case Management for Increased Efficiency
               </span>
-              <span className="hidden max-md:block px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4">
+              <span className="hidden max-md:block px-4 heading-dark py-3 text-2xl max-md:text-xl rounded-full bullet-dark border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4">
                 HOOPSTOCOLLEGE
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <div
               key={index}
-              className="flex relative flex-col justify-center items-start max-md:items-start max-md:justify-start gap-4 max-md:gap-3 w-[520px] max-md:w-[260px]"
+              className="flex relative flex-col justify-center items-start max-md:items-start max-md:justify-start gap-4 max-md:gap-3 w-[520px] max-md:w-[260px] "
             >
               <div>
                 <Cursor
@@ -103,13 +103,13 @@ export default function InfiniteSliderBasic(props) {
                   className="rounded-lg    h-[390px] max-md:w-[260px] max-md:h-[195px] object-center object-contain transition-all ease-linear"
                 />
               </div>
-              <span className="max-md:w-[260px] text-[20px] text-[#525252] max-md:text-sm max-md:mt-[-10px]">
+              <span className="max-md:w-[260px] text-[20px] text-[#525252] max-md:text-sm max-md:mt-[-10px] heading-dark">
                 {item.highlight}
               </span>
-              <span className="text-[28px] font-bold max-md:text-2xl">
+              <span className="text-[28px] font-bold max-md:text-2xl ">
                 {item.heading}
               </span>
-              <span className=" text-wrap text-[18px] text-[#292929] max-md:text-base">
+              <span className=" text-wrap text-[18px] text-[#292929] max-md:text-base heading-dark">
                 {item.subHeading}
               </span>
             </div>

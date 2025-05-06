@@ -1,57 +1,70 @@
 ---
-import { Image } from "astro:assets";
-import Logo from "../../public/assets/logo-dark.svg";
-import ArrowUP from "../../public/assets/arrowUpRight.svg";
-import list from "../../public/assets/list.svg";
+import ToggleTheme from "./ThemeToggle.jsx";
 ---
+
 <header
-  class="h-[96px] flex justify-between items-center toggle mx-auto max-md:mx-[0px] w-full"
+  class="h-[96px] flex justify-between items-center toggle mx-auto max-lg:mx-[0px] w-full"
 >
-  <div class="text-2xl font-bold pl-[115px] max-md:pl-[20px] max-md:w-[50%]">
-    <Image
-      src={Logo}
+  <div class="text-2xl font-bold pl-[115px] max-lg:pl-[20px] max-lg:w-[50%]">
+    <img
+      src="/assets/headerlogo-light.svg"
       alt="Logo"
       width={100}
       height={100}
       loading="lazy"
-      class="inline-block mr-2 w-[227px] h-[36px] max-md:w-[50%] headerFooterLogo min-w-[200px]"
+      class="inline-block mr-2 w-[227px] h-[36px] max-lg:w-[50%] headerFooterLogo min-w-[200px] toggle-image"
     />
   </div>
   <nav
-    class="flex justify-center items-center gap-[40px] text-gray-400 h-full toggle mr-[100px] max-md:mr-[35px]"
+    class="flex justify-center items-center gap-[40px] text-gray-400 h-full toggle mr-[100px] max-lg:mr-[35px]"
   >
     <span
-      class="nav-link max-md:hidden cursor-pointer"
+      class="nav-link max-lg:hidden cursor-pointer"
       onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
       >About Us</span
     >
-    <span class="nav-link max-md:hidden cursor-pointer"   onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';">Services</span>
-    <span class="nav-link max-md:hidden cursor-pointer"  onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'">Case Studies</span>
-    <span class="nav-link max-md:hidden cursor-pointer"  onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'">Contact</span>
-    <div class="flex justify-center items-center max-md:justify-end"  onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';">
-      <span class="nav-link max-md:hidden mx-[16] my-2 cursor-pointer">
-        <Image
-          src={ArrowUP}
+    <span
+      class="nav-link max-lg:hidden cursor-pointer"
+      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+      >Services</span
+    >
+    <span
+      class="nav-link max-lg:hidden cursor-pointer"
+      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
+      >Case Studies</span
+    >
+    <span
+      class="nav-link max-lg:hidden cursor-pointer"
+      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
+      >Contact</span
+    >
+    <div
+      class="flex justify-center items-center max-lg:justify-end"
+      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+    >
+      <span class="nav-link max-lg:hidden mx-[16] my-2 cursor-pointer">
+        <img
+          src="/assets/textarrowupright-light.svg"
           alt="Arrow"
           loading="lazy"
-          class="object-cover object-center inline-block orange-filter mr-7"
+          class="object-cover object-center inline-block mr-7 toggle-image"
           id="headerArrowUp"
         />
       </span>
     </div>
-
+    <ToggleTheme client:load />
     <span
       id="nav-bar"
-      class="hidden max-md:flex justify-between items-center w-[50%]"
+      class="hidden max-lg:flex justify-between items-center w-[50%]"
     >
-      <Image
-        src={list}
+      <img
+        src="/assets/list-light.svg"
         alt="Logo"
         width={100}
         height={100}
         loading="lazy"
         id="icon"
-        class="inline-block invert h-[24px] w-[24px] headerFooterLogo"
+        class="inline-block invert h-[24px] w-[24px] toggle-image"
       />
     </span>
   </nav>
@@ -61,49 +74,53 @@ import list from "../../public/assets/list.svg";
   id="menu"
   style="height:calc(100vh)"
 >
-  <div class="absolute inset-0 bg-white z-0 h-full">
+  <div class="absolute inset-0 bg-sm z-0 h-full">
     <div
       class="relative w-full overflow-hidden flex flex-col gap-5 justify-start items-between z-10 px-[24px] py-[40px]"
     >
       <span
-        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
         id="about"
-        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
       >
         About Us
       </span>
       <span
-        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
         id="services"
-         onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
       >
         Services
       </span>
       <span
-        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
         id="caseStudies"
-         onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
       >
         Case Studies
       </span>
       <span
-        class="font-urbanist text-[18px] font-normal leading-[150%] text-center text-[black] rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
+        class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-4 pb-3.5 w-full cursor-pointer"
         id="contact"
-         onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list.svg'"
+        onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src='/assets/list-light.svg'"
       >
         Contact
       </span>
     </div>
   </div>
 </div>
-<script>
+<script defer>
   document.getElementById("nav-bar")?.addEventListener("click", () => {
     const icon = document.getElementById("icon");
     if (icon && icon instanceof HTMLImageElement) {
-      if (icon.src.includes("close")) {
-        icon.src = "../../assets/list.svg";
+      if (icon.src.includes("close-light") || icon.src.includes("close-dark")) {
+        icon.src = icon.src.includes("dark")
+          ? "../../assets/list-dark.svg"
+          : "../../assets/list-light.svg";
       } else {
-        icon.src = "../../assets/close.svg";
+        icon.src = icon.src.includes("dark")
+          ? "../../assets/close-dark.svg"
+          : "../../assets/close-light.svg";
       }
     }
     const navBar = document.getElementById("menu");

@@ -12,13 +12,13 @@ function GenericSolutionsSection(props) {
       >
         <div className="flex flex-col gap-6 w-[80%] pl-[30px] max-md:pl-0 justify-center items-center ">
           <div className="flex justify-baseline items-center w-full">
-            <h4 className="text-[48px] max-md:text-[32px] font-bold bg-gradient-to-r from-[#181818] to-[#999] bg-clip-text text-transparent">
+            <h4 className="text-[48px] heading-dark max-md:text-[32px] font-bold bg-gradient-to-r from-[#181818] to-[#999] bg-clip-text text-transparent">
               {techSolutions.heading}
             </h4>
           </div>
 
           <div className="w-full justify-baseline items-center">
-            <p className="text-[24px] font-medium text-[#292929] max-md:text-lg">
+            <p className="text-[24px] font-medium text-[#292929] max-md:text-lg heading-dark">
               {techSolutions.description.line1} <br className="max-md:hidden" />
               {techSolutions.description.line2}
             </p>
@@ -29,7 +29,7 @@ function GenericSolutionsSection(props) {
               {techSolutions.features.map((item, index) => (
                 <span
                   key={index}
-                  className="px-4 py-3 text-[20px] max-md:text-lg rounded-full border text-[#464646] border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] max-md:py-2 max-md:px-4"
+                  className="px-4 py-3 text-[20px] bullet-dark max-md:text-lg rounded-full border text-[#464646] border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] max-md:py-2 max-md:px-4"
                 >
                   {item}
                 </span>
@@ -42,10 +42,10 @@ function GenericSolutionsSection(props) {
           <button className="bg-[#FF7D12] mt-[85px] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4">
             <span>Start Your Project</span>
             <img
-              src="/assets/arrowrightWhite.svg"
+              src="/assets/arrowupright-light.svg"
               alt="Arrow"
               loading="lazy"
-              className="object-cover object-center w-[24px] h-[24px] inline-block ml-2"
+              className="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
               id="headerArrowUp"
             />
           </button>

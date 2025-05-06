@@ -95,9 +95,9 @@ export function InfiniteSlider({
     : {};
 
   return (
-    <div className={cn(`overflow-hidden relative ${type === "image" ? 'bg-white' :''} z-10` , className)}>
+    <div className={cn(`overflow-hidden relative ${type === "image" ? 'bg-transparent' : ''} z-10`, className)}>
       <motion.div
-        className='flex w-max'
+        className='flex w-max !bg-transparent'
         style={{
           ...(direction === 'horizontal'
             ? { x: translation }
