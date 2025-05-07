@@ -1,26 +1,53 @@
 @import "tailwindcss";
-/* .dark{
-    background-color: #080808 !important;
-    color: #EFEFEF !important;
-} 
- .light{
-    background-color: #EFEFEF !important;
-    color: #080808  !important;
-} */
 
-/* .footer-bg{
-    background-color: red;
+.dark {
+  background-color: #080808 !important;
+  color: #ffffff !important;
 }
 
-.dark .footer-bg{
-    background-color:blue !important
-} */
+.light {
+  background-color: #ffffff !important;
+  color: #292929 !important;
+}
+
+.dark .bg-sm {
+  background: #080808;
+  color: white;
+}
+
+.bg-sm {
+  color: #080808;
+  background: white;
+}
+
+.dark button {
+  background: radial-gradient(#3b3939, #000000) !important;
+  border: 1px solid #ffffff !important;
+}
+
+.dark .lamp {
+  background: #fff !important;
+  box-shadow: rgb(255 255 255 / 56%) 0px 1px 20px 7px !important;
+}
+
+.dark .text-dark-white {
+  color: #fff !important;
+}
+
+.light .lamp {
+  color: #ff7d12 !important;
+}
+
+.dark .hero-dark {
+  box-shadow: none !important;
+}
+
+.dark .hero-dark .dark-bg {
+  background: none !important;
+}
+
 * {
   font-family: urbanist, sans-serif;
-}
-
-.orange-filter {
-  filter: brightness(0) saturate(100%) invert(63%) sepia(55%) saturate(4258%) hue-rotate(350deg) brightness(101%) contrast(102%);
 }
 
 button,
@@ -36,4 +63,21 @@ input[type="email"]:-webkit-autofill {
 
 textarea {
   resize: vertical;
+}
+
+.dark .heading-dark {
+  color: #ffffff;
+}
+
+.dark .bullet-dark {
+  background: #00000033 !important;
+  color: #ffffff;
+}
+
+.dark .description-detail {
+  color: #fff !important;
+}
+
+.dark .digitalbgsmall {
+  background-image: url("/assets/digitalbgsmall-dark.png") !important;
 }

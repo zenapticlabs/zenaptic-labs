@@ -50,7 +50,7 @@ function GenericSolutionsSection(props) {
      {techSolutions.caseStudies !== undefined &&   <div className="!w-[100%] py-[80px] !mx-0 font-semibold !text-2xl text-[#292929] max-md:text-xl">
             <GenericInfiniteSlider
                 featuresList={techSolutions.caseStudies}
-                speed={200}
+                speed={80}
                 speedOnHover={20}
                 direction="horizontal"
                 clientLoad
