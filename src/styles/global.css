@@ -81,3 +81,16 @@ textarea {
 .dark .digitalbgsmall {
   background-image: url("/assets/digitalbgsmall-dark.png") !important;
 }
+.dark .tellusbg {
+  background-image: url("/assets/tellusaboutbg-dark.png") !important;
+}
+
+.dark .email {
+  color: #ffffff
+}
+
+.dark input[type="email"]:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+}
