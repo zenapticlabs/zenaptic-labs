@@ -54,7 +54,17 @@ button,
 a {
   cursor: pointer;
 }
-
+button:active {
+  background: #ff6000;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: box-shadow 0.1s ease;
+}
+.dark button:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
+}
 input[type="email"]:-webkit-autofill {
   box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
   -webkit-text-fill-color: #000;
@@ -84,11 +94,9 @@ textarea {
 .dark .tellusbg {
   background-image: url("/assets/tellusaboutbg-dark.png") !important;
 }
-
 .dark .email {
-  color: #ffffff
+  color: #ffffff;
 }
-
 .dark input[type="email"]:-webkit-autofill {
   box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
   -webkit-text-fill-color: #ffffff;

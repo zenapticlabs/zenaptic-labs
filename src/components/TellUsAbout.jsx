@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
+
 function TellUsAbout() {
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     companyName: "",
     budget: "",
@@ -16,16 +17,23 @@ function TellUsAbout() {
       [name]: value,
     }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(JSON.stringify(formData));
     setFormData({
-      fullName: "",
+      name: "",
       email: "",
       companyName: "",
       budget: "",
       projectDescription: "",
     });
+    const res = await fetch("/api/route", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const result = await res.json();
   };
   return (
     <>
@@ -38,23 +46,24 @@ function TellUsAbout() {
 
         <div className="w-full flex justify-center items-center">
           <div className="w-full md:w-[50%]">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-y-10">
+            <form className="flex flex-col gap-y-10" onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="fullName"
+                name="name"
                 placeholder="Full Name"
-                value={formData.fullName}
+                value={formData.name}
                 onChange={handleChange}
-                className="w-full border-0 border-b border-[#BDBDBD]  text-[24px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
+                className="w-full border-0 border-b border-[#BDBDBD]  text=[24px] max-md:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
               />
 
               <input
+                required
                 type="email"
                 name="email"
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border-0 border-b border-[#BDBDBD]  text-[24px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
+                className="w-full border-0 border-b border-[#BDBDBD]  text=[24px] max-md:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
               />
 
               <div className="flex flex-col md:flex-row gap-6">
@@ -64,15 +73,15 @@ function TellUsAbout() {
                   placeholder="Company Name"
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text-[24px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
+                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text=[24px] max-md:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
                 />
                 <input
                   type="text"
                   name="budget"
-                  placeholder="What’s Your Budget?"
+                  placeholder="What’s Your Budget? USD"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text-[24px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
+                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text=[24px] max-md:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
                 />
               </div>
 
@@ -83,14 +92,11 @@ function TellUsAbout() {
                 cols="50"
                 value={formData.projectDescription}
                 onChange={handleChange}
-                className="w-full border-0 border-b border-[#BDBDBD]  text-[24px] placeholder-[#BDBDBD] focus:outline-none resize-none"
+                className="w-full border-0 border-b border-[#BDBDBD]  text=[24px] max-md:text-[20px] placeholder-[#BDBDBD] focus:outline-none resize-none"
               ></textarea>
 
               <div className="w-full flex justify-center items-center">
-                <button
-                  type="submit"
-                  className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
-                >
+                <button className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]">
                   Send Message
                   <img
                     src="/assets/arrowupright-light.svg"
@@ -102,7 +108,6 @@ function TellUsAbout() {
             </form>
           </div>
         </div>
-
       </div>
 
       <div className="w-full flex justify-center  items-center ">
