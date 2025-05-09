@@ -19,7 +19,7 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <span
               key={index}
-              className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] whitespace-nowrap max-md:py-2 max-md:px-4"
+              className="px-4 py-3 text-2xl max-md:text-[18px] rounded-full border border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] whitespace-nowrap max-md:py-2 max-md:px-4"
             >
               {item}
             </span>

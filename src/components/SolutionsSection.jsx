@@ -7,7 +7,7 @@ function GenericSolutionsSection(props) {
   return (
     <>
       <div
-        className="w-full overflow-hidden mx-auto flex justify-between  items-center px-[80px] relative max-md:px-5 gap-10 pt-[80px] max-md:pt-[40px] max-md:flex-col"
+        className="w-full overflow-hidden mx-auto flex justify-between  items-start max-md:items-center px-[80px] relative max-md:px-5 gap-10 pt-[80px] max-md:pt-[40px] max-md:flex-col"
         id="techSolutionsSection"
       >
         <div className="flex flex-col gap-6 w-[80%] pl-[30px] max-md:pl-0 justify-center items-center ">
@@ -38,8 +38,8 @@ function GenericSolutionsSection(props) {
           </div>
         </div>
 
-        <div className="   absolute top-0   right-[10%] max-md:right-0 w-[20%] max-md:flex max-md:w-[70%] max-md:static max-md:justify-baseline max-md:items-center max-md:mt-10 max-md:gap-5">
-          <button className="bg-[#FF7D12] mt-[85px] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4">
+        <div className=" max-md:right-0 w-[20%] flex justify-end max-md:w-[70%] max-md:static max-md:justify-start max-md:items-center max-md:mt-10 max-md:gap-5">
+          <button className="bg-[#FF7D12] max-md:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4 active:bg-[#ff6000]">
             <span>Start Your Project</span>
             <img
               src="/assets/arrowupright-light.svg"
