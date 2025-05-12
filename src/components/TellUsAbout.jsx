@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 
 function TellUsAbout() {
   const [formData, setFormData] = useState({
@@ -17,36 +18,110 @@ function TellUsAbout() {
       [name]: value,
     }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormData({
-      name: "",
-      email: "",
-      companyName: "",
-      budget: "",
-      projectDescription: "",
-    });
-    const res = await fetch("/api/route", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    const result = await res.json();
+    const theme = document
+      .getElementsByTagName("body")[0]
+      .classList.contains("dark")
+      ? "dark"
+      : "light";
+
+    const { email } = formData;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!email || !emailPattern.test(email)) {
+      toast.warn(" Please enter a valid email", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: theme,
+        transition: Bounce,
+      });
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/route", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+
+      if (result.ok) {
+        toast.success(`${result.message}`, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: theme,
+          transition: Bounce,
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          companyName: "",
+          budget: "",
+          projectDescription: "",
+        });
+      } else {
+        toast.error(`${result.message}`, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: theme,
+          transition: Bounce,
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          companyName: "",
+          budget: "",
+          projectDescription: "",
+        });
+      }
+    } catch (error) {
+      toast.error("🔥 Something went wrong, please try again later", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: theme,
+        transition: Bounce,
+      });
+    }
   };
+
   return (
     <>
-      <div className="min-w-full px-20 py-18 flex justify-center items-center   max-md:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)]  tellusbg  bg-cover bg-no-repeat bg-[center_top_-30px]  flex-col gap-y-10 max-md:px-[20px]">
-        <div className="w-full flex justify-center items-center ">
+      <div className="min-w-full px-20 py-18 flex justify-center items-center max-md:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)] tellusbg bg-cover bg-no-repeat bg-[center_top_-30px] flex-col gap-y-10 max-md:px-[20px]">
+        <div className="w-full flex justify-center items-center">
           <h3 className="text-4xl font-bold text-center heading-dark leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l max-md:text-[32px]">
             Tell us about your project
           </h3>
         </div>
-
         <div className="w-full flex justify-center items-center">
           <div className="w-full md:w-[50%]">
-            <form className="flex flex-col gap-y-10" onSubmit={handleSubmit}>
+            <form className="flex flex-col gap-y-10">
               <input
                 type="text"
                 name="name"
@@ -96,7 +171,10 @@ function TellUsAbout() {
               ></textarea>
 
               <div className="w-full flex justify-center items-center">
-                <button className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]">
+                <button
+                  onClick={handleSubmit}
+                  className="max-md:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
+                >
                   Send Message
                   <img
                     src="/assets/arrowupright-light.svg"
@@ -110,15 +188,25 @@ function TellUsAbout() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center  items-center ">
-        <InfiniteSlider
-          gap={100}
-          direction={"horizontal"}
-          speed={80}
-          speedOnHover={20}
-        >
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+        client:load
+      />
+
+      <div className="w-full flex justify-center items-center">
+        <InfiniteSlider gap={100} direction={"horizontal"} speed={80} speedOnHover={20}>
           <span
-            className=" text-transparent max-md:!text-[36px] stroke-text  text-center font-urbanist font-bold text-[56px] leading-[135%] "
+            className=" text-transparent max-md:!text-[36px] stroke-text  text-center font-urbanist font-bold text-[56px] leading-[135%]"
             style={{
               WebkitTextStroke: "1px #686868",
             }}
@@ -126,7 +214,7 @@ function TellUsAbout() {
             TRANSFORMING SOFTWARE IDEAS FOR YOUR BUSINESS INTO LIFE
           </span>
           <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l self-center from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] lamp"></span>
-          <span className="  from-[#999999] max-md:!text-[36px] to-[#181818] bg-clip-text text-transparent bg-gradient-to-r text-[56px] font-extrabold leading-[135%] ">
+          <span className="  from-[#999999] max-md:!text-[36px] to-[#181818] bg-clip-text text-transparent bg-gradient-to-r text-[56px] font-extrabold leading-[135%]">
             TRANSFORMING SOFTWARE IDEAS FOR YOUR BUSINESS INTO LIFE
           </span>
           <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l self-center from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] lamp"></span>
