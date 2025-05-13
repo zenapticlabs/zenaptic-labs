@@ -9,11 +9,11 @@ const ThemeToggle = () => {
   }
 
   return (
-    <span
+    <button
       id="theme-toggle"
       onClick={switchTheme}
-      type="span"
-      className={`theme-toggle-button ${
+      type="button"
+      className={`${
         theme == "dark"
           ? "text-gray-300 border-gray-300"
           : "text-gray-800 border-gray-500"
@@ -21,7 +21,7 @@ const ThemeToggle = () => {
     >
       <svg
         id="theme-toggle-dark-icon"
-        className={`${theme === "light" ? "hidden" : ""} w-5 h-5`}
+        className={`${theme === "dark" ? "hidden" : ""} w-5 h-5`}
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const ThemeToggle = () => {
       </svg>
       <svg
         id="theme-toggle-light-icon"
-        className={`${theme === "light" ? "" : "hidden"} w-5 h-5`}
+        className={`${theme === "dark" ? "" : "hidden"} w-5 h-5`}
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const ThemeToggle = () => {
           clipRule="evenodd"
         ></path>
       </svg>
-    </span>
+    </button>
   );
 };
 

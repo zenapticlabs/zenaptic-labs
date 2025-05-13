@@ -23,11 +23,13 @@ export async function POST({ request }) {
     <p >${data.name}  </p>
     <p style="font-weight:700; font-size:12px ">${data.email}</p>
     <p ><strong>Company Name:</strong></p>
-    <p >${data.companyName || 'N/A'}</p>
+    <p >${data.companyName || "N/A"}</p>
     <p ><strong>Budget:</strong></p>
-    <p style="color: #2e7d32; font-weight: bold; ">${data.budget || 'N/A'}</p>
+    <p style="color: #2e7d32; font-weight: bold; ">${data.budget || "N/A"}</p>
     <h3 style="text-align: center; font-size: 14px; font-weight: 700;">Project Description</h3>
-    <p style="line-height: 1.8;">${data.projectDescription || 'No description provided.'}</p>
+    <p style="line-height: 1.8;">${
+      data.projectDescription || "No description provided."
+    }</p>
   </div>
 </body>
 
@@ -38,7 +40,10 @@ export async function POST({ request }) {
       data.name
     );
     const recipients = [
-      new Recipient(import.meta.env.MAILERSEND_TO_EMAIL, import.meta.env.MAILERSEND_RECIEVER_NAME),
+      new Recipient(
+        import.meta.env.MAILERSEND_TO_EMAIL,
+        import.meta.env.MAILERSEND_RECIEVER_NAME
+      ),
     ];
 
     const emailParams = new EmailParams()

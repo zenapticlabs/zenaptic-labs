@@ -59,22 +59,23 @@ const ChooseYourPlan = () => {
   ];
 
   return (
-    <div className="w-full px-[80px] py-[80px] bg-light  max-lg:py-[40px] max-lg:px-[20px] max-lg:pl-[50px] flex flex-col relative before:content-[''] before:w-[2px] before:absolute before:left-[60px] before:max-lg:left-[25px] before:h-full before:bg-[#DCDCDC]">
-      <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-lg:left-[15px] absolute lamp"></span>
+    <div className="w-full px-[80px] py-[80px] bg-light  max-md:py-[40px] max-md:px-[20px] max-md:pl-[50px] flex flex-col relative before:content-[''] before:w-[2px] before:absolute before:left-[60px] before:max-md:left-[25px] before:h-full before:bg-[#DCDCDC]">
+      <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-md:left-[15px] absolute lamp"></span>
       <div className="w-full flex flex-col justify-center items-center gap-[24px]">
-        <h2 className="w-full text-center heading-dark from-[#999999] to-[#181818] bg-clip-text text-transparent font-urbanist text-[48px] font-bold leading-[135%] bg-gradient-to-l max-lg:text-[32px]">
+        <h2 className="w-full text-center heading-dark from-[#999999] to-[#181818] bg-clip-text text-transparent font-urbanist text-[48px] font-bold leading-[135%] bg-gradient-to-l max-md:text-[32px]">
           Choose the Perfect Plan for Your Goals
         </h2>
-        <span className="text-center text-[24px] font-[500] max-lg:text-[18px]">
+        <span className="text-center max-md:text-[18px]">
           Unlock exceptional development tailored to your pace and priorities.
         </span>
       </div>
 
-      <div className="w-full justify-center gap-[40px] py-[80px] max-lg:py-[40px] max-lg:items-center flex h-[700px] max-lg:h-fit max-lg:flex-col">
+      {/* PlansSection */}
+      <div className="w-full justify-center gap-[40px] py-[80px] max-md:py-[40px] flex h-[700px] max-md:h-fit max-md:flex-col">
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`w-[460px] !h-fit  hover:[box-shadow:0px_0px_20px_0px_rgba(255,179,120,0.10),0px_0px_80px_8px_rgba(255,179,120,0.10)] hover:backdrop-blur-[2px]  max-md:w-full max-lg:w-[70%] rounded-[16px] border border-solid border-[#EFEFEF] bg-light shadow-[0px_4px_40px_0px_rgba(255,255,255,0.25)] backdrop-blur-[2px] overflow-hidden transition-all duration-300 ease-in-out 
+            className={`w-[460px] h-fit  hover:[box-shadow:0px_0px_20px_0px_rgba(255,179,120,0.10),0px_0px_80px_8px_rgba(255,179,120,0.10)] hover:backdrop-blur-[2px]  max-md:w-full rounded-[16px] border border-solid border-[#EFEFEF] bg-light shadow-[0px_4px_40px_0px_rgba(255,255,255,0.25)] backdrop-blur-[2px] overflow-hidden transition-all duration-300 ease-in-out 
                             
                         `}
           >
@@ -82,18 +83,16 @@ const ChooseYourPlan = () => {
               <img
                 src={plan.icon}
                 alt="Rocket"
-                className="w-[72px] h-[72px] max-lg:w-[56px] max-lg:h-[56px] mr-3 toggle-image "
+                className="w-[72px] h-[72px] mr-3 toggle-image "
               />
-              <h2 className="text-[28px] font-semibold max-lg:text-[24px]">
-                {plan.title}
-              </h2>
+              <h2 className="text-[28px] font-semibold ">{plan.title}</h2>
             </div>
 
             <div className="divide-y divide-gray-200">
               {plan.features.map((feature, featureIndex) => (
                 <div
                   key={featureIndex}
-                  className={`transition-all duration-300 ease-in-out overflow-hidden !max-h-fit`}
+                  className={`transition-all duration-300 ease-in-out overflow-hidden max-h-fit`}
                 >
                   <div
                     className="flex justify-between  items-center px-4 py-3 cursor-pointer  transition-all ease-in-out transition-300 "
@@ -111,9 +110,9 @@ const ChooseYourPlan = () => {
                         alt="Check Mark"
                         className="w-6 h-6 toggle-image"
                       />
-                      <span className="text-[18px] font-medium">{feature}</span>
+                      <span className="text-sm font-medium">{feature}</span>
                     </div>
-                    <span
+                    <button
                       className={`w-6 h-6 transition-transform !border-0 duration-300 transform ${
                         openFeature === `${index}-${featureIndex}`
                           ? "rotate-180"
@@ -125,13 +124,11 @@ const ChooseYourPlan = () => {
                         className="toggle-image"
                         alt="Caret Down"
                       />
-                    </span>
+                    </button>
                   </div>
                   {openFeature === `${index}-${featureIndex}` && (
                     <div className="px-4 py-2">
-                      <p className="text-[16px]">
-                        {plan.responses[featureIndex]}
-                      </p>
+                      <p className="text-sm">{plan.responses[featureIndex]}</p>
                     </div>
                   )}
                 </div>

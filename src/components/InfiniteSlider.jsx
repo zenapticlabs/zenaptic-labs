@@ -22,7 +22,7 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <span
               key={index}
-              className="px-4 py-3 text-2xl max-lg:text-xl rounded-full border border-[#DCDCDC] bg-[#d7d7d7d5] whitespace-nowrap max-lg:py-2 max-lg:px-4 bullet-dark"
+              className="px-4 py-3 text-2xl max-md:text-xl rounded-full border border-[#DCDCDC] bg-[#d7d7d7d5] whitespace-nowrap max-md:py-2 max-md:px-4 bullet-dark"
             >
               {item}
             </span>
@@ -41,17 +41,17 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <div
               key={index}
-              className="flex relative flex-col justify-center items-start max-lg:items-start max-lg:justify-start gap-4 max-lg:gap-3 w-[520px] max-lg:w-[260px]"
+              className="flex relative flex-col justify-center items-start max-md:items-start max-md:justify-start gap-4 max-md:gap-3 w-[520px] max-md:w-[260px]"
             >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="rounded-lg w-[520px]   h-[390px] max-lg:w-[260px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
+                className="rounded-lg w-[520px]   h-[390px] max-md:w-[260px] max-md:h-[195px] object-center object-contain transition-all ease-linear"
               />
-              <span className=" max-lg:w-[260px] text-[18px] hidden max-lg:block font-bold heading-dark">
+              <span className=" max-md:w-[260px] text-[18px] hidden max-md:block font-bold heading-dark">
                 Enhancing Case Management for Increased Efficiency
               </span>
-              <span className="hidden max-lg:block px-4 heading-dark py-3 text-[16px] rounded-full bullet-dark border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-lg:py-2 max-lg:px-4">
+              <span className="hidden max-md:block px-4 heading-dark py-3 text-2xl max-md:text-xl rounded-full bullet-dark border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-md:py-2 max-md:px-4">
                 HOOPSTOCOLLEGE
               </span>
             </div>
@@ -70,7 +70,7 @@ export default function InfiniteSliderBasic(props) {
           {featuresList.map((item, index) => (
             <div
               key={index}
-              className="flex relative flex-col justify-center items-start max-lg:items-start max-lg:justify-start gap-4 max-lg:gap-3 w-[520px] max-lg:w-[260px] "
+              className="flex relative flex-col justify-center items-start max-md:items-start max-md:justify-start gap-4 max-md:gap-3 w-[520px] max-md:w-[260px] "
             >
               <div>
                 <Cursor
@@ -93,23 +93,23 @@ export default function InfiniteSliderBasic(props) {
                   <img
                     src={item.caseStudy}
                     alt="real world solution "
-                    className="rounded-lg   z-[10000]  h-[120px] max-lg:w-[200px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
+                    className="rounded-lg   z-[10000]  h-[120px] max-md:w-[200px] max-md:h-[195px] object-center object-contain transition-all ease-linear"
                   />
                 </Cursor>
 
                 <img
                   src={item.caseStudy}
                   alt="real world solution "
-                  className="rounded-lg    h-[390px] max-lg:w-[260px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
+                  className="rounded-lg    h-[390px] max-md:w-[260px] max-md:h-[195px] object-center object-contain transition-all ease-linear"
                 />
               </div>
-              <span className="max-lg:w-[260px] text-[20px] max-lg:text-[14px] text-[#525252] max-lg:text-sm max-lg:mt-[-10px] heading-dark">
+              <span className="max-md:w-[260px] text-[20px] text-[#525252] max-md:text-sm max-md:mt-[-10px] heading-dark">
                 {item.highlight}
               </span>
-              <span className="text-[28px] font-bold max-lg:text-[24px] ">
+              <span className="text-[28px] font-bold max-md:text-2xl ">
                 {item.heading}
               </span>
-              <span className=" text-wrap text-[18px] text-[#292929] max-lg:text-[16px] max-lg:text-base heading-dark">
+              <span className=" text-wrap text-[18px] text-[#292929] max-md:text-base heading-dark">
                 {item.subHeading}
               </span>
             </div>
