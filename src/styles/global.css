@@ -54,6 +54,16 @@ button,
 a {
   cursor: pointer;
 }
+.theme-toggle-button:active {
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: box-shadow 0.1s ease;
+}
+.dark .theme-toggle-button:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
+}
 button:active {
   background: #ff6000;
   box-shadow:
@@ -101,4 +111,25 @@ textarea {
   box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
   -webkit-text-fill-color: #ffffff;
   transition: background-color 5000s ease-in-out 0s;
+}
+.light .toggle-gredient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  pointer-events: none;
+  z-index: 50;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+  ) !important;
+}
+.dark .toggle-gredient {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0)
+  ) !important;
 }
