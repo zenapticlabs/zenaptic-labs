@@ -39,28 +39,28 @@ const progressSteps = [
 ];
 ---
 
-<div class="conatiner px-20 max-md:px-[20px]">
+<div class="conatiner px-20 max-lg:px-[20px]">
   <h2
-    class="w-full text-center heading-dark from-[#999999] to-[#181818] bg-clip-text text-transparent font-urbanist text-[48px] font-bold leading-[135%] bg-gradient-to-l max-md:pb-[30px]"
+    class="w-full text-center heading-dark max-lg:text-[32px] from-[#999999] to-[#181818] bg-clip-text text-transparent font-urbanist text-[48px] font-bold leading-[135%] bg-gradient-to-l max-lg:pb-[30px]"
   >
     Development Approach
   </h2>
   <div class="w-full flex justify-center items-center gap-1">
     <div
-      class="w-[100%] flex flex-wrap justify-center items-center max-md:py-0 py-20"
+      class="w-[100%] flex flex-wrap justify-center items-center max-lg:py-0 py-20"
     >
-      <div class="w-full gap-10 flex flex-col">
+      <div class="w-full gap-10 flex flex-col justify-center items-center">
         <div
-          class="w-full flex justify-around flex-wrap max-md:flex-col items-center gap-6"
+          class="w-full max-lg:w-[60%] max-md:w-full flex justify-around flex-wrap max-lg:flex-col items-center gap-6"
         >
           {
             progressSteps.map((step) => (
-              <div class="inset-0 bg-transparent  group-hover:bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.9)_0%,_transparent_70%)] transition-all duration-300 pointer-events-none w-[30%] max-md:w-[100%] !flex  flex-col justify-center items-center gap-12 p-6  border-[1px] border-[#DCDCDC] rounded-[8px]">
+              <div class="inset-0 bg-transparent min-h-[350px] !h-fit w-[30%] max-lg:w-[100%] !flex  flex-col justify-center items-center gap-12 p-6  border-[1px] border-[#DCDCDC] rounded-[8px]">
                 <div class="w-full ">
                   <span class="w-full block heading-dark  text-start text-[20px]  font-semibold leading-[135%] uppercase text-[var(--Color-Neutral-300,#525252)]">
                     {step.title}
                   </span>
-                  <span class="w-full block text-start heading-dark text-[28px] font-urbanist font-semibold leading-[150%] text-[#292929]">
+                  <span class="w-full block text-start heading-dark text-[28px] max-lg:text-[24px] font-urbanist font-semibold leading-[150%] text-[#292929]">
                     {step.description}
                   </span>
                 </div>
@@ -78,7 +78,7 @@ const progressSteps = [
         </div>
         <div class="w-full flex justify-center items-center">
           <button
-            class="bg-[#FF7D12] mt-[85px] max-md:ml-[0px] max-md:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-md:py-2 max-md:px-4"
+            class="bg-[#FF7D12] mt-[85px] max-lg:ml-[0px] max-lg:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4"
           >
             <span>Start Your Project</span>
             <img
