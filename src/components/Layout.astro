@@ -2,6 +2,8 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+
 ---
 
 <!doctype html>
@@ -31,7 +33,21 @@ import "../styles/global.css";
   <body class="scroll-smooth">
     <Header />
     <slot />
-    <Footer client:load />
+    <Footer client:only />
+    <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+        client:only
+      />
   </body>
 </html>
 

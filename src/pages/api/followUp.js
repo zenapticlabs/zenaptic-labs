@@ -22,8 +22,7 @@ export async function POST({ request }) {
     `;
 
     const sentFrom = new Sender(
-      import.meta.env.MAILERSEND_FROM_EMAIL,
-      data.name
+      import.meta.env.MAILERSEND_FROM_EMAIL , "Follow up email"
     );
     const recipients = [
       new Recipient(import.meta.env.MAILERSEND_TO_EMAIL, import.meta.env.MAILERSEND_RECIEVER_NAME),

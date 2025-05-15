@@ -173,21 +173,6 @@ function TellUsAbout() {
         </div>
       </div>
 
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-        client:load
-      />
-
       <div className="w-full flex justify-center items-center">
         <InfiniteSlider
           gap={100}

@@ -3,7 +3,6 @@ import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
 export async function POST({ request }) {
   try {
     const data = await request.json();
-
     const mailerSend = new MailerSend({
       apiKey: import.meta.env.MAILERSEND_API_KEY,
     });
@@ -35,7 +34,7 @@ export async function POST({ request }) {
 
     const sentFrom = new Sender(
       import.meta.env.MAILERSEND_FROM_EMAIL,
-      data.name
+      "Development Services"
     );
     const recipients = [
       new Recipient(import.meta.env.MAILERSEND_TO_EMAIL, import.meta.env.MAILERSEND_RECIEVER_NAME),
