@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import { ToastContainer, toast, Bounce } from "react-toastify";
+import { toast, Bounce } from "react-toastify";
 
 const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState({ email: "" });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewsletterEmail((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
   const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
     const theme = document
       .getElementsByTagName("body")[0]
       .classList.contains("dark")
       ? "dark"
       : "light";
-    e.preventDefault();
-
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!newsletterEmail.email || !emailPattern.test(newsletterEmail.email)) {
       toast.warn(" Please enter a valid email", {
@@ -28,45 +34,18 @@ const Footer = () => {
       return;
     }
 
-    try {
-      const res = await fetch("/api/followUp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newsletterEmail),
-      });
+    const res = await fetch("/api/followUp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newsletterEmail),
+    });
 
-      const result = await res.json();
+    const result = await res.json();
 
-      if (result.ok) {
-        toast.success(`${result.message}`, {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: theme,
-          transition: Bounce,
-        });
-        setNewsletterEmail({ email: "" });
-      } else {
-        toast.error(`${result.message}`, {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: theme,
-          transition: Bounce,
-        });
-      }
-    } catch (error) {
-      toast.error("🔥 Something went wrong, please try again later", {
+    if (result.ok) {
+      toast.success(`${result.message}`, {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -77,6 +56,20 @@ const Footer = () => {
         theme: theme,
         transition: Bounce,
       });
+      setNewsletterEmail({ email: "" });
+    } else {
+      toast.error(`${result.message}`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: theme,
+        transition: Bounce,
+      });
+      setNewsletterEmail({ email: "" });
     }
   };
 
@@ -136,11 +129,9 @@ const Footer = () => {
                 <input
                   type="email"
                   id="newsletter"
-                  name="newsletter"
+                  name="email"
                   value={newsletterEmail.email}
-                  onChange={(e) =>
-                    setNewsletterEmail({ email: e.target.value })
-                  }
+                  onChange={handleChange}
                   placeholder="Subscribe to our newsletter"
                   className="max-lg:py-[10px] max-lg:text-center max-lg:rounded-[100px] email max-lg:border-2 placeholder-[#BDBDBD] max-lg:border-[#BDBDBD] flex-1 w-full outline-0 px-4"
                 />
@@ -164,20 +155,6 @@ const Footer = () => {
           © 2024 copyrightzenaptic. All rights reserved.
         </p>
       </footer>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar
-        newestOnTop
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-        client:load
-      />
     </>
   );
 };

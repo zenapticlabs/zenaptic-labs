@@ -1,5 +1,4 @@
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
-import { Cursor } from "./MotionPrimitivesComponents/cursor-spring";
 export default function InfiniteSliderBasic(props) {
   let featuresList = props.featuresList || [];
   let animationDirection = props.animationDirection;
@@ -72,30 +71,7 @@ export default function InfiniteSliderBasic(props) {
               key={index}
               className="flex relative flex-col justify-center items-start max-lg:items-start max-lg:justify-start gap-4 max-lg:gap-3 w-[520px] max-lg:w-[260px] "
             >
-              <div>
-                <Cursor
-                  attachToParent
-                  variants={{
-                    initial: { height: 0, opacity: 0, scale: 0.3 },
-                    animate: { height: "auto", opacity: 1, scale: 1 },
-                    exit: { height: 0, opacity: 0, scale: 0.3 },
-                  }}
-                  transition={{
-                    type: "spring",
-                    duration: 0.3,
-                    bounce: 0.1,
-                  }}
-                  className="z-10"
-                  springConfig={{
-                    bounce: 0.01,
-                  }}
-                >
-                  <img
-                    src={item.caseStudy}
-                    alt="real world solution "
-                    className="rounded-lg   z-[10000]  h-[120px] max-lg:w-[200px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
-                  />
-                </Cursor>
+              <div>            
 
                 <img
                   src={item.caseStudy}
