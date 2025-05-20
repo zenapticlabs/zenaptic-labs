@@ -99,10 +99,14 @@ function TellUsAbout() {
   return (
     <>
       <div className="min-w-full px-20 py-18 flex justify-center items-center max-lg:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)] tellusbg bg-cover bg-no-repeat bg-[center_top_-30px] flex-col gap-y-10 max-lg:px-[20px]">
-        <div className="w-full flex justify-center items-center">
-          <h3 className="text-4xl font-bold text-center heading-dark leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l max-lg:text-[32px]">
-            Tell us about your project
+        <div className="w-full flex flex-col justify-center items-center">
+          <h3 className="text-4xl w-full font-bold text-center heading-dark leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l max-lg:text-[32px]">
+         Let’s Build Something Bold Together
           </h3>
+          <p className="text-[24px] w-full font-medium  max-lg:text-lg text-center pt-[30px]">
+            Whether you're a startup founder with a big idea, a growing company in need of smarter systems, or an enterprise ready to scale with AI and automation—we’re here to help.
+At Zenaptic Labs, we collaborate with innovative teams to design, build, and launch intelligent digital products that make an impact.
+       </p>
         </div>
         <div className="w-full flex justify-center items-center">
           <div className="w-full md:w-[50%]">

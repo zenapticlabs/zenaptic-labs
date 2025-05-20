@@ -1,15 +1,17 @@
-// src/hooks/useTheme.js
 import { useState, useEffect } from "react";
-
-const useTheme = () => {
-  const [theme, setTheme] = useState("light");
-
-
+export const useTheme = () => {
+  const [theme, setTheme] = useState("string");
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    } 
+  }, []);
   useEffect(() => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
     document.body.style.transition =
-      "background-color 0.5s ease-in-out, color 1s ease-in-out";
+      "background-color 0.5s ease-in-out, color 0s ease-in-out";
     const allImages = document.getElementsByClassName("toggle-image");
     if (allImages) {
       Array.from(allImages).forEach((icon) => {
@@ -23,10 +25,8 @@ const useTheme = () => {
         }
       });
     }
-
   }, [theme]);
 
   return [theme, setTheme];
 };
 
-export default useTheme;

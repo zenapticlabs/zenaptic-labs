@@ -24,7 +24,10 @@
   background: radial-gradient(#3b3939, #000000) !important;
   border: 1px solid #ffffff !important;
 }
-
+.dark .anchor{
+    background: radial-gradient(#3b3939, #000000) !important;
+  border: 1px solid #ffffff !important;
+}
 .dark .lamp {
   background: #fff !important;
   box-shadow: rgb(255 255 255 / 56%) 0px 1px 20px 7px !important;
@@ -60,6 +63,17 @@ button:active {
     rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   transition: box-shadow 0.1s ease;
+}
+.theme-toggle:active{
+    background: #ff6000;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: box-shadow 0.1s ease;
+}
+.dark .theme-toggle:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
 }
 .dark button:active {
   background: black !important;

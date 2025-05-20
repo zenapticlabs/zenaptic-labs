@@ -1,0 +1,46 @@
+---
+const { request } = Astro;
+const url = new URL(request.url);
+
+const heading = url.searchParams.get("heading") ?? "Our Service";
+const desc = url.searchParams.get("desc") ?? "We provide exceptional services.";
+const featuresRaw = url.searchParams.get("features") ?? "[]";
+
+let features: string[] = [];
+try {
+  features = JSON.parse(featuresRaw);
+} catch {
+  features = [];
+}
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+  <div
+    class=`relative bg-transparent  w-full px-6 py-16 max-w-6xl mx-auto flex flex-col gap-8 `
+  >
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">{heading}</h1>
+      <p class="text-base md:text-lg text-gray-500 leading-relaxed">{desc}</p>
+    </div>
+
+    {
+      features.length > 0 && (
+        <div class="flex flex-wrap gap-3 mt-4">
+          {features.map((feature) => (
+            <span class="px-4 py-2 text-sm rounded-full border border-gray-200 bg-gray-100 text-gray-800 shadow-sm">
+              {feature}
+            </span>
+          ))}
+        </div>
+      )
+    }
+
+    <a
+      href="/"
+      class="absolute anchor bottom-6 right-6 bg-[#FF7D12] text-white px-5 py-2 rounded-md text-sm font-medium shadow-md transition"
+    >
+      ← Back
+    </a>
+  </div>
+</Layout>

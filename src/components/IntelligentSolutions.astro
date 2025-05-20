@@ -3,11 +3,11 @@ import GenericSolutionSection from "./SolutionsSection.jsx";
 
 const aiSolutions = {
   component: "Intelligent Solutions",
-  heading: "Artificial Intelligence",
+  heading: "Artificial Intelligence/Machine Learning",
   description: {
     line1:
-      "Leverage the power of Artificial Intelligence to automate workflows,",
-    line2: "enhance decision-making, and deliver personalized user experience",
+      "With the rapid evolution of Artificial Intelligence (AI) and Machine Learning (ML), integrating intelligent solutions is no longer optional, it’s a strategic necessity. Our best AI/ML solutions empower ",
+    line2: "your businesses to innovate, automate, and scale with precision with secured agility, operational efficiency, and cost optimization. Stay ahead with data-driven intelligence.",
   },
   features: [
     "Artificial Intelligence",
@@ -27,11 +27,11 @@ const aiSolutions = {
 };
 const techSolutions = {
   component: "Solutions",
-  heading: "Web Design & Development",
+  heading: "Web and Mobile Apps",
   description: {
     line1:
-      "We craft visually stunning, responsive, and SEO-optimized websites ",
-    line2: "that drive engagement and conversions.",
+      "Stop settling for mediocre apps! Your web and mobile app development needs to do more than function—it must engage users, boost conversions, and scale. We don’t just write code ",
+    line2: "we engineer high-performance, scalable web and mobile apps with addictive UX that go beyond your expectations.",
   },
 
   features: [
@@ -63,10 +63,10 @@ const webSolutions = {
   ],
   description: {
     line1:
-      "We build robust, scalable, and high-performing applications for web,",
-    line2: " mobile, and SaaS platforms.",
+      "Imagine a SaaS platform that doesn’t just meet needs—it anticipates them. We specialize in end-to-end SaaS development, transforming your vision into a scalable, revenue-generating reality.",
+    line2: "From initial product concept to development, from deployment to post-launch support, we deliver excellence to make your SaaS flooded by users.",
   },
-  heading: "Web, Mobile and SaaS Development",
+  heading: "SaaS Development",
   caseStudies: [
     { src: "/assets/CaseStudyWeb1.png", alt: "Case Study 1" },
     { src: "/assets/CaseStudyWeb2.png", alt: "Case Study 2" },
@@ -86,10 +86,27 @@ const dataSolutions = {
   ],
   description: {
     line1:
-      "Unlock the full potential of your data with advanced analytics and ",
-    line2: "scalable warehousing solutions",
+      "In the AI era, your data stack must do more than store - It must predict, optimize, and decide. We engineer battle-tested analytics warehousing that delivers real-time intelligence, unified metrics, and 40% lower TCO.",
+    line2: " Stop wrestling with data and let us monetizing it with self-healing pipelines, ML-driven governance, and decision making insights.",
   },
   heading: "Data Warehousing & Analytics",
+};
+const cloudServices = {
+  features: [
+    "Big Data",
+    "Data Science",
+    "Business Intelligence",
+    "Cloud Data",
+    "Predictive Analytics",
+    "Data Solutions",
+    "Data Driven",
+  ],
+  description: {
+    line1:
+      "Every growing business eventually faces the critical need for secure, scalable, and professionally managed cloud solutions. Powered by AWS, Azure, and Google Cloud, we build resilient cloud environments that drive agility, performance, and long-term growth  ",
+    line2: " from seamless cloud migration to optimized infrastructure, DevOps automation, and cloud-native application development. ",
+  },
+  heading: "Cloud Services",
 };
 ---
 
@@ -100,6 +117,7 @@ const dataSolutions = {
   <GenericSolutionSection techSolutions={techSolutions} client:only />
   <GenericSolutionSection techSolutions={webSolutions} client:only />
   <GenericSolutionSection techSolutions={dataSolutions} client:only />
+  <GenericSolutionSection techSolutions={cloudServices} client:only />
   <div
     class="container px-20 max-lg:!px-2 flex items-center justify-center py-[80px]"
   >

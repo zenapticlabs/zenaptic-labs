@@ -3,7 +3,6 @@ import GenericInfiniteSlider from "./InfiniteSlider";
 
 function GenericSolutionsSection(props) {
   const techSolutions = props.techSolutions || [];
-
   return (
     <>
       <div
@@ -39,8 +38,8 @@ function GenericSolutionsSection(props) {
         </div>
 
         <div className=" max-lg:right-0 w-[20%] flex justify-end max-lg:w-[70%] max-lg:static max-lg:justify-start max-lg:items-center max-lg:mt-10 max-lg:gap-5">
-          <button className="bg-[#FF7D12] max-lg:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]">
-            <span>Start Your Project</span>
+     <a   href={`/Service?heading=${encodeURIComponent(techSolutions.heading)}&desc=${encodeURIComponent(techSolutions.description.line1 + " " + techSolutions.description.line2)} `} className="bg-[#FF7D12] max-lg:mt-[0px] anchor text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]">
+            <span>Explore service</span>
             <img
               src="/assets/arrowupright-light.svg"
               alt="Arrow"
@@ -48,7 +47,7 @@ function GenericSolutionsSection(props) {
               className="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
               id="headerArrowUp"
             />
-          </button>
+          </a>
         </div>
       </div>
       <div className="w-full overflow-hidden">
