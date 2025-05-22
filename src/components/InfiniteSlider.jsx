@@ -1,4 +1,5 @@
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
+import Tilt from "react-parallax-tilt";
 export default function InfiniteSliderBasic(props) {
   let featuresList = props.featuresList || [];
   let animationDirection = props.animationDirection;
@@ -72,12 +73,22 @@ export default function InfiniteSliderBasic(props) {
               className="flex relative flex-col justify-center items-start max-lg:items-start max-lg:justify-start gap-4 max-lg:gap-3 w-[520px] max-lg:w-[260px] "
             >
               <div>            
-
+                  <Tilt
+                  scale={.9}
+                  tiltMaxAngleX={30}
+                  tiltMaxAngleY={20}
+                  glareEnable={true}
+                  glareColor={"#ffff"}
+                  glarePosition="all"
+                  glareBorderRadius="8px"
+                  client:load
+                >
                 <img
                   src={item.caseStudy}
                   alt="real world solution "
                   className="rounded-lg    h-[390px] max-lg:w-[260px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
                 />
+                </Tilt>
               </div>
               <span className="max-lg:w-[260px] text-[20px] max-lg:text-[14px] text-[#525252] max-lg:text-sm max-lg:mt-[-10px] heading-dark">
                 {item.highlight}

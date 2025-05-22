@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+html{
+  scroll-behavior: smooth;
+}
 .dark {
   background-color: #080808 !important;
   color: #ffffff !important;
@@ -57,18 +59,27 @@ button,
 a {
   cursor: pointer;
 }
+button:hover{
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
 button:active {
   background: #ff6000;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.anchor:active {
+  background: #ff6000;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.anchor:hover{
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
 .theme-toggle:active{
     background: #ff6000;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
 .dark .theme-toggle:active {
@@ -79,6 +90,10 @@ button:active {
   background: black !important;
   border: 1px solid #414040 !important;
 }
+.dark .anchor:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
+} 
 input[type="email"]:-webkit-autofill {
   box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
   -webkit-text-fill-color: #000;

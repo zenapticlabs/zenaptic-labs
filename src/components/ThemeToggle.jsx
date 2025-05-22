@@ -1,7 +1,17 @@
 import React from "react";
 import { useTheme } from "./hooks/useTheme.jsx";
+import { useEffect } from "react";
 const ThemeToggle = () => {
   const [theme, setTheme] = useTheme("");
+  useEffect(() => {
+    if(!localStorage.getItem("theme")) {
+      setTheme("light")
+      localStorage.setItem("theme", 'light');
+    }
+  
+    
+  }, [])
+  
   function switchTheme() {
     let currentTheme = theme === "light" ? "dark" : "light";
     setTheme(currentTheme);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
-import { ToastContainer, toast, Bounce } from "react-toastify";
+import {  toast, Bounce } from "react-toastify";
 
 function TellUsAbout() {
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ function TellUsAbout() {
     budget: "",
     projectDescription: "",
   });
-
+const [loading ,setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -43,7 +43,7 @@ function TellUsAbout() {
       });
       return;
     }
-
+    setLoading(true);
     const res = await fetch("/api/route", {
       method: "POST",
       headers: {
@@ -52,7 +52,9 @@ function TellUsAbout() {
       body: JSON.stringify(formData),
     });
     const result = await res.json();
-
+    setTimeout(() => {
+    setLoading(false);
+    }, 300);
     if (result.ok) {
       toast.success(`${result.message}`, {
         position: "bottom-right",
@@ -98,7 +100,7 @@ function TellUsAbout() {
 
   return (
     <>
-      <div className="min-w-full px-20 py-18 flex justify-center items-center max-lg:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)] tellusbg bg-cover bg-no-repeat bg-[center_top_-30px] flex-col gap-y-10 max-lg:px-[20px]">
+      <div id="tellusabout" className="min-w-full px-20 py-18 flex justify-center items-center max-lg:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)] tellusbg bg-cover bg-no-repeat bg-[center_top_-30px] flex-col gap-y-10 max-lg:px-[20px]">
         <div className="w-full flex flex-col justify-center items-center">
           <h3 className="text-4xl w-full font-bold text-center heading-dark leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l max-lg:text-[32px]">
          Let’s Build Something Bold Together
@@ -164,12 +166,22 @@ At Zenaptic Labs, we collaborate with innovative teams to design, build, and lau
                   onClick={handleSubmit}
                   className="max-lg:mb-[78px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] font-bold py-[16px] px-[24px] rounded-[8px]"
                 >
-                  Send Message
-                  <img
+                 {loading ? (
+                   <>
+                     Loading{" "}
+                     <img src="/assets/loader.gif" alt="Loading..." className="w-[24px] ml-2 inline-block" />
+                   </>
+                 ) : (
+                  <>
+                   Send Message
+                    <img
                     src="/assets/arrowupright-light.svg"
                     alt="arrow"
                     className="inline ml-2 w-[24px] h-[24px] toggle-image"
                   />
+                  </>
+                 )}
+                 
                 </button>
               </div>
             </form>
