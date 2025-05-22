@@ -18,31 +18,38 @@ import ToggleTheme from "./ThemeToggle.jsx";
   <nav
     class="flex justify-center items-center gap-[40px] max-lg:gap-3 text-gray-400 h-full toggle mr-[100px] max-lg:mr-[25px]"
   >
-    <span
+    <a
+      href="/#aboutus"
       class="nav-link max-lg:hidden cursor-pointer text-[18px]"
-      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
-      >About Us</span
+      onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+      >About Us</a
     >
-    <span
+    <a
+      href="/#techSolutionsSection"
       class="nav-link max-lg:hidden cursor-pointer text-[18px]"
-      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
-      >Services</span
+      onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+      >Services</a
     >
-    <span
+    <a
+      href="/#realworldsolutions"
       class="nav-link max-lg:hidden cursor-pointer text-[18px]"
-      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
-      >Case Studies</span
+      onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+      >Case Studies</a
     >
-    <span
+    <a
+      href="/#tellusabout"
       class="nav-link max-lg:hidden cursor-pointer text-[18px]"
-      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
-      >Contact</span
+      onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+      >Contact</a
     >
     <div
       class="flex justify-center items-center max-lg:justify-end"
-      onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
+      onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';"
     >
-      <span class="nav-link max-lg:hidden mx-[16] my-2 cursor-pointer">
+      <a
+        href="/#tellusabout"
+        class="nav-link max-lg:hidden mx-[16] my-2 cursor-pointer"
+      >
         <img
           src="/assets/textarrowupright-light.svg"
           alt="Arrow"
@@ -50,7 +57,7 @@ import ToggleTheme from "./ThemeToggle.jsx";
           class="object-cover object-center inline-block mr-7 toggle-image"
           id="headerArrowUp"
         />
-      </span>
+      </a>
     </div>
     <ToggleTheme client:load />
     <span
@@ -79,41 +86,46 @@ import ToggleTheme from "./ThemeToggle.jsx";
       <div
         class="w-full overflow-hidden flex flex-col gap-5 justify-start items-between z-10 px-[24px] py-[40px]"
       >
-        <span
+        <a
+          href="/#aboutus"
           class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-2 pb-3.5 w-full cursor-pointer"
           id="about"
-          onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+          onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
         >
           About Us
-        </span>
-        <span
+        </a>
+        <a
+          href="/#techSolutionsSection"
           class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-2 pb-3.5 w-full cursor-pointer"
           id="services"
-          onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+          onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
         >
           Services
-        </span>
-        <span
+        </a>
+        <a
+          href="/#realworldsolutions"
           class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-2 pb-3.5 w-full cursor-pointer"
           id="caseStudies"
-          onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+          onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
         >
           Case Studies
-        </span>
-        <span
+        </a>
+        <a
+          href="/#tellusabout"
           class="font-urbanist text-[18px] font-normal leading-[150%] text-center rounded-[8px] pt-2 pb-3.5 w-full cursor-pointer"
           id="contact"
-          onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+          onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
         >
           Contact
-        </span>
+        </a>
       </div>
       <div
         class="w-full relative flex justify-center items-center border-t-[2px] border-[#BDBDBD]"
       >
-        <span
+        <a
+          href="/#tellusabout"
           class="nav-link cursor-pointer pt-[15px]"
-          onclick="document.getElementById('techSolutionsSection').scrollIntoView({ behavior: 'smooth' });document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
+          onclick="document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto';document.getElementById('menu').style.display='none';document.body.style.overflow = 'auto'; document.getElementById('icon').src=document.body.classList.contains('dark') ? '/assets/list-dark.svg' : '/assets/list-light.svg'"
         >
           <img
             src="/assets/textarrowupright-light.svg"
@@ -122,7 +134,7 @@ import ToggleTheme from "./ThemeToggle.jsx";
             class="object-cover object-center block toggle-image"
             id="headerArrowUp"
           />
-        </span>
+        </a>
       </div>
     </div>
   </div>
@@ -147,5 +159,41 @@ import ToggleTheme from "./ThemeToggle.jsx";
         document.body.style.overflow = "auto";
       }
     }
+  });
+
+  window.addEventListener("load", () => {
+    const hash = window.location.hash;
+
+    // Only scroll if:
+    // 1. There's a hash
+    // 2. AND we either came from another page OR user clicked an <a href="#...">
+    const cameFromAnotherPage =
+      document.referrer &&
+      new URL(document.referrer).pathname !== window.location.pathname;
+
+    if (hash && cameFromAnotherPage) {
+      const tryScroll = () => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          setTimeout(tryScroll, 100);
+        }
+      };
+      tryScroll();
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.pushState(null, "", this.getAttribute("href")); // Update hash
+        }
+      });
+    });
   });
 </script>

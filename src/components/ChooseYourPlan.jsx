@@ -74,29 +74,28 @@ const ChooseYourPlan = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`w-[460px] !h-fit  hover:[box-shadow:0px_0px_20px_0px_rgba(255,179,120,0.10),0px_0px_80px_8px_rgba(255,179,120,0.10)] hover:backdrop-blur-[2px]  max-md:w-full max-lg:w-[70%] rounded-[16px] border border-solid border-[#EFEFEF] bg-light shadow-[0px_4px_40px_0px_rgba(255,255,255,0.25)] backdrop-blur-[2px] overflow-hidden transition-all duration-300 ease-in-out 
-                            
-                        `}
+            className={`w-[40%] p-5 !h-fit hover:border-transparent  hover:[box-shadow:0px_0px_20px_0px_rgba(255,179,120,0.10),0px_0px_80px_8px_rgba(255,179,120,0.10)] hover:backdrop-blur-[2px]  max-md:w-full max-lg:w-[70%] rounded-[16px] border border-solid border-gray-300 bg-light  backdrop-blur-[2px] overflow-hidden transition-all duration-600 ease-in-out 
+                                  `}
           >
-            <div className="p-4 flex justify-baseline gap-y-[8px] items-baseline flex-col">
+            <div className="py-4 flex justify-baseline gap-y-[8px] items-baseline flex-col">
               <img
                 src={plan.icon}
                 alt="Rocket"
-                className="w-[72px] h-[72px] max-lg:w-[56px] max-lg:h-[56px] mr-3 toggle-image "
+                className="w-[72px] h-[72px] max-lg:w-[56px]  mb-[12px] max-lg:h-[56px] mr-3 toggle-image "
               />
-              <h2 className="text-[28px] font-semibold max-lg:text-[24px]">
+              <h2 className="text-[28px] font-semibold max-lg:text-[24px] mb-[24px]">
                 {plan.title}
               </h2>
             </div>
 
-            <div className="divide-y divide-gray-200">
+            <div className="divide-y divide-[#efefef81]">
               {plan.features.map((feature, featureIndex) => (
                 <div
                   key={featureIndex}
-                  className={`transition-all duration-300 ease-in-out overflow-hidden !max-h-fit`}
+                  className={`transition-all duration-600 ease-in-out overflow-hidden !max-h-fit`}
                 >
                   <div
-                    className="flex justify-between  items-center px-4 py-3 cursor-pointer  transition-all ease-in-out transition-300 "
+                    className="flex justify-between  items-center  py-3 cursor-pointer  transition-all ease-in-out transition-300 "
                     onClick={() =>
                       toggleDropdown(
                         openFeature === `${index}-${featureIndex}`
@@ -111,10 +110,12 @@ const ChooseYourPlan = () => {
                         alt="Check Mark"
                         className="w-6 h-6 toggle-image"
                       />
-                      <span className="text-[18px] font-medium">{feature}</span>
+                      <span className="text-[18px] font-medium ">
+                        {feature}
+                      </span>
                     </div>
                     <span
-                      className={`w-6 h-6 transition-transform !border-0 duration-300 transform ${
+                      className={`w-6 h-6 transition-transform !border-0 duration-600 transform ${
                         openFeature === `${index}-${featureIndex}`
                           ? "rotate-180"
                           : "rotate-0"
@@ -128,8 +129,8 @@ const ChooseYourPlan = () => {
                     </span>
                   </div>
                   {openFeature === `${index}-${featureIndex}` && (
-                    <div className="px-4 py-2">
-                      <p className="text-[16px]">
+                    <div className=" py-2">
+                      <p className="text-[16px] ml-[32px]">
                         {plan.responses[featureIndex]}
                       </p>
                     </div>

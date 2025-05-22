@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer";
 import Header from "../components/Header.astro";
+import { ToastContainer } from "react-toastify";
 import "../styles/global.css";
 ---
 
@@ -22,16 +23,24 @@ import "../styles/global.css";
       rel="stylesheet"
     />
     <title>ZenapticLabs</title>
-    <script is:inline>
-      if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    </script>
+   
   </head>
   <body class="scroll-smooth">
     <Header />
     <slot />
     <Footer client:load />
+    <ToastContainer
+      position="top-right"
+      autoClose={3000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light" 
+      client:only/>
   </body>
 </html>
 
