@@ -81,7 +81,7 @@ export default function InfiniteSliderBasic(props) {
   {featuresList.map((item, index) => (
     <CardContainer key={index} className="inter-var w-[560px]  max-lg:w-[260px] ">
       <CardBody
-        className="flex flex-col justify-start items-start h-[650px] max-lg:h-[600px]   gap-2  max-lg:mt-[5px] w-full rounded-xl p-5 bg-white/5 dark:bg-black border border-black/[0.1] dark:border-white/[0.1] group/card transition-all duration-300"
+        className="flex flex-col justify-start items-start h-[650px] max-lg:h-[600px]   gap-2  max-lg:mt-[5px] w-full rounded-xl p-5 bg-white/5  border border-black/[0.1] dark:border-white/[0.1] group/card transition-all duration-300"
       >
         <CardItem translateZ="50" className="w-full">
           <img
@@ -94,7 +94,7 @@ export default function InfiniteSliderBasic(props) {
         <CardItem
           translateZ="90"
           as="span"
-          className="max-lg:w-full text-[20px]  max-lg:text-[14px] text-[#525252] max-lg:text-sm  heading-dark"
+          className="max-lg:w-full text-[20px]  max-lg:text-[14px]  max-lg:text-sm  heading-dark"
         >
           {item.highlight}
         </CardItem>
