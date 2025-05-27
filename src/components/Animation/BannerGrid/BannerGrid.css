@@ -1,0 +1,9 @@
+:root {
+    --banner-grid-fill: #FF8C00;
+    --banner-grid-stroke: #FFBE44;
+}
+
+.dark {
+    --banner-grid-fill: #fff;
+    --banner-grid-stroke: #7C7C7C;
+}
