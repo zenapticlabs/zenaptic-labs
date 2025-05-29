@@ -3,15 +3,14 @@ import GenericInfiniteSlider from "./InfiniteSlider";
 
 function GenericSolutionsSection(props) {
   const techSolutions = props.techSolutions || [];
-  const setRelevantData = (metaData) => {
-    if(localStorage.getItem("metaData")){
-     localStorage.removeItem("metaData");
-     localStorage.setItem("metaData", JSON.stringify(metaData))
+  const setRelevantData = (slug) => {
+    if (localStorage.getItem("slug")) {
+      localStorage.removeItem("slug");
+      localStorage.setItem("slug", JSON.stringify(slug));
+    } else {
+      localStorage.setItem("slug", JSON.stringify(slug));
     }
-    else{
-      localStorage.setItem("metaData", JSON.stringify(metaData))
-  }
-}
+  };
   return (
     <>
       <div
@@ -46,7 +45,11 @@ function GenericSolutionsSection(props) {
         </div>
 
         <div className=" max-lg:right-0 w-[20%] flex justify-end max-lg:w-[70%] max-lg:static max-lg:justify-start max-lg:items-center max-lg:mt-10 max-lg:gap-5">
-     <a   href='/Service' onClick={()=>setRelevantData(techSolutions)} className="bg-[#FF7D12] max-lg:mt-[0px] anchor text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]">
+          <a
+            href="/Service"
+            onClick={() => setRelevantData(techSolutions.slug)}
+            className="bg-[#FF7D12] max-lg:mt-[0px] anchor text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]"
+          >
             <span>Explore service</span>
             <img
               src="/assets/arrowupright-light.svg"

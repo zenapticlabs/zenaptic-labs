@@ -1,5 +1,5 @@
 @import "tailwindcss";
-html{
+html {
   scroll-behavior: smooth;
 }
 .dark {
@@ -26,8 +26,8 @@ html{
   background: radial-gradient(#3b3939, #000000) !important;
   border: 1px solid #ffffff !important;
 }
-.dark .anchor{
-    background: radial-gradient(#3b3939, #000000) !important;
+.dark .anchor {
+  background: radial-gradient(#3b3939, #000000) !important;
   border: 1px solid #ffffff !important;
 }
 .dark .lamp {
@@ -59,27 +59,27 @@ button,
 a {
   cursor: pointer;
 }
-button:hover{
- box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
 button:active {
   background: #ff6000;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
 .anchor:active {
   background: #ff6000;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
-.anchor:hover{
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.anchor:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
-.theme-toggle:active{
-    background: #ff6000;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.theme-toggle:active {
+  background: #ff6000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
 .dark .theme-toggle:active {
@@ -93,7 +93,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 .dark .anchor:active {
   background: black !important;
   border: 1px solid #414040 !important;
-} 
+}
 input[type="email"]:-webkit-autofill {
   box-shadow: 0 0 0px 1000px rgba(159, 159, 159, 0) inset;
   -webkit-text-fill-color: #000;
@@ -151,4 +151,20 @@ textarea {
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0)
   ) !important;
+}
+
+.service-border {
+  border-color: black;
+  border-width: 1px;
+}
+.dark .service-border {
+  border-color: rgba(255, 255, 255, 0.322);
+  border-width: 1px;
+}
+
+.card-bg {
+  background: white;
+}
+.dark .card-bg {
+  background: #0f0f0f;
 }
