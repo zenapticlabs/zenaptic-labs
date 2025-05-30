@@ -118,7 +118,10 @@ textarea {
 }
 
 .dark .digitalbgsmall {
-  background-image: url("/assets/digitalbgsmall-dark.png") !important;
+  /* background-image: url("/assets/digitalbgsmall-dark.png") !important; */
+  background-size: 120% !important;
+  background-position: bottom !important;
+
 }
 .dark .tellusbg {
   background-image: url("/assets/tellusaboutbg-dark.png") !important;
