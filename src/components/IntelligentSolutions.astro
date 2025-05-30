@@ -1,5 +1,6 @@
 ---
 import GenericSolutionSection from "./SolutionsSection.jsx";
+import { DataAndWarehousingAnimation } from '../components/Animation/DataAndWarehousingAnimation/DataAndWarehousingAnimation.tsx';
 
 const aiSolutions = {
   component: "Intelligent Solutions",
@@ -109,22 +110,7 @@ const cloudServices = {
   <GenericSolutionSection techSolutions={webSolutions} client:only />
   <GenericSolutionSection techSolutions={dataSolutions} client:only />
   <GenericSolutionSection techSolutions={cloudServices} client:only />
-  <div
-    class="container px-20 max-lg:!px-2 flex items-center justify-center py-[80px]"
-  >
-    <img
-      src="/assets/zenapticbg-light.png"
-      alt="Arrow"
-      loading="lazy"
-      class="object-center object-cover max-lg:hidden toggle-image"
-    />
-    <img
-      src="/assets/zenapticbgsmall-light.png"
-      alt="Arrow"
-      loading="lazy"
-      class="object-center object-cover hidden max-lg:block toggle-image"
-    />
-  </div>
+  <DataAndWarehousingAnimation client:load />
   <span
     class="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] top-[110px] left-[49px] max-lg:left-[15px] absolute lamp"
   ></span>

@@ -118,8 +118,11 @@ export function ServiceDetails() {
                 </h2>
               )}
               {service.serviceCategories.map(({ title, items }, catIdx) => (
- <div key={`${title}-${catIdx}`} className="mb-10 card-bg shadow-lg p-10 max-lg:p-4">
-                    <h3 className="text-xl font-semibold capitalize mb-5">
+                <div
+                  key={`${title}-${catIdx}`}
+                  className="mb-10 card-bg shadow-lg p-10 max-lg:p-4"
+                >
+                  <h3 className="text-xl font-semibold capitalize mb-5">
                     {title}
                   </h3>
                   <ul className="list-disc list-inside flex flex-wrap gap-3">
@@ -194,14 +197,15 @@ export function ServiceDetails() {
           </div>
 
           <div className="w-full flex justify-between items-center">
-            { service.heading !=="Data Warehousing & Analytics" && service.cta && (
-              <a
-            href="/#tellusabout"
-           className="block m-3 px-6 py-3 anchor text-white max-lg:p-[10px] bg-[#FF7D12] rounded-lg font-semibold shadow-2xl transition"
-              >
-                {service.cta}
-              </a>
-            )}
+            {service.heading !== "Data Warehousing & Analytics" &&
+              service.cta && (
+                <a
+                  href="/#tellusabout"
+                  className="block m-3 px-6 py-3 anchor text-white max-lg:p-[10px] bg-[#FF7D12] rounded-lg font-semibold shadow-2xl transition"
+                >
+                  {service.cta}
+                </a>
+              )}
 
             <a
               href="/"
