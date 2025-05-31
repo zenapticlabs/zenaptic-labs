@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+html {
+  scroll-behavior: smooth;
+}
 .dark {
   background-color: #080808 !important;
   color: #ffffff !important;
@@ -24,7 +26,10 @@
   background: radial-gradient(#3b3939, #000000) !important;
   border: 1px solid #ffffff !important;
 }
-
+.dark .anchor {
+  background: radial-gradient(#3b3939, #000000) !important;
+  border: 1px solid #ffffff !important;
+}
 .dark .lamp {
   background: #fff !important;
   box-shadow: rgb(255 255 255 / 56%) 0px 1px 20px 7px !important;
@@ -54,14 +59,38 @@ button,
 a {
   cursor: pointer;
 }
-button:active {
-  background: #ff6000;
-  box-shadow:
-    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: box-shadow 0.1s ease;
 }
+button:active {
+  background: #ff6000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.anchor:active {
+  background: #ff6000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.anchor:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.theme-toggle:active {
+  background: #ff6000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: box-shadow 0.1s ease;
+}
+.dark .theme-toggle:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
+}
 .dark button:active {
+  background: black !important;
+  border: 1px solid #414040 !important;
+}
+.dark .anchor:active {
   background: black !important;
   border: 1px solid #414040 !important;
 }
@@ -89,7 +118,10 @@ textarea {
 }
 
 .dark .digitalbgsmall {
-  background-image: url("/assets/digitalbgsmall-dark.png") !important;
+  /* background-image: url("/assets/digitalbgsmall-dark.png") !important; */
+  background-size: 120% !important;
+  background-position: bottom !important;
+
 }
 .dark .tellusbg {
   background-image: url("/assets/tellusaboutbg-dark.png") !important;
@@ -122,4 +154,20 @@ textarea {
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0)
   ) !important;
+}
+
+.service-border {
+  border-color: black;
+  border-width: 1px;
+}
+.dark .service-border {
+  border-color: rgba(255, 255, 255, 0.322);
+  border-width: 1px;
+}
+
+.card-bg {
+  background: white;
+}
+.dark .card-bg {
+  background: #0f0f0f;
 }

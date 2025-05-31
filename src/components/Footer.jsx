@@ -3,7 +3,7 @@ import { toast, Bounce } from "react-toastify";
 
 const Footer = () => {
   const [newsletterEmail, setNewsletterEmail] = useState({ email: "" });
-
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewsletterEmail((prevData) => ({
@@ -33,7 +33,7 @@ const Footer = () => {
       });
       return;
     }
-
+    setLoading(true);
     const res = await fetch("/api/followUp", {
       method: "POST",
       headers: {
@@ -43,7 +43,9 @@ const Footer = () => {
     });
 
     const result = await res.json();
-
+   setTimeout(() => {
+    setLoading(false);
+    }, 300);
     if (result.ok) {
       toast.success(`${result.message}`, {
         position: "bottom-right",
@@ -139,7 +141,17 @@ const Footer = () => {
                   onClick={handleNewsletterSubmit}
                   className="px-4 py-2 h-[48px] m-2 mr-2 bg-[#FF7D12] text-white rounded-[100px] border toggleFooterButton max-lg:w-full border-white"
                 >
-                  Subscribe
+                  {loading ? (
+                    <>
+                      <img
+                        src="/assets/loader.gif"
+                        alt="Loading..."
+                        className="w-[24px]  inline-block"
+                      />
+                    </>
+                  ) : (
+                    <>Subscribe</>
+                  )}
                 </button>
               </div>
             </form>

@@ -6,32 +6,20 @@ import TexteffectAnimation from './TextEffectAnimation.jsx';
 <div class="relative overflow-x-clip">
 	<MiddleBanner client:load />
   <div
-    class="container mx-auto py-[80px] px-[72px] flex flex-col gap-[40px] max-lg:gap-[200px] justify-between h-full max-lg:px-3 max-lg:!py-2 digitalbg-small"
+    id="aboutus"
+    class="container mx-auto py-[80px]  px-[72px] flex flex-col gap-[40px] max-lg:gap-[200px] justify-between h-full max-lg:px-3 max-lg:!py-2 digitalbg-small"
   >
     <div
-      class="flex flex-col items-start max-lg:ml-[16px]"
+      class="flex flex-col w-[60%] max-lg:w-[80%] items-start max-lg:ml-[16px] relative top-[-60px]"
       id="render-animation"
     >
       <TexteffectAnimation
         client:load
-        Text="We build engaging online environments for "
+        Text="From comprehensive software development to expert consultancy services,we are dedicated to delivering exceptional digital solutions. We thrive on tackling your complex Software engineering challenges. Our Priority is to ensure your business stays ahead in an evolving technology landscape."
         Component="DigitalJourney"
         Classes="text-4xl font-normal leading-[135%] text-[#292929] max-lg:text-2xl heading-dark"
       />
-      <br class="max-lg:hidden" />
-      <TexteffectAnimation
-        client:load
-        Text="businesses, forging their identity and enhancing "
-        Component="DigitalJourney"
-        Classes="text-4xl font-normal leading-[135%] text-[#292929] max-lg:text-2xl heading-dark"
-      />
-      <br class="max-lg:hidden" />
-      <TexteffectAnimation
-        client:load
-        Text=" digital achievement. "
-        Component="DigitalJourney"
-        Classes="text-4xl font-normal leading-[135%] text-[#292929] max-lg:text-2xl heading-dark"
-      />
+
       <button
         class="mt-[40px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4"
       >

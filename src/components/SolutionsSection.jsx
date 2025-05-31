@@ -3,11 +3,18 @@ import GenericInfiniteSlider from "./InfiniteSlider";
 
 function GenericSolutionsSection(props) {
   const techSolutions = props.techSolutions || [];
-
+  const setRelevantData = (slug) => {
+    if (localStorage.getItem("slug")) {
+      localStorage.removeItem("slug");
+      localStorage.setItem("slug", JSON.stringify(slug));
+    } else {
+      localStorage.setItem("slug", JSON.stringify(slug));
+    }
+  };
   return (
     <>
       <div
-        className="w-full overflow-hidden mx-auto flex justify-between  items-start max-lg:items-center px-[80px] relative max-lg:px-5 gap-10 pt-[80px] max-lg:pt-[40px] max-lg:flex-col"
+        className="w-full py-4 overflow-hidden mx-auto flex justify-between  items-start max-lg:items-center px-[80px] relative max-lg:px-5 gap-10 pt-[80px] max-lg:pt-[40px] max-lg:flex-col"
         id="techSolutionsSection"
       >
         <div className="flex flex-col gap-6 w-[80%] pl-[30px] max-lg:pl-0 justify-center items-center ">
@@ -19,8 +26,7 @@ function GenericSolutionsSection(props) {
 
           <div className="w-full justify-baseline items-center">
             <p className="text-[24px] font-medium text-[#292929] max-lg:text-lg heading-dark">
-              {techSolutions.description.line1} <br className="max-lg:hidden" />
-              {techSolutions.description.line2}
+              {techSolutions.description}
             </p>
           </div>
 
@@ -29,7 +35,7 @@ function GenericSolutionsSection(props) {
               {techSolutions.features.map((item, index) => (
                 <span
                   key={index}
-                  className="px-4 py-3 text-[20px] max-lg:text-[16px] bullet-dark max-lg:text-lg rounded-full border text-[#464646] border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] max-lg:py-2 max-lg:px-4"
+                  className="px-4 py-3 text-[20px]  max-lg:text-[16px] bullet-dark max-lg:text-lg rounded-full border text-[#464646] border-[#DCDCDC] bg-[rgba(215,215,215,0.2)] max-lg:py-2 max-lg:px-4"
                 >
                   {item}
                 </span>
@@ -39,8 +45,12 @@ function GenericSolutionsSection(props) {
         </div>
 
         <div className=" max-lg:right-0 w-[20%] flex justify-end max-lg:w-[70%] max-lg:static max-lg:justify-start max-lg:items-center max-lg:mt-10 max-lg:gap-5">
-          <button className="bg-[#FF7D12] max-lg:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]">
-            <span>Start Your Project</span>
+          <a
+            href="/Service"
+            onClick={() => setRelevantData(techSolutions.slug)}
+            className="bg-[#FF7D12] max-lg:mt-[0px] anchor text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 active:bg-[#ff6000]"
+          >
+            <span>Explore service</span>
             <img
               src="/assets/arrowupright-light.svg"
               alt="Arrow"
@@ -48,7 +58,7 @@ function GenericSolutionsSection(props) {
               className="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
               id="headerArrowUp"
             />
-          </button>
+          </a>
         </div>
       </div>
       <div className="w-full overflow-hidden">

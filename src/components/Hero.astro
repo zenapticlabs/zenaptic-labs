@@ -1,137 +1,141 @@
 ---
-import InfiniteSlider from './InfiniteSlider.jsx';
-import TextRollAnimation from './TextRollAnimation.jsx';
-import BannerGridBlack from './Animation/BannerGrid/BannerGridBlack.tsx';
+import InfiniteSlider from "./InfiniteSlider.jsx";
+import TextRollAnimation from "./TextRollAnimation.jsx";
+import BannerGridBlack from "./Animation/BannerGrid/BannerGridBlack.tsx";
 const servicesOffered = [
-	'Custom Software',
-	'AI-Powered Solutions',
-	'Data Analytics',
-	'Custom Software',
-	'Workflow Automation',
-	'Predictive Modeling',
+  "Custom Software",
+  "AI-Powered Solutions",
+  "Data Analytics",
+  "Custom Software",
+  "Workflow Automation",
+  "Predictive Modeling",
 ];
 const techSolutions = [
-	'Innovation in Tech',
-	'Machine Learning',
-	'Business Intelligence',
-	'Innovation in Tech',
-	'Scalable Systems',
-	'Digital Transformation',
+  "Innovation in Tech",
+  "Machine Learning",
+  "Business Intelligence",
+  "Innovation in Tech",
+  "Scalable Systems",
+  "Digital Transformation",
 ];
 const strategicInitiatives = [
-	'Data-First Approach',
-	'Tech-Focused Growth',
-	'AI-Driven Insights',
-	'Data-First Approach',
-	'Smart Applications',
-	'Process Optimization',
-	'Cloud Integration',
+  "Data-First Approach",
+  "Tech-Focused Growth",
+  "AI-Driven Insights",
+  "Data-First Approach",
+  "Smart Applications",
+  "Process Optimization",
+  "Cloud Integration",
 ];
 ---
 
 <div
-	class="h-[800px] !w-full overflow-hidden shadow-[inset_0_0_100px_47px_#ffffff] max-md:h-[600px] hero-dark relative"
+  class="h-[800px] !w-full overflow-hidden shadow-[inset_0_0_100px_47px_#ffffff] max-md:h-[600px] hero-dark relative"
 >
-	<BannerGridBlack client:load />
+  <BannerGridBlack client:load />
 
-
-	<div class="h-full bg-[#e0e0e030] dark-bg">
-		<div
-			class="container mx-auto flex flex-col justify-start pt-[60px] px-20 max-lg:px-[10px]"
-		>
-			<p
-				class="bg-gradient-to-l pb-[200px] max-lg:pb-[110px] from-white to-black bg-clip-text text-transparent text-[56px] font-bold max-lg:text-4xl max-lg:px-2"
-			>
-				<TextRollAnimation
-					client:load
-					Text="TRANSFORMING"
-					component="Hero"
-					classes="text-[black] text-[56px] max-lg:text-[36px] text-dark-white"
-				/>
-				<br />
-				<TextRollAnimation
-					client:load
-					Text="SOFTWARE IDEAS"
-					component="Hero"
-					classes="text-[#FF7D12] text-[56px] max-lg:text-[36px] text-dark-white"
-				/>
-				<br />
-				<TextRollAnimation
-					client:load
-					Text="FOR YOUR BUSINESS INTO LIFE"
-					component="Hero"
-					classes="text-[black] text-[56px] bg-gradient-to-l from-white to-black text-dark-white bg-clip-text max-lg:text-[36px] break-words"
-				/>
-			</p>
-		</div>
-		<div class="flex flex-col gap-[24px]">
-			<div class="flex flex-col gap-[24px]">
-				<div class="relative w-full">
-					<div
-						class="absolute left-0 top-0 h-full w-[40px] z-50
+  <div class="h-full bg-[#e0e0e030] dark-bg">
+    <div
+      class="container mx-auto flex flex-col justify-start pt-[60px] px-20 max-lg:px-[10px]"
+    >
+      <p
+        class="bg-gradient-to-l  from-white to-black bg-clip-text text-transparent text-[56px] font-bold max-lg:text-4xl max-lg:px-2"
+      >
+        <TextRollAnimation
+          client:load
+          Text="TRANSFORMING"
+          component="Hero"
+          classes="text-[black] text-[56px] max-lg:text-[36px] text-dark-white"
+        />
+        <br />
+        <TextRollAnimation
+          client:load
+          Text="SOFTWARE IDEAS"
+          component="Hero"
+          classes="text-[#FF7D12] text-[56px] max-lg:text-[36px] text-dark-white"
+        />
+        <br />
+        <TextRollAnimation
+          client:load
+          Text="TO EMPOWER BUSINESS INNOVATION"
+          component="Hero"
+          classes="text-[black] text-[56px] bg-gradient-to-l from-white to-black text-dark-white bg-clip-text max-lg:text-[36px] break-words"
+        />
+      </p>
+	   <h2
+        class="pb-[190px] pt-[10px] ml-[10px] max-lg:pb-[30px] font-semibold text-[24px] max-lg:text-2xl"
+      >
+        Your Trusted Technology Partner
+      </h2>
+    </div>
+    <div class="flex flex-col gap-[24px]">
+      <div class="flex flex-col gap-[24px]">
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
             toggle-gredient"
-					>
-					</div>
+          >
+          </div>
 
-					<div
-						class="!mx-0 w-full font-semibold !text-2xl max-lg:text-xl relative z-10"
-					>
-						<InfiniteSlider
-							featuresList={servicesOffered}
-							speed={80}
-							speedOnHover={20}
-							animationDirection="horizontal"
-							direction="right-to-left"
-							client:load
-							component="Text-Infinite-Slider"
-						/>
-					</div>
-				</div>
+          <div
+            class="!mx-0 w-full font-semibold !text-2xl max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={servicesOffered}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="right-to-left"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
 
-				<div class="relative w-full">
-					<div
-						class="absolute left-0 top-0 h-full w-[40px] z-50
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
              toggle-gredient"
-					>
-					</div>
+          >
+          </div>
 
-					<div
-						class="!mx-0 w-full font-semibold text-2xl max-lg:text-xl relative z-10"
-					>
-						<InfiniteSlider
-							featuresList={techSolutions}
-							speed={80}
-							speedOnHover={20}
-							animationDirection="horizontal"
-							direction="left-to-right"
-							client:load
-							component="Text-Infinite-Slider"
-						/>
-					</div>
-				</div>
+          <div
+            class="!mx-0 w-full font-semibold text-2xl max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={techSolutions}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="left-to-right"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
 
-				<div class="relative w-full">
-					<div
-						class="absolute left-0 top-0 h-full w-[40px] z-50
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
             toggle-gredient"
-					>
-					</div>
+          >
+          </div>
 
-					<div
-						class="text-2xl !mx-0 w-full font-semibold max-lg:text-xl relative z-10"
-					>
-						<InfiniteSlider
-							featuresList={strategicInitiatives}
-							speed={80}
-							speedOnHover={20}
-							animationDirection="horizontal"
-							direction="right-to-left"
-							client:load
-							component="Text-Infinite-Slider"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div
+            class="text-2xl !mx-0 w-full font-semibold max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={strategicInitiatives}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="right-to-left"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

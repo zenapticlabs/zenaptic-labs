@@ -1,28 +1,38 @@
 import React from "react";
-import useTheme from "./hooks/useTheme.jsx";
-
+import { useTheme } from "./hooks/useTheme.jsx";
+import { useEffect } from "react";
 const ThemeToggle = () => {
-  const [theme, setTheme] = useTheme();
-
+  const [theme, setTheme] = useTheme("");
+  useEffect(() => {
+    if(!localStorage.getItem("theme")) {
+      setTheme("light")
+      localStorage.setItem("theme", 'light');
+    }
+  
+    
+  }, [])
+  
   function switchTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
+    let currentTheme = theme === "light" ? "dark" : "light";
+    setTheme(currentTheme);
+    localStorage.setItem("theme", currentTheme);
   }
 
   return (
-    <button
+    <span
       id="theme-toggle"
       onClick={switchTheme}
       type="span"
       className={`${
         theme == "dark"
           ? "text-gray-300 border-gray-300"
-          : "text-gray-800 border-gray-500"
-      } border-2 rounded-lg text-sm p-2`}
+          : "text-white border-gray-500"
+      } border-2 rounded-lg text-sm p-2 theme-toggle`}
     >
       <svg
         id="theme-toggle-dark-icon"
         className={`${theme === "light" ? "hidden" : ""} w-5 h-5`}
-        fill="currentColor"
+        fill="white"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -31,8 +41,8 @@ const ThemeToggle = () => {
       <svg
         id="theme-toggle-light-icon"
         className={`${theme === "light" ? "" : "hidden"} w-5 h-5`}
-        fill="currentColor"
         viewBox="0 0 20 20"
+        fill="black"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -41,7 +51,7 @@ const ThemeToggle = () => {
           clipRule="evenodd"
         ></path>
       </svg>
-    </button>
+    </span>
   );
 };
 

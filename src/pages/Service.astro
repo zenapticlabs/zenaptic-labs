@@ -1,0 +1,557 @@
+---
+import Layout from "../components/Layout.astro";
+import { ServiceDetails } from "../components/ServiceDetails";
+---
+
+<Layout>
+  <div
+    class="relative bg-transparent w-full px-6 py-16 max-w-6xl mx-auto flex flex-col gap-8"
+  >
+    <ServiceDetails client:load />
+  </div>
+</Layout>
+<script is:inline>
+  const serviceDetails = [
+    {
+      heading: "AI/ML Services",
+      intro:
+        "Zanaptic Labs builds enterprise-grade AI systems that drive measurable business outcomes. Our battle-tested ML architectures, cognitive automation, and MLOps pipelines eliminate inefficiencies while future-proofing your operations—delivering 30-50% efficiency gains for Fortune 500 leaders. Let’s transform your data into competitive advantage.",
+      services: [
+        {
+          id: 1,
+          title: "Generative AI Development Services",
+          description:
+            "Engineer impact making solutions that unlock innovation, accelerate transformation and increase productivity.",
+        },
+        {
+          id: 2,
+          title: "Computer Vision Solutions",
+          description:
+            "Convert visual data into intelligent, real-time insights—powering data-driven decisions and breakthrough innovation across various industries.",
+        },
+        {
+          id: 3,
+          title: "Deep Learning Solutions",
+          description:
+            "Unlock hidden patterns in complex data with our deep learning solutions—enabling predictive intelligence and autonomous decision.",
+        },
+        {
+          id: 4,
+          title: "Predictive Analytics",
+          description:
+            "Turn data into foresight—predict outcomes, optimize decisions.",
+        },
+        {
+          id: 5,
+          title: "Natural Language Processing",
+          description:
+            "Innovate the dynamics of communication with optimized language interactions and engineered NLP solutions for impactful outcome.",
+        },
+        {
+          id: 6,
+          title: "Predictive Analytics",
+          description:
+            "Anticipate market shifts with predictive intelligence to future-proof your business strategy and growth.",
+        },
+      ],
+      cta: "Talk to AI/ML expert",
+      technologyStack: {
+        languages: ["Python", "Java/Kotlin", "C++"],
+        frameworksAndLibraries: [
+          "TensorFlow",
+          "Keras",
+          "PyTorch",
+          "Scikit-Learn",
+          "Theano",
+          "NumPy",
+          "NLTK",
+          "Pandas",
+          "MLlib",
+          "XGBoost",
+          "NvidiaDigits",
+          "OpenCV",
+          "Microsoft Cognitive Toolkit",
+        ],
+        aiMlPlatforms: [
+          "Amazon SageMaker",
+          "Amazon Rekognition",
+          "Azure Machine Learning",
+          "AWS Deep Learning",
+          "Azure Cognitive Services",
+          "Azure Bot Service",
+          "Azure Language Understanding",
+          "Cloud Machine Learning Engine",
+          "Cloud Vision API",
+          "Cloud Natural Language AI",
+          "Cloud Speech API",
+          "DialogFlow",
+          "Amazon Transcribe",
+          "Amazon Polly",
+          "Amazon Comprehend",
+          "Google Cloud AutoML",
+          "NVIDIA",
+          "CUDA",
+          "OpenAI API",
+        ],
+        dataIntegrationTools: [
+          "Azure Data Factory",
+          "Azure Functions",
+          "Azure Event Grid",
+          "Azure Event Hubs",
+          "Azure Databricks",
+          "Microsoft SQL Server",
+          "Integration Services",
+          "AWS Glue",
+          "AWS Data Exchange",
+          "Apache Nifi",
+          "Talend",
+          "Informatica",
+          "PowerCenter",
+          "Dell Boomi",
+          "MuleSoft Anypoint Platform",
+        ],
+        databases: ["Pinecone", "CosmosDB", "PostgreSQL", "Timescale", "MySQL"],
+        hosting: [
+          "AWS",
+          "Docker",
+          "Flask",
+          "Kubernetes",
+          "Azure",
+          "Hugging Face",
+          "Google Cloud",
+        ],
+        developmentTools: [
+          "Jupyter",
+          "Anaconda",
+          "GitHub Copilot",
+          "Azure Copilot",
+          "GitHub",
+          "VS Code",
+        ],
+      },
+    },
+    {
+      heading: "Web and Mobile Development",
+      intro:
+        "At Zenaptic Labs, we craft high-performance web and mobile applications that empower businesses to scale with confidence. Whether you're launching a data-rich web platform or a user-focused mobile app, our team delivers elegant, scalable, and secure solutions tailored to your needs. We specialize in cross-platform and native mobile development for iOS, Android, and Windows, as well as building AI-driven, enterprise-grade web applications that thrive under pressure.\nWith a portfolio of 100+ successful product launches across fintech, healthcare, life sciences, education, and more, we blend deep technical expertise with creative UX/UI design to ensure your digital experience captivates and converts. From strategy to deployment, our end-to-end approach includes custom development, seamless integration, and rigorous quality assurance.\nLooking to elevate your product vision with intelligent, next-gen apps? Partner with Zenaptic Labs—where innovation meets execution.",
+      webServices: [
+        {
+          id: 1,
+          title: "Frontend Development",
+          description:
+            "Build stunning, responsive, and interactive web interfaces that captivate users and enhance engagement.",
+        },
+        {
+          id: 2,
+          title: "Backend Development",
+          description:
+            "Create secure, scalable, and high-performance server-side systems that power your business logic and infrastructure.",
+        },
+        {
+          id: 3,
+          title: "Custom Web App Development",
+          description:
+            "Turn your vision into a reality with tailored web applications that align with your unique business goals and deliver measurable impact.",
+        },
+        {
+          id: 4,
+          title: "SaaS Development",
+          description:
+            "Launch robust, cloud-native SaaS products that streamline operations and scale seamlessly to meet demand.",
+        },
+        {
+          id: 5,
+          title: "Progressive Web App (PWA) Development",
+          description:
+            "Deliver app-like experiences in the browser with fast, reliable, and offline-capable PWAs optimized for all devices.",
+        },
+        {
+          id: 6,
+          title: "Custom Ecommerce Development",
+          description:
+            "Design high-conversion online stores with user-first interfaces and integrated payment, inventory, and analytics systems.",
+        },
+        {
+          id: 7,
+          title: "Web Portal Development",
+          description:
+            "Develop centralized portals that consolidate services, data, and user access in a secure, intuitive environment.",
+        },
+        {
+          id: 8,
+          title: "Web Development Consulting",
+          description:
+            "Leverage our strategic expertise to streamline your development process, minimize risk, and maximize return on investment.",
+        },
+      ],
+      mobileServices: [
+        {
+          id: 1,
+          title: "Native Mobile App Development",
+          description:
+            "Build high-performance apps for iOS and Android using platform-native technologies for the best user experience.",
+        },
+        {
+          id: 2,
+          title: "Cross-Platform App Development",
+          description:
+            "Reach more users faster with cost-effective apps built on React Native or Flutter, without compromising quality.",
+        },
+        {
+          id: 3,
+          title: "Custom Mobile App Design",
+          description:
+            "Engage users with intuitive, elegant designs that are optimized for usability, retention, and delight.",
+        },
+        {
+          id: 4,
+          title: "E-Commerce Mobile Apps",
+          description:
+            "Launch mobile storefronts that drive conversions and offer seamless, user-friendly shopping on the go.",
+        },
+        {
+          id: 5,
+          title: "IoT Mobile Integration",
+          description:
+            "Connect your app to IoT devices for real-time interactions, smart automation, and extended functionality.",
+        },
+        {
+          id: 6,
+          title: "Wearable App Development",
+          description:
+            "Create apps for smartwatches and wearable tech, including fitness tracking, health insights, and instant notifications.",
+        },
+      ],
+      cta: "Talk to an expert",
+      technologyStack: {
+        frontendDevelopment: {
+          frameworksAndLibraries: [
+            "React",
+            "Angular",
+            "Vue.js",
+            "Next.js",
+            "Electron",
+            "Ionic",
+          ],
+          markupAndStyling: ["HTML5", "CSS3", "Bootstrap", "TypeScript"],
+        },
+        backendDevelopment: {
+          languagesAndFrameworks: [
+            "Python",
+            "Node.js",
+            "Express.js",
+            "Java",
+            "Spring Boot",
+            "C#",
+            "Django",
+          ],
+          apisAndProtocols: ["REST", "GraphQL", "gRPC"],
+        },
+        mobileAppDevelopment: {
+          nativeTechnologies: [
+            "Swift",
+            "Kotlin",
+            "Java for Android",
+            "Objective-C",
+            "Xcode",
+          ],
+          crossPlatform: ["Flutter", "React Native", "Ionic"],
+        },
+        databases: {
+          sql: [
+            "MySQL",
+            "PostgreSQL",
+            "MS SQL Server",
+            "Oracle SQL",
+            "Supabase",
+          ],
+          noSql: ["MongoDB", "Cassandra", "DynamoDB"],
+          inMemoryAndCaching: ["Redis"],
+        },
+        devOpsAndInfrastructure: {
+          ciCdAndVersionControl: ["Git", "GitLab", "Bitbucket", "Jenkins"],
+          containersAndOrchestration: ["Docker", "Kubernetes", "Service Mesh"],
+          serverTools: [
+            "Linux (Ubuntu, Debian, CentOS)",
+            "SSH",
+            "FTP",
+            "PuTTY",
+            "Screen",
+            "Tmux",
+            "Apache",
+            "Nginx",
+          ],
+        },
+        cloudAndDeployment: {
+          cloudPlatforms: [
+            "AWS",
+            "Azure",
+            "Google Cloud (GCP)",
+            "Atlas",
+            "Fly.io",
+            "Vercel",
+          ],
+          infrastructureAsCode: ["Terraform", "Ansible"],
+        },
+      },
+    },
+    {
+      heading: "SaaS Development",
+      intro:
+        "Build scalable, secure, and high-performance SaaS products with Zenaptic Labs — your trusted partner in cloud-native software innovation. We specialize in full-cycle SaaS development services that turn ambitious ideas into revenue-generating platforms. From MVP to enterprise-grade systems, we architect solutions that are flexible, modular, and built for scale. Whether you're a startup launching your first SaaS product or an established company modernizing a legacy application, we bring the technical depth and strategic insight to make it happen.",
+      services: [
+        {
+          id: 1,
+          title: "Custom SaaS Product Development",
+          description:
+            "Tailored platforms built to your specific business model and user workflows, with seamless integrations and multi-tenant architecture.",
+        },
+        {
+          id: 2,
+          title: "API & Third-Party Integration",
+          description:
+            "Connect your product with popular CRMs, payment gateways, analytics tools, and more — ensuring extensibility and interoperability.",
+        },
+        {
+          id: 3,
+          title: "User Management & Access Control",
+          description:
+            "Implement secure authentication, role-based access, and subscription-based usage with built-in analytics and admin dashboards.",
+        },
+        {
+          id: 4,
+          title: "Subscription & Billing Systems",
+          description:
+            "Enable flexible billing models using Stripe, Paddle, or Chargebee — including trials, usage-based pricing, and multi-tiered plans.",
+        },
+        {
+          id: 5,
+          title: "Multi-Tenant Architecture",
+          description:
+            "Launch with confidence using scalable and secure infrastructure that supports multiple customers in a single codebase without data overlap.",
+        },
+        {
+          id: 6,
+          title: "DevOps & Cloud Deployment",
+          description:
+            "Leverage CI/CD pipelines, containerization, and leading cloud platforms (AWS, Azure, GCP, Fly.io, Vercel) for fast, reliable deployments.",
+        },
+        {
+          id: 7,
+          title: "SaaS UX/UI Design",
+          description:
+            "Our designers craft intuitive, modern interfaces that engage users and reduce churn, tailored specifically for B2B or B2C SaaS audiences.",
+        },
+      ],
+      cta: "Talk to a SaaS expert",
+      technologyStack: {
+        frontendDevelopment: {
+          frameworksAndLibraries: [
+            "React",
+            "Angular",
+            "Vue.js",
+            "Next.js",
+            "Electron",
+            "Ionic",
+          ],
+          languagesAndStyling: [
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
+            "TypeScript",
+            "JavaScript",
+          ],
+        },
+        backendDevelopment: {
+          languagesAndFrameworks: [
+            "Python",
+            "Node.js",
+            "Express.js",
+            "Java",
+            "Spring Boot",
+            "C#",
+            "Django",
+          ],
+          apiArchitectures: ["RESTful APIs", "GraphQL", "gRPC"],
+          authenticationAndSecurity: [
+            "OAuth2",
+            "JWT",
+            "Role-based Access Control",
+          ],
+        },
+        mobileDevelopment: {
+          native: [
+            "Swift",
+            "Kotlin",
+            "Java for Android",
+            "Objective-C",
+            "Xcode",
+          ],
+          crossPlatform: ["Flutter", "React Native", "Ionic"],
+        },
+        databaseTechnologies: {
+          sql: [
+            "PostgreSQL",
+            "MySQL",
+            "MS SQL Server",
+            "Oracle SQL",
+            "Supabase",
+          ],
+          noSql: ["MongoDB", "Cassandra", "DynamoDB"],
+          inMemory: ["Redis"],
+        },
+        devOpsAndTooling: {
+          versionControlAndCI_CD: ["Git", "GitLab", "Bitbucket", "Jenkins"],
+          containersAndOrchestration: [
+            "Docker",
+            "Kubernetes",
+            "Helm",
+            "Service Mesh",
+          ],
+          infrastructureAndAutomation: ["Terraform", "Ansible"],
+        },
+        serverAndHosting: {
+          operatingSystems: ["Ubuntu", "Debian", "CentOS"],
+          webServers: ["Nginx", "Apache"],
+          remoteTools: ["SSH", "FTP", "PuTTY", "Tmux", "Screen"],
+        },
+        cloudPlatforms: {
+          publicCloud: ["AWS", "Google Cloud (GCP)", "Microsoft Azure"],
+          otherProviders: ["Fly.io", "Vercel", "MongoDB Atlas"],
+        },
+      },
+    },
+    {
+      heading: "cloud services",
+      intro:
+        "We architect and tailor cloud solutions to align precisely with each client’s operational requirements, optimizing system performance, scalability, and cost-efficiency. Through our managed cloud services, businesses gain access to cutting-edge technologies—such as containerization, serverless computing, and AI-driven automation—while eliminating the overhead of managing physical infrastructure.",
+      serviceCategories: [
+        {
+          id: 1,
+          title: "Managed Cloud Services",
+          items: [
+            "Cloud Monitoring & Reporting",
+            "Backup & Disaster Recovery",
+            "Cloud Migration Services",
+            "Automated Monitoring & Reporting",
+            "Infrastructure as Code",
+            "Provisioning Infrastructure",
+            "Cloud Deployment",
+            "Cloud Security",
+            "Cost Optimization & Budgeting",
+            "Network & Storage",
+          ],
+        },
+        {
+          id: 2,
+          title: "Cloud Application Development",
+          items: [
+            "Application Modernization",
+            "Microservices and Serverless Apps",
+            "API-Centered Development",
+            "SaaS Multi-Tenant Solutions",
+            "Cloud Platform & Data Security",
+            "CI/CD Pipelines & DevOps",
+          ],
+        },
+        {
+          id: 3,
+          title: "DevOps & Cloud Solutions",
+          items: [
+            "Infrastructure Automation",
+            "Configuration Management",
+            "Continuous Integration",
+            "Continuous Deployment",
+            "Version Control Management",
+            "Orchestration",
+            "Platform as a Service",
+            "Notification Management",
+          ],
+        },
+        {
+          id: 4,
+          title: "Managed Cloud Security",
+          items: [
+            "Security Assessment",
+            "Identity & Access Management",
+            "Data Security & Encryption",
+            "Threat Detection & Incident Response",
+            "Cloud Security Training & Awareness",
+            "Compliance & Audit Readiness",
+            "Cloud Security Support",
+            "Network Security",
+            "Security Automation",
+          ],
+        },
+        {
+          id: 5,
+          title: "Cloud Infrastructure",
+          items: [
+            "Cloud Migration Service",
+            "Cloud Infrastructure Consultancy",
+            "Disaster Survival Kit",
+            "Security",
+            "Cost Optimization",
+            "Monitoring and Troubleshooting",
+          ],
+        },
+      ],
+      cta: "Talk to a cloud expert",
+    },
+     {
+      heading: "Data Warehousing & Analytics",
+      intro:
+      "In today’s competitive landscape, harnessing the true power of your data is the key to driving growth and staying ahead. At Zenaptic Labs, we help businesses unlock meaningful insights from their data to fuel smarter decisions and accelerate success.\nAs a leading Data Analytics company, we offer end-to-end BI and analytics solutions designed to transform raw data into valuable business intelligence. Our goal is to empower organizations to create a data-first culture — where every strategy, action, and decision is backed by accurate, real-time insights.\nFrom building customized dashboards with Power BI and Tableau to advanced analytics, reporting, and data visualization, Zenaptic Labs provides comprehensive BI consulting services — tailored to meet your unique business needs.\nWith the right tools, clear insights, and expert guidance — you’ll be able to anticipate change, minimize risks, optimize performance, and stay ahead of market trends.",
+      serviceCategories: [
+      {
+        id: 1,
+        title: "Data Platform Development",
+        items: [
+        "Building scalable data platforms for analytics & AI workloads",
+        "Ensuring secure data storage, governance, and compliance",
+        "Cloud migration services for modern data infrastructure",
+        ],
+      },
+      {
+        id: 2,
+        title: "Data Engineering Services",
+        items: [
+        "Automating data pipelines for seamless transformation",
+        "Data cleansing & preparation for accuracy",
+        "Integrating diverse data sources for a unified business view",
+        ],
+      },
+      {
+        id: 3,
+        title: "Data Modeling & Architecture",
+        items: [
+        "Modernizing data architecture for efficient analysis",
+        "Designing scalable data models",
+        "Defining business KPIs to drive actionable insights",
+        ],
+      },
+      {
+        id: 4,
+        title: "Advanced Data Analytics & Visualization",
+        items: [
+        "Creating dynamic dashboards & visual reports",
+        "Delivering data products for self-service analytics",
+        "Empowering businesses with real-time, data-driven decision-making",
+        ],
+      },
+      ],
+      cta: "Talk to a data analytics expert",
+    },
+
+  ];
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const slug = JSON.parse(localStorage.getItem("slug"));
+    if (!slug) return;
+
+    const service = serviceDetails.find((service) =>
+      service.heading.toLowerCase().includes(slug.toLowerCase())
+    );
+    localStorage.setItem("service", JSON.stringify(service));
+  });
+</script>
