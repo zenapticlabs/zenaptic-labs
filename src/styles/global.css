@@ -116,7 +116,13 @@ textarea {
 .dark .description-detail {
   color: #fff !important;
 }
+.cursor {
+  cursor: pointer;
+}
 
+.z-index-100 {
+  z-index: 100;
+}
 .dark .digitalbgsmall {
   /* background-image: url("/assets/digitalbgsmall-dark.png") !important; */
   background-size: 120% !important;

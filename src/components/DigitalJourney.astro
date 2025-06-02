@@ -1,13 +1,13 @@
 ---
-import { MiddleBanner } from './Animation/MiddleBanner/MiddleBanner';
-import TexteffectAnimation from './TextEffectAnimation.jsx';
+import { MiddleBanner } from "./Animation/MiddleBanner/MiddleBanner";
+import TexteffectAnimation from "./TextEffectAnimation.jsx";
 ---
 
 <div class="relative overflow-x-clip">
-	<MiddleBanner client:load />
+  <MiddleBanner client:load />
   <div
     id="aboutus"
-    class="container mx-auto py-[80px]  px-[72px] flex flex-col gap-[40px] max-lg:gap-[200px] justify-between h-full max-lg:px-3 max-lg:!py-2 digitalbg-small"
+    class="container mx-auto py-[80px] px-[72px] flex flex-col gap-[40px] max-lg:gap-[200px] justify-between h-full max-lg:px-3 max-lg:!py-2 digitalbg-small"
   >
     <div
       class="flex flex-col w-[60%] max-lg:w-[80%] items-start max-lg:ml-[16px] relative top-[-60px]"
@@ -20,8 +20,9 @@ import TexteffectAnimation from './TextEffectAnimation.jsx';
         Classes="text-4xl font-normal leading-[135%] text-[#292929] max-lg:text-2xl heading-dark"
       />
 
-      <button
-        class="mt-[40px] bg-[#FF7D12] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4"
+      <a
+        href="/#tellusabout"
+        class="mt-[40px] bg-[#FF7D12] cursor text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4"
       >
         Start Your Project
         <img
@@ -31,7 +32,7 @@ import TexteffectAnimation from './TextEffectAnimation.jsx';
           id="headerArrowUp"
           class="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
         />
-      </button>
+      </a>
     </div>
     <div class="flex justify-end items-center">
       <div class="w-[45%] flex justify-center items-center max-lg:w-full">
@@ -40,7 +41,7 @@ import TexteffectAnimation from './TextEffectAnimation.jsx';
           alt="Logo"
           width={454}
           loading="lazy"
-          class="mr-20 mt-[120px] max-lg:mr-0 max-lg:w-[80%] max-lg:pl-[10px] toggle-image"
+          class="mr-20 mt-[65px] max-lg:mr-0 max-lg:w-[80%] max-lg:pl-[10px] toggle-image"
         />
       </div>
     </div>
