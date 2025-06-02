@@ -24,6 +24,31 @@ let realWorldSolution = [
     caseStudy: "/assets/1-real-world-solution.png",
   },
 ];
+const servicesOffered = [
+  "Custom Software",
+  "AI-Powered Solutions",
+  "Data Analytics",
+  "Custom Software",
+  "Workflow Automation",
+  "Predictive Modeling",
+];
+const techSolutions = [
+  "Innovation in Tech",
+  "Machine Learning",
+  "Business Intelligence",
+  "Innovation in Tech",
+  "Scalable Systems",
+  "Digital Transformation",
+];
+const strategicInitiatives = [
+  "Data-First Approach",
+  "Tech-Focused Growth",
+  "AI-Driven Insights",
+  "Data-First Approach",
+  "Smart Applications",
+  "Process Optimization",
+  "Cloud Integration",
+];
 ---
 
 <div
@@ -52,17 +77,74 @@ id="realworldsolutions"
       component="real-world-solutions"
     />
   </div>
-  <div class="w-full flex justify-center items-center">
-    <button
-      class="bg-[#FF7D12] mt-[85px] max-lg:ml-[0px] max-lg:mt-[0px] text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4 btn-dark"
-    >
-      <span>Start Your Project</span>
-      <img
-        src="/assets/arrowupright-light.svg"
-        alt="Arrow"
-        loading="lazy"
-        class="object-cover object-center w-[24px] h-[24px] inline-block ml-2 toggle-image"
-      />
-    </button>
-  </div>
+
 </div>
+<div class="flex flex-col gap-[24px]">
+      <div class="flex flex-col gap-[24px]">
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
+            toggle-gredient"
+          >
+          </div>
+
+          <div
+            class="!mx-0 w-full font-semibold !text-2xl max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={servicesOffered}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="right-to-left"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
+
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
+             toggle-gredient"
+          >
+          </div>
+
+          <div
+            class="!mx-0 w-full font-semibold text-2xl max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={techSolutions}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="left-to-right"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
+
+        <div class="relative w-full">
+          <div
+            class="absolute left-0 top-0 h-full w-[40px] z-50
+            toggle-gredient"
+          >
+          </div>
+
+          <div
+            class="text-2xl !mx-0 w-full font-semibold max-lg:text-xl relative z-10"
+          >
+            <InfiniteSlider
+              featuresList={strategicInitiatives}
+              speed={80}
+              speedOnHover={20}
+              animationDirection="horizontal"
+              direction="right-to-left"
+              client:load
+              component="Text-Infinite-Slider"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
