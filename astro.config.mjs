@@ -6,7 +6,7 @@ import react from '@astrojs/react';
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
-  // output: 'server',
+  output: 'server',
   // adapter: node({
   //   mode: 'standalone' 
   // }),
