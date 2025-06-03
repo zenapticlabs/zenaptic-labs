@@ -27,7 +27,7 @@ const ThemeToggle = () => {
         theme == "dark"
           ? "text-gray-300 border-gray-300"
           : "text-white border-gray-500"
-      } border-2 rounded-lg text-sm p-2 theme-toggle`}
+      } border-2 rounded-lg text-sm p-2 theme-toggle cursor`}
     >
       <svg
         id="theme-toggle-dark-icon"

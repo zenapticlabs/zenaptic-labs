@@ -36,8 +36,11 @@ function GenericSolutionsSection(props) {
           </div>
         </div>
 
-        <div className="   absolute top-0   right-0 w-[20%] max-lg:flex max-lg:w-full max-lg:static max-lg:ml-[35px] max-lg:justify-baseline max-lg:items-center max-lg:mt-10 max-lg:gap-5">
-          <button className="bg-[#FF7D12] mt-[85px] max-lg:ml-[20px] max-lg:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4">
+        <div className="cursor absolute top-0 right-0 w-[20%] max-lg:flex max-lg:w-full max-lg:static max-lg:ml-[35px] max-lg:justify-baseline max-lg:items-center max-lg:mt-10 max-lg:gap-5">
+          <a
+            href="/#tellusabout"
+            className="bg-[#FF7D12] mt-[85px] max-lg:ml-[20px] max-lg:mt-[0px]  text-[#F7F7F7] text-[18px] flex justify-center items-center whitespace-nowrap rounded-lg px-[24px] py-[16px] max-lg:py-2 max-lg:px-4"
+          >
             <span>Start Your Project</span>
             <img
               src="/assets/arrowrightWhite.svg"
@@ -46,7 +49,7 @@ function GenericSolutionsSection(props) {
               className="object-cover object-center w-[24px] h-[24px] inline-block ml-2"
               id="headerArrowUp"
             />
-          </button>
+          </a>
         </div>
       </div>
       {techSolutions.caseStudies !== undefined && (
