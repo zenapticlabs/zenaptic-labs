@@ -1,6 +1,5 @@
 import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
 import { CardBody, CardContainer, CardItem } from "../components/MotionPrimitivesComponents/3d-effect.jsx";
-import Tilt from "react-parallax-tilt";
 export default function InfiniteSliderBasic(props) {
   let featuresList = props.featuresList || [];
   let animationDirection = props.animationDirection;
@@ -43,22 +42,13 @@ export default function InfiniteSliderBasic(props) {
               key={index}
               className="flex relative flex-col justify-center items-start max-lg:items-start max-lg:justify-start gap-4 max-lg:gap-3 w-[520px] max-lg:w-[260px]"
             >
-               <Tilt
-                  scale={0.9}
-                  tiltMaxAngleX={20}
-                  tiltMaxAngleY={20}
-                  glareEnable={true}
-                  glareColor="#808080" 
-                  glarePosition="all"
-                  glareBorderRadius="8px"
-                  client:load
-                >
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="rounded-lg w-[520px]   h-[390px] max-lg:w-[260px] max-lg:h-[195px] object-center object-contain transition-all ease-linear"
-              />
-              </Tilt>
+              <div className="overflow-hidden rounded-lg">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="rounded-lg w-[520px] h-[390px] max-lg:w-[260px] max-lg:h-[195px] object-center object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
               <span className=" max-lg:w-[260px] text-[18px] hidden max-lg:block font-bold heading-dark">
                 Enhancing Case Management for Increased Efficiency
               </span>
@@ -83,11 +73,11 @@ export default function InfiniteSliderBasic(props) {
       <CardBody
         className="flex flex-col justify-start items-start h-[650px] max-lg:h-[600px]   gap-2  max-lg:mt-[5px] w-full rounded-xl p-5 bg-white/5  border border-black/[0.1] dark:border-white/[0.1] group/card transition-all duration-300"
       >
-        <CardItem translateZ="50" className="w-full">
+        <CardItem translateZ="50" className="w-full overflow-hidden rounded-lg">
           <img
             src={item.caseStudy}
             alt="real world solution"
-            className="w-full h-[390px] max-lg:h-[195px] !object-cover rounded-lg group-hover/card:shadow-xl"
+            className="w-full h-[390px] max-lg:h-[195px] object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover/card:scale-105"
           />
         </CardItem>
 

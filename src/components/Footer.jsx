@@ -110,12 +110,18 @@ const Footer = () => {
                   className="inline-block w-[24px] h-[24px] max-lg:h-[40px] max-lg:w-[40px] toggle-image"
                 />
               </div>
-              <span className="text-[18px] font-[400] max-lg:hidden">
+              <a
+                href="/privacy"
+                className="text-[18px] font-[400] max-lg:hidden hover:underline cursor-pointer"
+              >
                 Privacy Policy
-              </span>
-              <span className="text-[18px] font-[400] max-lg:hidden">
+              </a>
+              <a
+                href="/terms"
+                className="text-[18px] font-[400] max-lg:hidden hover:underline cursor-pointer"
+              >
                 Terms of Use
-              </span>
+              </a>
             </div>
           </div>
 
@@ -157,8 +163,18 @@ const Footer = () => {
             </form>
 
             <div className="hidden max-lg:flex w-full justify-between items-center py-[40px]">
-              <span className="text-[18px] font-[400]">Privacy Policy</span>
-              <span className="text-[18px] font-[400]">Terms of Use</span>
+              <a
+                href="/privacy"
+                className="text-[18px] font-[400] hover:underline cursor-pointer"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="/terms"
+                className="text-[18px] font-[400] hover:underline cursor-pointer"
+              >
+                Terms of Use
+              </a>
             </div>
           </div>
         </div>

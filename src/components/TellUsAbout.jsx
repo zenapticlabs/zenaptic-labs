@@ -141,14 +141,27 @@ At Zenaptic Labs, we collaborate with innovative teams to design, build, and lau
                   onChange={handleChange}
                   className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text=[24px] max-lg:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
                 />
-                <input
-                  type="text"
+                <select
                   name="budget"
-                  placeholder="What’s Your Budget? USD"
                   value={formData.budget}
                   onChange={handleChange}
-                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD]  text=[24px] max-lg:text-[20px] placeholder-[#BDBDBD] focus:outline-none focus:border-black"
-                />
+                  className="w-full md:flex-1 border-0 border-b border-[#BDBDBD] text-[24px] max-lg:text-[20px] text-[#BDBDBD] focus:outline-none focus:border-black focus:text-black bg-transparent appearance-none cursor-pointer"
+                  style={{
+                    color: formData.budget ? "inherit" : "#BDBDBD",
+                  }}
+                >
+                  <option value="" disabled>
+                    What's Your Budget? USD
+                  </option>
+                  <option value="Under $10,000">Under $10,000</option>
+                  <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                  <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+                  <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                  <option value="$100,000 - $250,000">$100,000 - $250,000</option>
+                  <option value="$250,000 - $500,000">$250,000 - $500,000</option>
+                  <option value="$500,000+">$500,000+</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
               </div>
 
               <textarea

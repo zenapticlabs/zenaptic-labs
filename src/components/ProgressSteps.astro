@@ -1,5 +1,4 @@
 ---
-import Tilt from "react-parallax-tilt";
 const progressSteps = [
   {
     id: 1,
@@ -59,17 +58,7 @@ const progressSteps = [
           {
             progressSteps.map((step) => (
               <div class=" w-[30%] max-lg:w-[100%]">
-                <Tilt
-                  scale={1.01}
-                  tiltMaxAngleX={30}
-                  tiltMaxAngleY={20}
-                  glareEnable={true}
-                  glareColor={"#808080d6"}
-                  glarePosition="all"
-                  glareBorderRadius="8px"
-                  client:load
-                >
-                  <div class="inset-0 bg-transparent  min-h-[350px] border-[#DCDCDC] border-[1px]  rounded-[8px] !h-fit !flex  flex-col justify-center items-center  gap-12 p-6  ">
+                  <div class="inset-0 bg-transparent min-h-[350px] border-[#DCDCDC] border-[1px] rounded-[8px] !h-fit !flex flex-col justify-center items-center gap-12 p-6 transition-all duration-300 ease-in-out hover:shadow-lg hover:border-[#FF7D12]/30">
                     <div class="w-full ">
                       <span class="w-full block heading-dark  text-start text-[20px]  font-semibold leading-[135%] uppercase text-[var(--Color-Neutral-300,#525252)]">
                         {step.title}
@@ -87,7 +76,6 @@ const progressSteps = [
                       />
                     </div>
                   </div>
-                </Tilt>
               </div>
             ))
           }
