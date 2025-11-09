@@ -167,7 +167,7 @@ At Zenaptic Labs, we collaborate with innovative teams to design, build, and lau
               <textarea
                 name="projectDescription"
                 placeholder="Project Description"
-                rows="1"
+                rows="5"
                 cols="50"
                 value={formData.projectDescription}
                 onChange={handleChange}
