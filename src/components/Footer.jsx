@@ -89,27 +89,7 @@ const Footer = () => {
               className="inline-block mr-2 w-[227px] self-baseline max-lg:self-center toggle-image"
             />
 
-            <div className="flex items-center space-x-4 max-lg:flex-col w-full max-lg:justify-center">
-              <span className="text-[18px] font-[400] max-lg:pb-[16px]">
-                Follow us
-              </span>
-              <div className="flex gap-1.5 w-[20%] max-lg:gap-[20px] max-lg:justify-center max-lg:w-full max-lg:pb-[40px]">
-                <img
-                  src="/assets/facebook-light.svg"
-                  alt="Facebook"
-                  className="inline-block w-[24px] h-[24px] max-lg:h-[40px] max-lg:w-[40px] toggle-image"
-                />
-                <img
-                  src="/assets/linkedin-light.svg"
-                  alt="LinkedIn"
-                  className="inline-block w-[24px] h-[24px] max-lg:h-[40px] max-lg:w-[40px] toggle-image"
-                />
-                <img
-                  src="/assets/X-light.svg"
-                  alt="X (Twitter)"
-                  className="inline-block w-[24px] h-[24px] max-lg:h-[40px] max-lg:w-[40px] toggle-image"
-                />
-              </div>
+            <div className="flex items-center gap-4 max-lg:flex-col w-full max-lg:justify-center">
               <a
                 href="/privacy"
                 className="text-[18px] font-[400] max-lg:hidden hover:underline cursor-pointer"
