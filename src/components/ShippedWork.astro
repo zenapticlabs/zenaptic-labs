@@ -1,0 +1,106 @@
+---
+const products = [
+  {
+    name: "pdfmill",
+    description: "An n8n PDF generator and HTML-to-PDF API.",
+    href: "https://pdfmill.dev",
+    image: "/assets/shipped/pdfmill.png",
+    alt: "pdfmill public product preview",
+    imageClass: "object-cover",
+  },
+  {
+    name: "bidmill",
+    description: "Build a quote on your phone, send it, and get it accepted.",
+    href: "https://bidmill.app",
+    image: "/assets/shipped/bidmill.png",
+    alt: "bidmill public product preview",
+    imageClass: "object-cover",
+  },
+];
+
+const games = [
+  {
+    name: "Sortle — The Daily Edition",
+    description: "A daily color sort puzzle.",
+    href: "https://play.google.com/store/apps/details?id=com.zenapticlabs.sortle",
+    image: "/assets/shipped/sortle.png",
+    alt: "Sortle — The Daily Edition app icon on Google Play",
+    imageClass: "object-contain p-8",
+  },
+  {
+    name: "Waybill: Daily Routing Puzzle",
+    description: "Lay the track, commit, and watch the whole board resolve.",
+    href: "https://play.google.com/store/apps/details?id=com.zenapticlabs.waybill",
+    image: "/assets/shipped/waybill.png",
+    alt: "Waybill: Daily Routing Puzzle app icon on Google Play",
+    imageClass: "object-contain p-8",
+  },
+];
+---
+
+<section id="shipped" class="w-full px-[80px] py-[96px] max-lg:px-5 max-lg:py-[64px]" aria-labelledby="shipped-heading">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <h2 id="shipped-heading" class="heading-dark text-[48px] font-bold leading-[1.12] max-lg:text-[36px]">
+        Shipped
+      </h2>
+      <p class="heading-dark mt-4 max-w-2xl text-[20px] leading-[1.5] max-lg:text-[18px]">
+        Public work you can visit today.
+      </p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+      {products.map((item) => (
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-bg group overflow-hidden rounded-[16px] border border-black/[0.12] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.16)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7D12] dark:border-white/[0.16]"
+          aria-label={`Visit ${item.name}`}
+        >
+          <div class="aspect-[16/9] overflow-hidden bg-[#efefef] dark:bg-[#161616]">
+            <img src={item.image} alt={item.alt} loading="lazy" class={`h-full w-full ${item.imageClass} transition-transform duration-500 group-hover:scale-[1.02]`} />
+          </div>
+          <div class="p-7 max-lg:p-6">
+            <span class="inline-flex rounded-full bg-[#B05206] px-2 py-1 text-[14px] font-semibold uppercase tracking-[0.08em] text-white">Product</span>
+            <h3 class="heading-dark mt-3 text-[30px] font-bold leading-[1.15] max-lg:text-[26px]">{item.name}</h3>
+            <p class="heading-dark mt-3 text-[18px] leading-[1.5]">{item.description}</p>
+            <span class="heading-dark mt-6 inline-flex items-center gap-2 text-[16px] font-semibold">
+              Visit site <span aria-hidden="true">↗</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-16 border-t border-black/[0.12] pt-10 dark:border-white/[0.16]">
+      <div class="max-w-3xl">
+        <h3 class="heading-dark text-[30px] font-bold leading-[1.15] max-lg:text-[26px]">Games shipped to Google Play</h3>
+        <p class="heading-dark mt-3 text-[18px] leading-[1.5]">Two public games, available on Google Play.</p>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {games.map((item) => (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="card-bg group overflow-hidden rounded-[16px] border border-black/[0.12] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.16)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7D12] dark:border-white/[0.16]"
+            aria-label={`View ${item.name} on Google Play`}
+          >
+            <div class="aspect-[16/9] overflow-hidden bg-[#efefef] dark:bg-[#161616]">
+              <img src={item.image} alt={item.alt} loading="lazy" class={`h-full w-full ${item.imageClass} transition-transform duration-500 group-hover:scale-[1.02]`} />
+            </div>
+            <div class="p-7 max-lg:p-6">
+              <span class="inline-flex rounded-full bg-[#B05206] px-2 py-1 text-[14px] font-semibold uppercase tracking-[0.08em] text-white">Shipped to Google Play</span>
+              <h3 class="heading-dark mt-3 text-[30px] font-bold leading-[1.15] max-lg:text-[26px]">{item.name}</h3>
+              <p class="heading-dark mt-3 text-[18px] leading-[1.5]">{item.description}</p>
+              <span class="heading-dark mt-6 inline-flex items-center gap-2 text-[16px] font-semibold">
+                View on Google Play <span aria-hidden="true">↗</span>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
 import {  toast, Bounce } from "react-toastify";
 
 function TellUsAbout() {
@@ -102,12 +101,11 @@ const [loading ,setLoading] = useState(false);
     <>
       <div id="tellusabout" className="min-w-full px-20 py-18 flex justify-center items-center max-lg:bg-[center_top_-135px] bg-[url(/assets/tellusaboutbg-light.png)] tellusbg bg-cover bg-no-repeat bg-[center_top_-30px] flex-col gap-y-10 max-lg:px-[20px]">
         <div className="w-full flex flex-col justify-center items-center">
-          <h3 className="text-4xl w-full font-bold text-center heading-dark leading-[1.35] from-[#999999] to-[#181818] bg-clip-text text-transparent bg-gradient-to-l max-lg:text-[32px]">
+          <h3 className="text-4xl w-full font-bold text-center heading-dark leading-[1.35] max-lg:text-[32px]">
          Let’s Build Something Bold Together
           </h3>
           <p className="text-[24px] w-full font-medium  max-lg:text-lg text-center pt-[30px]">
-            Whether you're a startup founder with a big idea, a growing company in need of smarter systems, or an enterprise ready to scale with AI and automation—we’re here to help.
-At Zenaptic Labs, we collaborate with innovative teams to design, build, and launch intelligent digital products that make an impact.
+            Tell us what takes people away from their real work.
        </p>
         </div>
         <div className="w-full flex justify-center items-center">
@@ -202,28 +200,6 @@ At Zenaptic Labs, we collaborate with innovative teams to design, build, and lau
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center">
-        <InfiniteSlider
-          gap={100}
-          direction={"horizontal"}
-          speed={80}
-          speedOnHover={20}
-        >
-          <span
-            className=" text-transparent max-lg:!text-[36px] stroke-text  text-center font-urbanist font-bold text-[56px] leading-[135%]"
-            style={{
-              WebkitTextStroke: "1px #686868",
-            }}
-          >
-            TRANSFORMING SOFTWARE IDEAS FOR YOUR BUSINESS INTO LIFE
-          </span>
-          <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l self-center from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] lamp"></span>
-          <span className="  from-[#999999] max-lg:!text-[36px] to-[#181818] bg-clip-text text-transparent bg-gradient-to-r text-[56px] font-extrabold leading-[135%]">
-            TRANSFORMING SOFTWARE IDEAS FOR YOUR BUSINESS INTO LIFE
-          </span>
-          <span className="w-[24px] h-[24px] z-1 rounded bg-gradient-to-l self-center from-orange-500 to-amber-300 shadow-[0px_0px_32px_8px_rgba(255,179,120,0.25)] lamp"></span>
-        </InfiniteSlider>
-      </div>
     </>
   );
 }
