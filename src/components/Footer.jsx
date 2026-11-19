@@ -180,7 +180,7 @@ const Footer = () => {
         </div>
 
         <p className="w-[80%] text-[#989898] font-[16px] pb-[72px] mt-2.5 ">
-          © 2024 copyrightzenaptic. All rights reserved.
+          © 2026 Zenaptic Labs. All rights reserved.
         </p>
       </footer>
     </>
