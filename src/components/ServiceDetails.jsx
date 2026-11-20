@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 export function ServiceDetails() {
   const [service, setService] = useState(null);
   const [serviceStackData, setServiceStackData] = useState([]);
+  const [resolved, setResolved] = useState(false);
 
   useEffect(() => {
     const storedService = JSON.parse(localStorage.getItem("service"));
     setService(storedService);
+    setResolved(true);
     if (storedService) {
       setServiceStackData([
         ["Technology Stack We Master", storedService.technologyStack],
@@ -24,6 +26,13 @@ export function ServiceDetails() {
       ]);
     }
   }, []);
+
+  // Runs after the commit that renders the resolved body, so the impact strip
+  // below is revealed in its final position instead of being pushed down it.
+  useEffect(() => {
+    if (!resolved) return;
+    document.documentElement.removeAttribute("data-service-pending");
+  }, [resolved]);
 
   return (
     <div className="relative p-6 max-lg:p-1">

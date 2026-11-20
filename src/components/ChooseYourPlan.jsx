@@ -41,8 +41,6 @@ const ChooseYourPlan = () => {
         "Custom Integrations",
         "Flexible Strategy Sessions",
         "Comprehensive Reporting",
-        "Flexible Strategy Sessions",
-        "Flexible Strategy Sessions",
       ],
       responses: [
         "Your requests are prioritized above others.",
@@ -52,8 +50,6 @@ const ChooseYourPlan = () => {
         "Tailored integrations to meet your specific needs.",
         "Your requests are prioritized above others.",
         "Faster completion of tasks and deliverables.",
-        "Flexible Strategy Sessions",
-        "Flexible Strategy Sessions",
       ],
     },
   ];

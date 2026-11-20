@@ -1,15 +1,40 @@
 ---
 import Layout from "../components/Layout.astro";
+import { ImpactHighlightsSection } from "../components/ImpactHighlightSection";
 import { ServiceDetails } from "../components/ServiceDetails";
 ---
 
 <Layout>
+  <script is:inline>
+    // The service body below is rendered from localStorage after hydration and
+    // grows by thousands of pixels when it fills in. Keep what sits under it
+    // out of the first paint while that is pending so nothing is displaced;
+    // the detail island reveals it in the same frame it renders its content.
+    try {
+      if (localStorage.getItem("slug")) {
+        document.documentElement.setAttribute("data-service-pending", "");
+        // Safety net: if the detail island never resolves, still show the rest.
+        window.setTimeout(() => {
+          document.documentElement.removeAttribute("data-service-pending");
+        }, 3000);
+      }
+    } catch (error) {
+      /* storage unavailable — nothing to defer */
+    }
+  </script>
   <div
     class="relative bg-transparent w-full px-6 py-16 max-w-6xl mx-auto flex flex-col gap-8"
   >
     <ServiceDetails client:load />
   </div>
+  <ImpactHighlightsSection client:load />
 </Layout>
+<style is:global>
+  html[data-service-pending] #impact-highlights,
+  html[data-service-pending] body footer {
+    display: none;
+  }
+</style>
 <script is:inline>
   const serviceDetails = [
     {
