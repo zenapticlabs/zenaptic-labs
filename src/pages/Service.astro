@@ -1,5 +1,6 @@
 ---
 import Layout from "../components/Layout.astro";
+import { ImpactHighlightsSection } from "../components/ImpactHighlightSection";
 import { ServiceDetails } from "../components/ServiceDetails";
 ---
 
@@ -9,6 +10,7 @@ import { ServiceDetails } from "../components/ServiceDetails";
   >
     <ServiceDetails client:load />
   </div>
+  <ImpactHighlightsSection client:load />
 </Layout>
 <script is:inline>
   const serviceDetails = [

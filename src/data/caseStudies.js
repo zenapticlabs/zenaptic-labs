@@ -1,0 +1,102 @@
+export const caseStudies = [
+  {
+    heading: "pdfmill",
+    subHeading:
+      "Our document-generation service: workflow data or raw HTML in, a branded PDF out, via an n8n node or an HTML-to-PDF API.",
+    href: "https://pdfmill.dev",
+    caseStudy: "/assets/case-studies/pdfmill.webp",
+  },
+  {
+    heading: "bidmill",
+    subHeading:
+      "Our quoting app for solo tradespeople: build a quote on the phone and send it before leaving the job.",
+    href: "https://bidmill.app",
+    caseStudy: "/assets/case-studies/bidmill.webp",
+  },
+  {
+    heading: "Sortle — The Daily Edition",
+    subHeading:
+      "Our daily sort-puzzle game, solver-verified, live on Google Play.",
+    href: "https://play.google.com/store/apps/details?id=com.zenapticlabs.sortle",
+    caseStudy: "/assets/case-studies/sortle.webp",
+  },
+  {
+    heading: "Waybill: Daily Routing Puzzle",
+    subHeading:
+      "Our daily routing-puzzle game: lay the track, commit, and watch the board resolve. Live on Google Play.",
+    href: "https://play.google.com/store/apps/details?id=com.zenapticlabs.waybill",
+    caseStudy: "/assets/case-studies/waybill.webp",
+  },
+  {
+    heading: "AI-Driven Expense Processing",
+    subHeading:
+      "A unified platform for tracking, approving and reporting business expenses, on web and mobile.",
+    caseStudy: "/assets/case-studies/ai-driven-expense-processing.webp",
+  },
+  {
+    heading: "Smartcite",
+    subHeading:
+      "A production LLM and RAG system that extracts legal citations and maps references as a graph, with validation to reduce citation errors.",
+    caseStudy: "/assets/case-studies/smartcite.webp",
+  },
+  {
+    heading: "AI Doc Maker",
+    subHeading:
+      "An LLM-driven document generation platform with customizable templates for documents, presentations and spreadsheets.",
+    href: "https://www.aidocmaker.com",
+    caseStudy: "/assets/case-studies/ai-doc-maker.webp",
+  },
+  {
+    heading: "MRP Renovation",
+    subHeading:
+      "A platform connecting homeowners and contractors with digital project management, communication and visual progress tracking.",
+    caseStudy: "/assets/case-studies/mrp-renovation.webp",
+  },
+  {
+    heading: "Global Weather Data Pipeline",
+    subHeading:
+      "An automated, scalable pipeline that unifies disparate data sources and delivers real-time insights.",
+    caseStudy: "/assets/case-studies/global-weather-data-pipeline.webp",
+  },
+  {
+    heading: "MMHP",
+    subHeading:
+      "An AI mental-health support platform delivering structured, guarded therapeutic conversations.",
+    href: "http://app.mmhp.ai",
+    caseStudy: "/assets/case-studies/mmhp.webp",
+  },
+  {
+    heading: "Retrolux",
+    subHeading:
+      "An iOS app for lighting-retrofit teams to capture building audits, manage proposals and sync field data with the web app. Reduced field data entry time by 50%.",
+    href: "https://retrolux.com",
+    caseStudy: "/assets/case-studies/retrolux.webp",
+  },
+  {
+    heading: "Advocus",
+    subHeading:
+      "A healthcare platform that helps staff optimize patient coverage and provider revenue.",
+    caseStudy: "/assets/case-studies/advocus.webp",
+  },
+  {
+    heading: "Washbuddy",
+    subHeading:
+      "A crowd-sourced, map-based platform to discover and review car washes, with a points and rewards system.",
+    caseStudy: "/assets/case-studies/washbuddy.webp",
+  },
+  {
+    heading: "Hoops To College",
+    subHeading:
+      "An automated recruiting platform connecting student-athletes and colleges, built on Make.com, Airtable and Stripe. 4x increase in athlete sign-ups.",
+    caseStudy: "/assets/case-studies/hoops-to-college.webp",
+  },
+  {
+    heading: "Customer Account License Management (CALM)",
+    subHeading: "A license-tracking platform for transactions and reporting.",
+  },
+  {
+    heading: "Lee's Oriental Shopping",
+    subHeading:
+      "A redesigned, culturally inspired online storefront with a store gallery, inquiry tools and mobile optimization. 35% more online traffic, 25% more customer inquiries.",
+  },
+];

@@ -1,6 +1,7 @@
 ---
 import GenericSolutionSection from "./SolutionsSection.jsx";
 import { DataAndWarehousingAnimation } from '../components/Animation/DataAndWarehousingAnimation/DataAndWarehousingAnimation.tsx';
+import { caseStudies } from "../data/caseStudies.js";
 
 const aiSolutions = {
   component: "Intelligent Solutions",
@@ -19,9 +20,9 @@ const aiSolutions = {
     "AI-driven Insights",
   ],
   caseStudies: [
-    { src: "/assets/CaseStudy1.png", alt: "Case Study 1" },
-    { src: "/assets/CaseStudy2.png", alt: "Case Study 2" },
-    { src: "/assets/CaseStudy3.png", alt: "Case Study 3" },
+    { src: caseStudies[5].caseStudy, alt: caseStudies[5].heading },
+    { src: caseStudies[6].caseStudy, alt: caseStudies[6].heading },
+    { src: caseStudies[9].caseStudy, alt: caseStudies[9].heading },
   ],
 };
 const techSolutions = {
@@ -41,9 +42,9 @@ const techSolutions = {
     "API Development & Integration",
   ],
   caseStudies: [
-    { src: "/assets/CaseStudyTech1.png", alt: "Case Study 1" },
-    { src: "/assets/CaseStudyTech2.png", alt: "Case Study 2" },
-    { src: "/assets/CaseStudyTech3.png", alt: "Case Study 3" },
+    { src: caseStudies[10].caseStudy, alt: caseStudies[10].heading },
+    { src: caseStudies[12].caseStudy, alt: caseStudies[12].heading },
+    { src: caseStudies[13].caseStudy, alt: caseStudies[13].heading },
   ],
 };
 
@@ -64,9 +65,9 @@ const webSolutions = {
   heading: "SaaS Development",
   slug: "SaaS development",
   caseStudies: [
-    { src: "/assets/CaseStudyWeb1.png", alt: "Case Study 1" },
-    { src: "/assets/CaseStudyWeb2.png", alt: "Case Study 2" },
-    { src: "/assets/CaseStudyWeb3.png", alt: "Case Study 3" },
+    { src: caseStudies[0].caseStudy, alt: caseStudies[0].heading },
+    { src: caseStudies[1].caseStudy, alt: caseStudies[1].heading },
+    { src: caseStudies[7].caseStudy, alt: caseStudies[7].heading },
   ],
 };
 

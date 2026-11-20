@@ -71,28 +71,25 @@ export default function InfiniteSliderBasic(props) {
   {featuresList.map((item, index) => (
     <CardContainer key={index} className="inter-var w-[560px]  max-lg:w-[260px] ">
       <CardBody
-        className="flex flex-col justify-start items-start h-[650px] max-lg:h-[600px]   gap-2  max-lg:mt-[5px] w-full rounded-xl p-5 bg-white/5  border border-black/[0.1] dark:border-white/[0.1] group/card transition-all duration-300"
+        className={`flex flex-col justify-start items-start ${item.caseStudy ? "h-[650px] max-lg:h-[600px]" : "h-[260px] max-lg:h-[260px]"} gap-2 max-lg:mt-[5px] w-full rounded-xl p-5 bg-white/5 border border-black/[0.1] dark:border-white/[0.1] group/card transition-all duration-300`}
       >
-        <CardItem translateZ="50" className="w-full overflow-hidden rounded-lg">
-          <img
-            src={item.caseStudy}
-            alt="real world solution"
-            className="w-full h-[390px] max-lg:h-[195px] object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover/card:scale-105"
-          />
-        </CardItem>
-
-        <CardItem
-          translateZ="90"
-          as="span"
-          className="max-lg:w-full text-[20px]  max-lg:text-[14px] text-[#525252] max-lg:text-sm  heading-dark"
-        >
-          {item.highlight}
-        </CardItem>
+        {item.caseStudy && (
+          <CardItem translateZ="50" className="w-full overflow-hidden rounded-lg">
+            <img
+              src={item.caseStudy}
+              alt={item.heading}
+              className="w-full h-[390px] max-lg:h-[195px] object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+            />
+          </CardItem>
+        )}
 
         <CardItem
           translateZ="50"
-          as="span"
-          className="text-[28px]  font-bold max-lg:text-[24px]"
+          as={item.href ? "a" : "span"}
+          href={item.href}
+          target={item.href ? "_blank" : undefined}
+          rel={item.href ? "noreferrer" : undefined}
+          className="text-[28px] font-bold max-lg:text-[24px] no-underline text-inherit"
         >
           {item.heading}
         </CardItem>

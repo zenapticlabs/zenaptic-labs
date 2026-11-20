@@ -1,29 +1,6 @@
 ---
 import InfiniteSlider from "./InfiniteSlider.jsx";
-
-let realWorldSolution = [
-  {
-    highlight: "AI-Powered Automation",
-    heading: "Streamlining Operations with Intelligent Workflow Automation",
-    subHeading:
-      "Developed a custom AI-driven system that automated 80% of repetitive tasks, reducing operational costs and boosting efficiency for a logistics company.",
-    caseStudy: "/assets/2-real-world-solution.png",
-  },
-  {
-    highlight: "Predictive Analytics",
-    heading: "Enhancing Customer Retention with AI Insights",
-    subHeading:
-      "Built a predictive analytics tool that identified churn risks, enabling a retail client to improve retention rates by 35% through personalized strategies.",
-    caseStudy: "/assets/3-real-world-solution.png",
-  },
-  {
-    highlight: "Machine Learning",
-    heading: "Title: Transforming Healthcare with Data-Driven Diagnostics",
-    subHeading:
-      "Description: Designed a machine learning model that improved diagnostic accuracy by 25%, empowering healthcare providers with faster, more reliable patient insights.",
-    caseStudy: "/assets/1-real-world-solution.png",
-  },
-];
+import { caseStudies } from "../data/caseStudies.js";
 const servicesOffered = [
   "Custom Software",
   "AI-Powered Solutions",
@@ -69,7 +46,7 @@ id="realworldsolutions"
 
   <div class="w-full relative flex justify-center items-center">
     <InfiniteSlider
-      featuresList={realWorldSolution}
+      featuresList={caseStudies}
       speed={80}
       speedOnHover={20}
       direction="horizontal"
