@@ -39,8 +39,7 @@ export function ImpactHighlightsSection() {
             />
           ) : (
             <div className="h-[400px] w-[400px] border border-gray-300 rounded-lg p-5 flex flex-col justify-center">
-              <h3 className="text-[28px] font-bold">{heading}</h3>
-              <p className="mt-3 text-[18px] text-[#292929]">{subHeading}</p>
+              <p className="text-[18px] text-[#292929] heading-dark">{subHeading}</p>
             </div>
           )}
           <div className="pt-4">
@@ -57,7 +56,7 @@ export function ImpactHighlightsSection() {
               <h3 className="text-[24px] font-bold">{heading}</h3>
             )}
             {caseStudy && (
-              <p className="mt-2 text-[18px] text-[#292929]">{subHeading}</p>
+              <p className="mt-2 text-[18px] text-[#292929] heading-dark">{subHeading}</p>
             )}
           </div>
         </div>

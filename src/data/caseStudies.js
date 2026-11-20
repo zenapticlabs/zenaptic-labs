@@ -95,8 +95,14 @@ export const caseStudies = [
     subHeading: "A license-tracking platform for transactions and reporting.",
   },
   {
-    heading: "Lee's Oriental Shopping",
+    heading: "TLC",
     subHeading:
-      "A redesigned, culturally inspired online storefront with a store gallery, inquiry tools and mobile optimization. 35% more online traffic, 25% more customer inquiries.",
+      "Software for a pickup-and-delivery operation: native iOS and Android driver apps that show each scheduled pickup and delivery with in-app task notifications, backed by a mobile API and a back office for tasks and invoices.",
+  },
+  {
+    heading: "DentalCaravan",
+    subHeading:
+      "A web platform for a school-based dental program: schools and districts, exam and sealant forms, Medicaid eligibility checks, and electronic (EDI) claims, with access restricted per school and district.",
+    caseStudy: "/assets/case-studies/dentalcaravan.webp",
   },
 ];

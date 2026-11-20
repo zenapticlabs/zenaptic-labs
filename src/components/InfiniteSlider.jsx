@@ -50,10 +50,7 @@ export default function InfiniteSliderBasic(props) {
                 />
               </div>
               <span className=" max-lg:w-[260px] text-[18px] hidden max-lg:block font-bold heading-dark">
-                Enhancing Case Management for Increased Efficiency
-              </span>
-              <span className="hidden max-lg:block px-4 heading-dark py-3 text-[16px] rounded-full bullet-dark border border-[#DCDCDC] bg-[#D7D7D733] whitespace-nowrap max-lg:py-2 max-lg:px-4">
-                HOOPSTOCOLLEGE
+                {item.alt}
               </span>
             </div>
           ))}
