@@ -3,7 +3,10 @@ import { Cursor } from "./MotionPrimitivesComponents/cursor-spring";
 
 export function ImpactHighlightsSection() {
   return (
-    <div className="flex !w-full justify-around gap-5 items-start overflow-auto py-[72px] px-[80px] max-lg:px-[15px]">
+    <div
+      id="impact-highlights"
+      className="flex !w-full justify-around gap-5 items-start overflow-auto py-[72px] px-[80px] max-lg:px-[15px]"
+    >
       {caseStudies.map(({ caseStudy, heading, subHeading, href }) => (
         <div key={heading} className="flex-shrink-0 w-[400px]">
           {caseStudy && (
