@@ -19,7 +19,9 @@ There is no other deploy step, so merging is the deploy — merge only on Sung's
 
 Doppler project `zenaptic-labs` (configs `dev`, `stg`, `prd`) holds `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`,
 `SMTP_PASSWORD`, `SMTP_TO_EMAIL`, used by the contact form (`src/lib/email.js`, `src/pages/api/`). The
-Vercel project environment carries the same names for deployments. Values never enter the repo.
+Vercel project carries the same names for the **production** target only, alongside Doppler's
+`DOPPLER_*` markers (Doppler sync), so the contact form cannot send from preview deployments. Values
+never enter the repo.
 
 ## Showcase content
 
