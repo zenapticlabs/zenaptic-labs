@@ -26,8 +26,8 @@ export function ImpactHighlightsSection() {
             >
               <img
                 src={caseStudy}
-                alt=""
-                className="h-[500px] block w-[500px] object-cover"
+                alt={heading}
+                className="block w-[500px] h-auto aspect-[4/3] object-cover"
               />
             </Cursor>
           )}
@@ -35,7 +35,7 @@ export function ImpactHighlightsSection() {
             <img
               src={caseStudy}
               alt={heading}
-              className="h-[400px] w-[400px] object-cover"
+              className="w-full h-auto aspect-[4/3] object-cover"
             />
           ) : (
             <div className="h-[400px] w-[400px] border border-gray-300 rounded-lg p-5 flex flex-col justify-center">

@@ -93,11 +93,13 @@ export const caseStudies = [
   {
     heading: "Customer Account License Management (CALM)",
     subHeading: "A license-tracking platform for transactions and reporting.",
+    caseStudy: "/assets/case-studies/calm.webp",
   },
   {
     heading: "TLC",
     subHeading:
       "Software for a pickup-and-delivery operation: native iOS and Android driver apps that show each scheduled pickup and delivery with in-app task notifications, backed by a mobile API and a back office for tasks and invoices.",
+    caseStudy: "/assets/case-studies/tlc.webp",
   },
   {
     heading: "DentalCaravan",

@@ -75,7 +75,7 @@ export default function InfiniteSliderBasic(props) {
             <img
               src={item.caseStudy}
               alt={item.heading}
-              className="w-full h-[390px] max-lg:h-[195px] object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover/card:scale-105"
+              className="w-full h-[390px] max-lg:h-[195px] object-contain rounded-lg transition-transform duration-300 ease-in-out group-hover/card:scale-105"
             />
           </CardItem>
         )}
