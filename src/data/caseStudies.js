@@ -47,6 +47,12 @@ export const caseStudies = [
     caseStudy: "/assets/case-studies/ai-doc-maker.webp",
   },
   {
+    heading: "NEO",
+    subHeading:
+      "A voice-first AI assistant that helps visually impaired users use the web and handle daily tasks by voice: a cross-platform desktop app with real-time voice, LLM task routing and AI browser automation.",
+    caseStudy: "/assets/case-studies/neo.webp",
+  },
+  {
     heading: "MRP Renovation",
     subHeading:
       "A platform connecting homeowners and contractors with digital project management, communication and visual progress tracking.",
