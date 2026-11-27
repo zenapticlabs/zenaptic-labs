@@ -26,8 +26,8 @@ never enter the repo.
 ## Showcase content
 
 - The homepage "Real-World Solutions" section, the solutions slider and the Service page strip render
-  `src/data/caseStudies.js`. It lists exactly the projects in `studio/gtm/public-portfolio.md` (18 as of
-  2026-11-20), the same set and order as the Upwork agency and freelancer portfolios.
+  `src/data/caseStudies.js`. It lists exactly the projects in `studio/gtm/public-portfolio.md` (19 as of
+  2026-11-26), the same set and order as the Upwork agency and freelancer portfolios.
 - Card images are `public/assets/case-studies/<slug>.webp`, exported from the covers in
   `studio/gtm/project-covers-2026-11-20/` (Sortle and Waybill from `studio/gtm/upwork-covers-2026-11-19/`),
   the same files uploaded to Upwork. Covers show the product in use, never a landing or login page.
