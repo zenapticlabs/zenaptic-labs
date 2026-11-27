@@ -113,4 +113,10 @@ export const caseStudies = [
       "A web platform for a school-based dental program: schools and districts, exam and sealant forms, Medicaid eligibility checks, and electronic (EDI) claims, with access restricted per school and district.",
     caseStudy: "/assets/case-studies/dentalcaravan.webp",
   },
+  {
+    heading: "Aperio",
+    subHeading:
+      "A secure client portal that gives law firms and marketing vendors the same live Power BI reporting the client's own team uses, scoped to only their own leads.",
+    caseStudy: "/assets/case-studies/aperio.webp",
+  },
 ];
