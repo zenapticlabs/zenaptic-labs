@@ -34,7 +34,7 @@ never enter the repo.
   Personal data is covered with solid bars, never blurred.
 - Descriptions, links and metrics come only from `studio/gtm/website-showcase-2026-11-20/manifest.md`;
   only Sung-confirmed metrics appear.
-- The logo strip stays as it is. Prices and plans change only with Sung.
+- The logo strip shows Microsoft, AWS, Bayer, and PFU America as text with the caption "Companies we've done work for"; no channel wording (Sung, 2026-11-26). Prices and plans change only with Sung.
 
 ## Verification
 

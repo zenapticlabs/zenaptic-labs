@@ -1,37 +1,76 @@
----
-import { InfiniteSlider } from "./MotionPrimitivesComponents/infinite-slider";
----
+<section class="brands-section" aria-labelledby="companies-caption">
+  <p class="brands-caption" id="companies-caption">
+    Companies we've done work for
+  </p>
+  <ul class="brands-list" role="list">
+    <li>Microsoft</li>
+    <li>AWS</li>
+    <li>Bayer</li>
+    <li>PFU America</li>
+  </ul>
+</section>
 
-<div
-  class="flex !bg-transparent px-[80px] light gap-9 py-[72px] overflow-y-hidden overflow-hidden max-lg:justify-between max-lg:px-5"
->
-  <InfiniteSlider
-    gap={70}
-    direction="horizontal"
-    speed={80}
-    speedOnHover={20}
-    client:load
-  >
-    <img
-      src="/assets/pepsico-light.svg"
-      alt="PepsiCo Logo"
-      class="toggle-image"
-    />
-    <img
-      src="/assets/gofundme-light.svg"
-      alt="GoFundMe Logo"
-      class="toggle-image"
-    />
-    <img
-      src="/assets/chipotle-light.svg"
-      alt="Chipotle Logo"
-      class="toggle-image"
-    />
-    <img
-      src="/assets/washingtonuniversity-light.svg"
-      alt="Washington Logo"
-      class="toggle-image"
-    />
-    <img src="/assets/delta-light.svg" alt="Delta Logo" class="toggle-image" />
-  </InfiniteSlider>
-</div>
+<style>
+  .brands-section {
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    gap: 1.5rem;
+    min-height: 15rem;
+    padding: 3.5rem clamp(1.25rem, 5vw, 5rem);
+  }
+
+  .brands-caption {
+    margin: 0;
+    color: #5e5e5e;
+    font-family: "Urbanist", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .brands-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    width: min(100%, 70rem);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+
+  .brands-list li {
+    min-width: 0;
+    color: #686868;
+    font-family: "Urbanist", sans-serif;
+    font-size: clamp(1.125rem, 2.25vw, 1.875rem);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  :global(.dark) .brands-caption {
+    color: #ababab;
+  }
+
+  :global(.dark) .brands-list li {
+    color: #b7b7b7;
+  }
+
+  @media (max-width: 34rem) {
+    .brands-section {
+      gap: 1.25rem;
+      min-height: 17rem;
+      padding-block: 3rem;
+    }
+
+    .brands-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1rem;
+      row-gap: 1.25rem;
+    }
+  }
+</style>
